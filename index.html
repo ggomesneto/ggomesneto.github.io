@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geraldo Gomes</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Peta&family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" 
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,600&display=swap" rel="stylesheet">
+
+    
+    
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+
+    <div id="menuWrap">
+        
+        <div id="logo">
+            <div id="GG">GG</div>
+            <div id="geraldo">GERALDO</div>
+            <div id="gomes">GOMES</div>
+        </div>
+
+        <div id='menuButtons'>
+            <a class="menuBut" href='#slide1' >HOME</a>
+            <span class="menuDash">/</span>
+            <a class="menuBut" href='#slide2'>THE COURSE</a>
+            <span class="menuDash" >/</span>
+            <a class="menuBut" href='#slide3'>SKILLS</a>
+            <span class="menuDash">/</span>
+            <a class="menuBut" href='#slide4'>PROJECTS</a>
+            <span class="menuDash">/</span>
+            <a class="menuBut" href='#slide5 '>ABOUT</a>
+        </div>
+
+
+    </div>
+
+
+    <div id="slider">
+
+        <div id='slides'>
+
+
+                <div id='slide1' class="slideWrap">
+                 <pre id="typewriter">
+<span class="var-highlight">var</span> newProject = {
+        Post on: <span class="string-highlight">'My Website'</span>,
+        skill: <span class="string-highlight">'Beginner'</span>,
+        location: <span class="string-highlight">'Las Vegas, NV'</span>,
+        properties:[<span class="string-highlight">'Javascript'</span>,
+                    <span class="string-highlight">'HTML'</span>,
+                    <span class="string-highlight">'CSS'</span>];
+}; </pre>
+                </div>
+
+                <div id='slide2' class="slideWrap">
+                    <div id='slide2Text'>"Each module of this 800-hour course covers key aspects of front-end web development,
+                        back-end web development, databases, and data structures and algorithms.
+                        Modules include learning resources, practice exercises, projects, and career-related coursework."</div>
+                    <img src='img/springboard.png'>
+                </div>
+                
+                <div id='slide3' class="slideWrap">
+                    <div id="levelSkill">BEGGINER | INTERMEDIATE | ADVANCED
+                    </div>
+                    <ul class='skill'>
+                        <li>HTML:<span class='blockInter'></span></li>
+                        <li>CSS:<span class='blockBegin'></span></li>
+                        <li>JAVASCRIPT:<span class='blockBegin'></span></li>
+                        <li>GIT:<span class='blockBegin'></span></li>
+                        <li>JASMINE:<span class='blockBegin'></span></li>
+                    </ul>
+
+                </div>
+
+                <div id='slide4' class="slideWrap">
+                    
+                    <div id='projectLeft'>
+
+                        <div id='memGame' class='projectSpace'>
+                            <img src='img/memGame/chihuahua1.jpg' onclick="openDisplay(0)">
+                            <span class="tooltiptext">Memory Game</span>
+                        </div>
+
+                        <div id='memeGen' class='projectSpace'>
+                            <img src='img/Meme.png' onclick="openDisplay(1)">
+                            <span class="tooltiptext">Meme Generator</span>
+                        </div>
+
+                        <div class='projectSpace'>
+
+                        </div>
+
+                        <div class='projectSpace'>
+
+                        </div>
+                        
+                    </div>
+
+                    <div id='projectRight'>
+
+                        <div  class='projectSpace'>
+                            
+                        </div>
+
+                        <div class='projectSpace'>
+
+                        </div>
+                        
+                        <div class='projectSpace'>
+
+                        </div>
+
+                        <div class='projectSpace'>
+
+                        </div>
+                        
+                    </div>
+                    
+                    <div id="displayContent1"  style="display:none;" class="displayContent">
+                        <span id="closeX" onclick="closeDisplay()">X</span>
+                        <button id="restart" onclick="reset()">Restart</button>
+                        <span id="record">Record:</span>
+                        <span id="recordN"></span>
+                        <span id="current">Current:</span>
+                        <span id="currentN"></span>
+                       
+                    </div>
+
+                    <div id="displayContent2" style="display:none;" class="displayContent">
+                        <span id="closeX" onclick="closeDisplay()">X</span>
+                    
+                        <div id="memeFormWrap">
+            
+                        <form id="memeForm" action="">
+                            <label for="imageLink">Image Link:</label>
+                            <input type="text" name="imageLink" >
+                            <br>
+                            <label for="topText">Top Text:</label>
+                            <input type="text" name="topText" >
+                            <br>
+                            <label for="botText">Bottom Text:</label>
+                            <input type="text" name="botText">
+                            <br>
+                            <label for="fontSize">Font Size:</label>
+                            <input type="range" name="fontSize" min="20" max="100">
+                        
+                        
+                            
+                            <input type="submit" value="Submit">
+                        
+                        
+                        
+                        </form>
+            
+            
+            
+                    </div> 
+                    
+                    <div id="wrapMeme">
+            
+            
+                    </div> 
+            
+            
+            
+                    </div>
+
+
+                </div>
+
+                <div id='slide5' class="slideWrap">
+                    
+                    <img src='img/me.jpg' id='selfie'>
+                    <div id="aboutText">
+                        <p>The Short</p>
+                        Geraldo Gomes is a Computer Engineering student at xxxx and a Software Engineering student at Springboard, while working in offshore drilling rigs, working as a Managed Pressure Drilling Specialist. After years of accomplishments in the oilfield, he decided to switch sides and go from being the user on high tech softwares/technology to being the one coding them.
+
+                        <p>The Long</p>
+                        Geraldo was born in Brazil. He is married and, since 2018, lives in the USA. His career in the oilfield started when he was 21 and, on the years after he worked in places like Siberia, Abu Dhabi and Central America. All that excitement was not enough for him and, in 2018 he decided to pursue a dream and became a full-time poker player in Las Vegas. He succeed for three years, and after getting married, decided to go back to work in a 'normal' job that could give him more financial stability. After working with different types of technology, he found love in coding and decided to make a step out of his comfort zone and started learning more about software engineering.  
+
+
+
+
+
+                    </div>
+                   </div>
+   
+
+                
+
+                
+             
+           
+
+        </div>
+    </div>
+
+
+    <div id="footerWrap">
+        
+        <div id='footerLine'></div>
+
+        <div class="stepFoot">
+            <div id='topFoot'>I'm starting something new</div>
+            <a href="#slide2"><div class='anchorFoot'></div></a>
+            <div id='botFoot'>A software engineering program</div>
+        </div>
+        <div class="stepFoot">
+            <div id='topFoot'>I want to share </div>
+            <a href="#slide3"><div class='anchorFoot'></div></a>
+            <div id='botFoot'>My progress as I go</div>
+        </div>
+        <div class="stepFoot">
+            <div id='topFoot'>Let's focus on growth</div>
+            <a href="#slide4"><div class='anchorFoot'></div></a>
+            <div id='botFoot'>With practice comes mastery</div>
+        </div>
+        <div class="stepFoot">
+            <div id='topFoot'>Get to know me</div>
+            <a href="#slide5"><div class='anchorFoot'></div></a>
+            <div id='botFoot'>Experience and curiosities</div>
+        </div>
+
+    </div>
+        
+    <div id="sideWrap">
+        <div id="sideContent">
+            <span class='sideText'>CONTACT INFO:</span><BR><BR>
+            <span class='sideText'><a href="http://linkedin.com/in/ggomesneto">LINKEDIN</a></span><BR><BR>
+            <span class='sideText'><a href="http://instagram.com/ggomesneto">INSTAGRAM</a></span><BR><BR>
+            <span class='sideText'>GGOMESNETO@GMAIL.COM</span>
+        </div>
+    </div>
+    
+</body>
+
+
+<script src="typewriter.js" ></script>
+<script src="MemGame.js" ></script>
+<script src="memeGen.js" ></script>
+</html>
