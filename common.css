@@ -1,11 +1,21 @@
 body {
-	width: 1900px;
-	height: 900px;
+	width: 100vw;
+	height: 100vh;
+	margin: 0px;
+	overflow: hidden;
+}
+
+html {
+	font-size: 1vw;
+}
+
+img {
+	max-width: 100%;
 }
 /* ----------------------------MENU----------------------------------- */
 #menuWrap {
-	width: 80%;
-	height: 10%;
+	width: 80vw;
+	height: 10vh;
 	border-bottom: 2px solid black;
 	position: relative;
 	box-shadow: 0 8px 6px -6px black;
@@ -15,9 +25,9 @@ body {
 	display: inline-block;
 	bottom: 5px;
 	position: absolute;
-	right: 0px;
+	right: 1vw;
 	font-family: 'Lexend Peta', sans-serif;
-	font-size: 20px;
+	font-size: 15px;
 }
 
 #menuButtons a {
@@ -35,17 +45,8 @@ body {
 	float: left;
 	display: flex;
 	font-family: 'Russo One', sans-serif;
-	font-size: 20px;
+	font-size: 1vw;
 	margin: 10px;
-	TOP: 40PX;
-}
-
-#GG {
-	font-family: 'Dosis', sans-serif;
-	position: absolute;
-	font-size: 50px;
-	top: -50px;
-	left: 50px;
 }
 
 /* ----------------------------MAIN----------------------------------- */
@@ -56,14 +57,14 @@ body {
 	position: relative;
 	text-align: center;
 	display: flex;
-	
-	width: 80%;
-	height: 80%;
+
+	width: 80vw;
+	height: 80vh;
 }
 
 #slides {
-	width: 1320px;
-	height: 640px;
+	width: 70vw;
+	height: 68vh;
 
 	overflow-y: auto;
 	scroll-snap-type: y mandatory;
@@ -80,14 +81,14 @@ body {
 }
 
 .slideWrap {
-	width: 1300px;
-	height: 620px;
+	width: 65vw;
+	height: 65vh;
 	position: relative;
 	align-items: center;
 	display: flex;
-	margin-bottom: 30px;
+	margin-bottom: 4vh;
 	scroll-snap-align: start;
-  	scroll-snap-stop: normal;
+	scroll-snap-stop: normal;
 }
 
 /* ----------------------------SLIDES ( SLIDE 1 )----------------------------------- */
@@ -100,10 +101,10 @@ body {
 }
 
 #typewriter {
-	font-size: 3em;
-	margin: auto 180px;
+	font-size: 2.5vw;
+	margin: auto;
 	font-family: "Courier New";
-	width: 1000px;
+	width: 52vw;
 
 	text-align: left;
 }
@@ -111,27 +112,38 @@ body {
 /* ----------------------------SLIDES ( SLIDE 2 )----------------------------------- */
 
 #slide2 img {
-	width: 100%;
+	width: 100vw;
 	position: absolute;
 	bottom: 0px;
 }
 
 #slide2Text {
 	position: absolute;
-	top: 0px;
-	font-size: 40px;
+	top: 4vw;
+	font-size: 2.2vw;
 	font-family: 'Montserrat', sans-serif;
 }
 
 /* ----------------------------SLIDES ( SLIDE 3 )----------------------------------- */
 
 .skill {
-	font-size: 50px;
+	font-size: 2.5vw;
 	list-style: none;
 	text-align: right;
 	position: absolute;
 	left: 0px;
+	top: 10vh;
 }
+
+#skillSet {
+	display: flex;
+	align-items: center;
+
+	position: relative;
+	width: 90vw;
+	height: 60vh;
+}
+
 li {
 	position: relative;
 	font-family: 'Lexend Peta', sans-serif;
@@ -139,113 +151,70 @@ li {
 }
 
 .blockBegin {
-	width: 200px;
-	height: 90%;
+	width: 11vw;
+	height: 5vh;
 	background-color: orangered;
 	position: absolute;
 	bottom: 0px;
-	margin-right: 20px;
 }
 
 .blockInter {
-	width: 480px;
-	height: 90%;
+	width: 28vw;
+	height: 5vh;
 	background-color: orangered;
 	position: absolute;
 	bottom: 0px;
-	margin-right: 20px;
 }
 
 .blockAdv {
-	width: 600px;
-	height: 90%;
+	width: 40vw;
+	height: 5vh;
 	background-color: orangered;
 	position: absolute;
 	bottom: 0px;
-	margin-right: 20px;
 }
 
 #levelSkill {
 	font-family: 'Lexend Peta', sans-serif;
-
-	font-size: 25px;
+	font-size: 1.5vw;
 	position: absolute;
-	top: 100px;
-	left: 470px;
+	top: 8vh;
+	right: 0px;
 }
 
 /* ----------------------------SLIDES ( SLIDE 4 )----------------------------------- */
 #projectLeft {
-	width: 50%;
-	height: 100%;
+	width: 50vw;
+	height: 65vh;
 }
+
+#projectLeft li {
+	font-family: 'Bad Script', cursive;
+	font-size: 2vw;
+}
+
+#projectLeft li:hover {
+	cursor: pointer;
+	border-bottom: 2px solid black;
+}
+
 #projectRight {
-	width: 50%;
-	height: 100%;
+	width: 50vw;
+	height: 65vh;
 }
 
-.projectSpace {
-	margin: 10px;
-	float: left;
-	width: 45%;
-	height: 48%;
-	background-color: #ddc;
-	border: solid 5vmin #eee;
-	border-bottom-color: #fff;
-	border-left-color: #eee;
-	border-radius: 2px;
-	border-right-color: #eee;
-	border-top-color: #ddd;
-	box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25) inset, 0 5px 10px 5px rgba(0, 0, 0, .25);
-	box-sizing: border-box;
-	position: relative;
-	text-align: center;
-}
-
-#slide4 #projectLeft img {
-	border: solid 2px;
-	border-bottom-color: #ffe;
-	border-left-color: #eed;
-	border-right-color: #eed;
-	border-top-color: #ccb;
-	max-height: 80%;
-	max-width: 80%;
-	margin-top: 20px;
-}
-
-.tooltiptext {
-	visibility: hidden;
-	width: 200px;
-	background-color: black;
-	color: #fff;
-	text-align: center;
-	border-radius: 6px;
-	padding: 5px 0;
-	position: absolute;
-	z-index: 1;
-	bottom: -20px;
-	right: 0%;
-	font-size: 20px;
-	font-family: 'Montserrat', sans-serif;
-}
 #memGame:hover {
 	cursor: pointer;
-}
-#memGame:hover .tooltiptext {
-	visibility: visible;
 }
 
 #memeGen:hover {
 	cursor: pointer;
 }
-#memeGen:hover .tooltiptext {
-	visibility: visible;
-}
 
 .displayContent {
 	float: left;
-	width: 95%;
-	height: 100%;
+	width: 65vw;
+	height: 65vh;
 	background-color: #ddc;
 	border: solid 5vmin #eee;
 	border-bottom-color: #fff;
@@ -258,60 +227,54 @@ li {
 	position: absolute;
 	text-align: center;
 	top: 10px;
-	left: 20px;
+	left: 10px;
 }
 
 .memCard {
-	width: 180px;
-	height: 230px;
+	width: 9.5vw;
+	height: 25vh;
 	border: 2px solid black;
 	display: inline-block;
 	margin: 10px 5px 5px 10px;
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.6);
-	z-index: 100;
-}
-
-.displayImage {
-	width: 300px;
-	height: 224px;
 }
 
 #restart {
-	font-size: 15px;
-	right: 10px;
+	font-size: 0.8vw;
+	right: 3px;
 	top: 50px;
 	position: absolute;
 	font-family: 'Roboto', sans-serif;
 }
 
 #record {
-	font-size: 20px;
+	font-size: 1vw;
 	right: 5px;
-	top: 120px;
+	top: 10vh;
 	position: absolute;
 	font-family: 'Roboto', sans-serif;
 }
 
 #recordN {
-	font-size: 20px;
+	font-size: 1vw;
 	right: 35px;
-	top: 150px;
+	top: 13vh;
 	position: absolute;
 	font-family: 'Roboto', sans-serif;
 }
 
 #current {
-	font-size: 20px;
+	font-size: 1vw;
 	right: 5px;
-	top: 200px;
+	top: 18vh;
 	position: absolute;
 	font-family: 'Roboto', sans-serif;
 }
 
 #currentN {
-	font-size: 20px;
+	font-size: 1vw;
 	right: 35px;
-	top: 230px;
+	top: 21vh;
 	position: absolute;
 	font-family: 'Roboto', sans-serif;
 }
@@ -321,12 +284,12 @@ li {
 	right: 30px;
 	cursor: pointer;
 	top: 10px;
-	font-size: 20px;
+	font-size: 1.5vw;
 	font-family: 'Roboto', sans-serif;
 }
 
 #memeFormWrap {
-	width: 300px;
+	width: 10vw;
 	text-align: right;
 	display: flex;
 	float: left;
@@ -335,16 +298,16 @@ li {
 }
 
 #memeForm {
-	width: 700px;
+	width: 30vw;
 	left: 0px;
 	padding: 0px;
 }
 
 #wrapMeme {
-	width: 750px;
-	height: 100%;
-	top: 0px;
-
+	width: 40vw;
+	height: 50vh;
+	position: relative;
+	top: 1vh;
 	display: inline-block;
 	overflow-y: scroll;
 }
@@ -354,24 +317,25 @@ li {
 }
 
 #wrapMeme img {
-	width: 100%;
+	width: 40vw;
+	height: 42.5vh;
 }
 
 .WrapperMeme {
-	width: 600px;
-	height: 400px;
+	width: 35vw;
+	height: 42.5vh;
 	border: solid 2px black;
 	position: relative;
 	display: flex;
 	align-items: center;
-	margin: auto;
-	margin-bottom: 10px;
+	margin: 10px auto 10px;
+
 	overflow-wrap: break-word;
 }
 
 .Top {
 	top: 0px;
-	width: 600px;
+	width: 35vw;
 	position: absolute;
 	text-align: center;
 
@@ -380,7 +344,7 @@ li {
 }
 
 .Bot {
-	width: 600px;
+	width: 35vw;
 	bottom: 0px;
 	text-align: center;
 	position: absolute;
@@ -394,7 +358,8 @@ li {
 	padding: 4px;
 	right: 0px;
 	top: 0px;
-	font-size: 20px;
+	font-size: 1vw;
+	font-family: 'Roboto', sans-serif;
 }
 
 .close:hover {
@@ -402,8 +367,10 @@ li {
 	cursor: pointer;
 }
 
+/* ----------------------------SLIDES ( SLIDE 5 )----------------------------------- */
+
 #selfie {
-	width: 200px;
+	width: 10vw;
 	box-shadow: 10px 8px 16px 0px rgba(0, 0, 0, 0.8);
 }
 
@@ -412,11 +379,12 @@ li {
 }
 
 #aboutText {
-	width: 30%;
-	height: 100%;
+	width: 25vw;
+	height: 10vh;
 	text-align: left;
 	font-family: 'Nunito', sans-serif;
-	margin: 20px;
+	margin: 2vw;
+	font-size: 0.9vw;
 }
 
 #aboutText p {
@@ -425,8 +393,8 @@ li {
 
 /* ----------------------------FOOTER----------------------------------- */
 #footerWrap {
-	width: 80%;
-	height: 10%;
+	width: 80vw;
+	height: 10vh;
 
 	position: relative;
 	display: flex;
@@ -436,14 +404,14 @@ li {
 }
 
 #footerLine {
-	width: 100%;
+	width: 80vw;
 	border-bottom: 5px solid grey;
 	position: absolute;
 }
 
 .stepFoot {
-	width: 20%;
-	height: 95%;
+	width: 20vw;
+	height: 9.5vh;
 	/* border: 2px solid blue; */
 	display: flex;
 	justify-content: space-around;
@@ -452,32 +420,32 @@ li {
 }
 
 #topFoot {
-	width: 100%;
-	height: 40%;
+	width: 20vw;
+	height: 4vh;
 
 	position: absolute;
 	top: 5px;
 	font-family: 'Roboto', sans-serif;
-	color: grey;
-	font-size: 25px;
+	color: rgb(117, 117, 117);
+	font-size: 1.5vw;
 	text-align: center;
 }
 
 #botFoot {
-	width: 100%;
-	height: 40%;
+	width: 20vw;
+	height: 4vh;
 
 	position: absolute;
 	bottom: 0px;
 	font-family: 'Roboto', sans-serif;
-	color: grey;
-	font-size: 15px;
+	color: rgb(168, 168, 168);
+	font-size: 1vw;
 	text-align: center;
 }
 
 .anchorFoot {
-	height: 20px;
-	width: 20px;
+	height: 1.2vw;
+	width: 1.2vw;
 	background-color: lightgrey;
 	border-radius: 50%;
 	z-index: 1;
@@ -490,8 +458,8 @@ li {
 
 /* ----------------------------SIDE----------------------------------- */
 #sideWrap {
-	width: 19%;
-	height: 100%;
+	width: 19vw;
+	height: 100vh;
 	position: absolute;
 
 	top: 0px;
@@ -501,8 +469,8 @@ li {
 }
 
 #sideContent {
-	width: 80%;
-	height: 20%;
+	width: 16vw;
+	height: 20vh;
 
 	margin: auto;
 	text-align: center;
@@ -516,4 +484,8 @@ li {
 #sideWrap a:hover {
 	cursor: pointer;
 	border-bottom: 2px solid black;
+}
+
+.sideText {
+	font-size: 0.8vw;
 }
