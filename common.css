@@ -1,3 +1,21 @@
+/* @-webkit-keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+} */
+
+/* ----------------------------BODY----------------------------------- */
 body {
 	width: 100vw;
 	height: 100vh;
@@ -19,6 +37,9 @@ img {
 	border-bottom: 2px solid black;
 	position: relative;
 	box-shadow: 0 8px 6px -6px black;
+	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4s both;
+	animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4s both;
+	min-width: 750px;
 }
 
 #menuButtons {
@@ -49,22 +70,55 @@ img {
 	margin: 10px;
 }
 
+.dropdown {
+	display: none;
+	margin: auto;
+	position: relative;
+	top: 75%;
+	left: 10%;
+	text-align: center;
+	font-family: 'Lexend Peta', sans-serif;
+	font-size: 15px;
+}
+
+.dropdown-content {
+	display: none;
+	position: relative;
+	margin: auto;
+	width: 100px;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	padding: 12px 16px;
+	z-index: 1;
+}
+
+.dropdown-content a {
+	text-decoration: none;
+	color: black;
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
 /* ----------------------------MAIN----------------------------------- */
 
 #slider {
 	text-align: center;
 	overflow: hidden;
 	position: relative;
-	text-align: center;
+
 	display: flex;
 
 	width: 80vw;
 	height: 80vh;
+	min-width: 750px;
 }
 
 #slides {
 	width: 70vw;
 	height: 68vh;
+	min-width: 750px;
 
 	overflow-y: auto;
 	scroll-snap-type: y mandatory;
@@ -89,6 +143,7 @@ img {
 	margin-bottom: 4vh;
 	scroll-snap-align: start;
 	scroll-snap-stop: normal;
+	min-width: 750px;
 }
 
 /* ----------------------------SLIDES ( SLIDE 1 )----------------------------------- */
@@ -101,12 +156,14 @@ img {
 }
 
 #typewriter {
-	font-size: 2.5vw;
-	margin: auto;
-	font-family: "Courier New";
+	font-size: 30px;
+	margin: auto 20px;
+	/* font-family: "Courier New"; */
+	font-family: 'Source Code Pro', monospace;
 	width: 52vw;
 
 	text-align: left;
+	position: absolute;
 }
 
 /* ----------------------------SLIDES ( SLIDE 2 )----------------------------------- */
@@ -126,63 +183,109 @@ img {
 
 /* ----------------------------SLIDES ( SLIDE 3 )----------------------------------- */
 
-.skill {
-	font-size: 2.5vw;
-	list-style: none;
-	text-align: right;
+.skill-big {
+	font-family: 'Inconsolata', monospace;
 	position: absolute;
-	left: 0px;
+	font-size: 7vw;
+	cursor: pointer;
+}
+
+.skill-small {
+	font-family: 'Inconsolata', monospace;
+	position: absolute;
+	font-size: 4vw;
+}
+
+.tooltiptext {
+	font-size: 1vw;
+	visibility: hidden;
+	width: 20vw;
+	background-color: black;
+	color: #fff;
+	text-align: left;
+	border-radius: 6px;
+	position: absolute;
+	z-index: 1;
+	top: 5vh;
+}
+
+#skill-one {
+	left: 25vw;
+	top: 24vh;
+}
+
+#skill-one:hover .tooltiptext {
+	visibility: visible;
+}
+#skill-two {
+	top: 14vh;
+	left: 23vw;
+}
+
+#skill-two:hover .tooltiptext {
+	visibility: visible;
+}
+#skill-three {
+	top: 34vh;
+	left: 18vw;
+}
+
+#skill-three:hover .tooltiptext {
+	visibility: visible;
+}
+#skill-four {
+	top: 24vh;
+	left: 9vw;
+}
+
+#skill-four:hover .tooltiptext {
+	visibility: visible;
+}
+#skill-five {
+	top: 14vh;
+	left: 34vw;
+}
+
+#skill-five:hover .tooltiptext {
+	visibility: visible;
+}
+
+#skill-six {
+	left: 39vw;
+	top: 29vh;
+}
+
+#skill-seven {
+	top: 19vh;
+	left: 11vw;
+}
+
+#skill-eight {
+	top: 39vh;
+	left: 6vw;
+}
+
+#skill-nine {
+	top: 29vh;
+	left: 19vw;
+}
+
+#skill-ten {
+	top: 13vh;
+	left: 11vw;
+}
+
+#skill-eleven {
 	top: 10vh;
+	left: 35vw;
 }
 
-#skillSet {
-	display: flex;
-	align-items: center;
-
-	position: relative;
-	width: 90vw;
-	height: 60vh;
-}
-
-li {
-	position: relative;
-	font-family: 'Lexend Peta', sans-serif;
-	display: block;
-}
-
-.blockBegin {
-	width: 11vw;
-	height: 5vh;
-	background-color: orangered;
-	position: absolute;
-	bottom: 0px;
-}
-
-.blockInter {
-	width: 28vw;
-	height: 5vh;
-	background-color: orangered;
-	position: absolute;
-	bottom: 0px;
-}
-
-.blockAdv {
-	width: 40vw;
-	height: 5vh;
-	background-color: orangered;
-	position: absolute;
-	bottom: 0px;
-}
-
-#levelSkill {
-	font-family: 'Lexend Peta', sans-serif;
-	font-size: 1.5vw;
-	position: absolute;
-	top: 8vh;
-	right: 0px;
+.learned:hover {
+	color: orangered;
 }
 
 /* ----------------------------SLIDES ( SLIDE 4 )----------------------------------- */
+
 #projectLeft {
 	width: 50vw;
 	height: 65vh;
@@ -191,11 +294,14 @@ li {
 #projectLeft li {
 	font-family: 'Bad Script', cursive;
 	font-size: 2vw;
+	display: block;
+	position: relative;
+	text-align: left;
 }
 
 #projectLeft li:hover {
 	cursor: pointer;
-	border-bottom: 2px solid black;
+	text-decoration: underline;
 }
 
 #projectRight {
@@ -370,8 +476,12 @@ li {
 /* ----------------------------SLIDES ( SLIDE 5 )----------------------------------- */
 
 #selfie {
-	width: 10vw;
-	box-shadow: 10px 8px 16px 0px rgba(0, 0, 0, 0.8);
+	width: 20vw;
+
+	box-shadow: 10px 10px 16px 0px rgba(0, 0, 0, 0.8);
+	position: relative;
+	/* left: 8vw; */
+	margin: auto;
 }
 
 #slide5 {
@@ -391,6 +501,23 @@ li {
 	text-align: center;
 }
 
+#aboutText a {
+	color: black;
+}
+#aboutText a:hover {
+	color: red;
+}
+
+.aboutImg {
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+}
+
+.aboutImg:hover {
+	cursor: pointer;
+	color: red;
+}
+
 /* ----------------------------FOOTER----------------------------------- */
 #footerWrap {
 	width: 80vw;
@@ -401,6 +528,9 @@ li {
 	justify-content: space-around;
 	align-items: center;
 	margin: 0px;
+	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 5s both;
+	animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 5s both;
+	min-width: 750px;
 }
 
 #footerLine {
@@ -412,7 +542,7 @@ li {
 .stepFoot {
 	width: 20vw;
 	height: 9.5vh;
-	/* border: 2px solid blue; */
+
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -423,6 +553,18 @@ li {
 	width: 20vw;
 	height: 4vh;
 
+	position: absolute;
+	top: 5px;
+	font-family: 'Roboto', sans-serif;
+	color: rgb(117, 117, 117);
+	font-size: 1.5vw;
+	text-align: center;
+}
+
+#smallTopFoot {
+	width: 20vw;
+	height: 4vh;
+	DISPLAY: NONE;
 	position: absolute;
 	top: 5px;
 	font-family: 'Roboto', sans-serif;
@@ -449,6 +591,7 @@ li {
 	background-color: lightgrey;
 	border-radius: 50%;
 	z-index: 1;
+	position: relative;
 }
 
 #footerWrap a div:hover {
@@ -461,11 +604,14 @@ li {
 	width: 19vw;
 	height: 100vh;
 	position: absolute;
-
+	background-color: white;
 	top: 0px;
 	right: 0px;
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.8);
 	display: flex;
+
+	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 6.3s both;
+	animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 6.3s both;
 }
 
 #sideContent {
@@ -487,5 +633,87 @@ li {
 }
 
 .sideText {
-	font-size: 0.8vw;
+	font-size: 15px;
+}
+
+.sideImg {
+	width: 50%;
+	display: block;
+	margin: 15px auto;
+	display: none;
+}
+
+#sideImgs {
+	position: absolute;
+	top: 35vh;
+}
+
+/* ----------------------------MEDIAS----------------------------------- */
+
+@media (max-width: 1300px) {
+	.sideImg {
+		display: block;
+	}
+
+	.sideText {
+		display: none;
+	}
+
+	#sideWrap {
+		width: 100px;
+		z-index: 1;
+	}
+
+	#menuWrap {
+		width: 88vw;
+	}
+
+	#footerWrap {
+		width: 90vw;
+	}
+
+	#footerLine {
+		width: 100%;
+	}
+
+	#topFoot {
+		font-size: 20px;
+	}
+
+	.stepFoot {
+		width: 200px;
+	}
+
+	#footerLine {
+		top: 70%;
+	}
+
+	.anchorFoot {
+		top: 2vh;
+		height: 30px;
+		width: 30px;
+	}
+
+	#botFoot {
+		display: none;
+	}
+}
+
+@media (max-width: 880px) {
+	#topFoot {
+		display: none;
+	}
+
+	#smallTopFoot {
+		display: block;
+		font-size: 20px;
+	}
+
+	.dropdown {
+		display: block;
+	}
+
+	#menuButtons {
+		display: none;
+	}
 }
