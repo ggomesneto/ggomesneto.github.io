@@ -12,6 +12,9 @@
     rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
 
     
     
@@ -22,11 +25,22 @@
     <div id="menuWrap">
         
         <div id="logo">
-            <div id="GG">GG</div>
-            <div id="geraldo">GERALDO</div>
-            <div id="gomes">GOMES</div>
+            <img src='img/logo.png'>
         </div>
 
+
+        <div class="dropdown">
+            <span>MENU</span>
+            <div class="dropdown-content">
+                <p><a class="menuBut" href='#slide1' >HOME</a></p>
+                <p><a class="menuBut" href='#slide2'>THE COURSE</a></p>
+                <p><a class="menuBut" href='#slide3'>SKILLS</a></p>
+                <p><a class="menuBut" href='#slide4'>PROJECTS</a></p>
+                <p><a class="menuBut" href='#slide5'>ABOUT</a></p>
+            </div>
+          </div>
+      
+      
         <div id='menuButtons'>
             <a class="menuBut" href='#slide1' >HOME</a>
             <span class="menuDash">/</span>
@@ -49,16 +63,34 @@
 
 
                 <div id='slide1' class="slideWrap">
+
+
                  <pre id="typewriter">
+downloading ggomesneto.github.io
+...
+display topMenu
+display botMenu
+display sideBar
+...
+...
+...
 <span class="var-highlight">var</span> newProject = {
-        Post on: <span class="string-highlight">'My Website'</span>,
+        postOn: <span class="string-highlight">'My Website'</span>,
         skill: <span class="string-highlight">'Beginner'</span>,
         location: <span class="string-highlight">'Las Vegas, NV'</span>,
         properties:[<span class="string-highlight">'Javascript'</span>,
                     <span class="string-highlight">'HTML'</span>,
                     <span class="string-highlight">'CSS'</span>];
 }; </pre>
+
+
+
+
                 </div>
+
+
+
+
 
                 <div id='slide2' class="slideWrap">
                     <div id='slide2Text'>"Each module of this 800-hour course covers key aspects of front-end web development,
@@ -68,59 +100,123 @@
                 </div>
                 
                 <div id='slide3' class="slideWrap">
-                    <div id="levelSkill">BEGGINER | INTERMEDIATE | ADVANCED
+                    <!-- <div id='skillSet'>
+                        <div id="levelSkill">BEGGINER | INTERMEDIATE | ADVANCED
+                        </div>
+                        <ul class='skill'>
+                            <li>HTML:<span class='blockInter'></span></li>
+                            <li>CSS:<span class='blockBegin'></span></li>
+                            <li>JAVASCRIPT:<span class='blockBegin'></span></li>
+                            <li>GIT:<span class='blockBegin'></span></li>
+                            <li>JASMINE:<span class='blockBegin'></span></li>
+                        </ul>
+                    </div> -->
+
+                    <!-- <img id='cloud' src='img/skills.png'> -->
+
+
+                    <div id='skillSet'>
+                        <span id='skill-one' class='skill-big learned'>
+                        <span class="tooltiptext">
+                            <ul>
+                                <li>Working with HTML Documents</li>
+                                <li>Creating Lists</li>
+                                <li>Linking</li>
+                                <li>Displaying Data</li>
+                                <li>Planning for Accessibility</li>
+                            </ul>
+                        </span>
+                        HTML</span>
+
+
+                        <span id='skill-two' class='skill-big learned'>
+                            <span class="tooltiptext">
+                                <ul>
+                                    <li>Modifying by element/id/class</li>
+                                    <li>Hover attributes</li>
+                                    <li>Element positioning</li>
+                                    <li>Responsive elements</li>
+                                    <li>Planning for Accessibility</li>
+                                </ul>
+                            
+                            
+                            </span>
+                            CSS</span>
+
+
+                        <span id='skill-three' class='skill-big learned'>
+                            <span class="tooltiptext">
+                                <ul>
+                                    <li>Debugging</li>
+                                    <li>Timers</li>
+                                    <li>DOM Manipulation</li>
+                                    <li>Advanced Array Methods</li>
+                                    <li>Object-Oriented Programming</li>
+                                </ul>
+                            
+                            
+                            </span>
+                            JAVASCRIPT</span>
+
+
+                        <span id='skill-four' class='skill-big learned'>
+                            <span class="tooltiptext">
+                                <ul>
+                                    <li>Fundamentals</li>
+                                    <li>Branching and Merging</li>
+                                    <li>GitHub</li>
+                                </ul>
+                            
+                            </span>
+                            GIT</span>
+
+
+                        <span id='skill-five' class='skill-big learned'>
+                            <span class="tooltiptext">
+                                <ul>
+                                    <li>Testing Tools</li>
+                                    <li>Matchers</li>
+                                    <li>Cleanup</li>
+                                    <li>Best Practices</li>
+                                    
+                                </ul>
+                            
+                            </span>
+                            JASMINE</span>
+
+
+
+                        <span id='skill-six' class='skill-small'>REACT</span>
+                        <span id='skill-seven' class='skill-small'>PYTHON</span>
+                        <span id='skill-eight' class='skill-small'>JQUERY</span>
+                        <span id='skill-nine' class='skill-small'>SQL</span>
+                        <span id='skill-ten' class='skill-small'>NODEJS</span>
+                        <span id='skill-eleven' class='skill-small'>FLASK</span>
                     </div>
-                    <ul class='skill'>
-                        <li>HTML:<span class='blockInter'></span></li>
-                        <li>CSS:<span class='blockBegin'></span></li>
-                        <li>JAVASCRIPT:<span class='blockBegin'></span></li>
-                        <li>GIT:<span class='blockBegin'></span></li>
-                        <li>JASMINE:<span class='blockBegin'></span></li>
-                    </ul>
+
 
                 </div>
 
                 <div id='slide4' class="slideWrap">
                     
                     <div id='projectLeft'>
-
-                        <div id='memGame' class='projectSpace'>
-                            <img src='img/memGame/chihuahua1.jpg' onclick="openDisplay(0)">
-                            <span class="tooltiptext">Memory Game</span>
-                        </div>
-
-                        <div id='memeGen' class='projectSpace'>
-                            <img src='img/Meme.png' onclick="openDisplay(1)">
-                            <span class="tooltiptext">Meme Generator</span>
-                        </div>
-
-                        <div class='projectSpace'>
-
-                        </div>
-
-                        <div class='projectSpace'>
-
-                        </div>
+                        <ul>
+                            <li onclick='openDisplay(0)'>Memory Game</li>
+                            <li onclick='openDisplay(1)'>Meme Generator</li>
+                            <li>Connect Four</li>
+                            <li>Jeopardy</li>
+                            <li>Hacker News</li>
+                            <li>Forex Converter</li>
+                            <li>Database DJ</li>
+                            <li>Lucky Number</li>
+                        </ul>
+                      
                         
                     </div>
 
                     <div id='projectRight'>
 
-                        <div  class='projectSpace'>
-                            
-                        </div>
-
-                        <div class='projectSpace'>
-
-                        </div>
-                        
-                        <div class='projectSpace'>
-
-                        </div>
-
-                        <div class='projectSpace'>
-
-                        </div>
+                    
                         
                     </div>
                     
@@ -178,19 +274,21 @@
 
                 <div id='slide5' class="slideWrap">
                     
-                    <img src='img/me.jpg' id='selfie'>
+                    
                     <div id="aboutText">
                         <p>The Short</p>
-                        Geraldo Gomes is a Computer Engineering student at xxxx and a Software Engineering student at Springboard, while working in offshore drilling rigs, working as a Managed Pressure Drilling Specialist. After years of accomplishments in the oilfield, he decided to switch sides and go from being the user on high tech softwares/technology to being the one coding them.
+                        Geraldo Gomes is a Computer Engineering student at xxxx and a Software Engineering student at Springboard, while working in offshore drilling rigs, working as a <a href='https://www.weatherford.com/en/products-and-services/drilling/managed-pressure-drilling/' target="_blank" class='aboutImg'>Managed Pressure Drilling Specialist.</a> After years of accomplishments in the oilfield, he decided to switch sides and go from being the user on high tech softwares/technology to being the one coding them.
 
                         <p>The Long</p>
-                        Geraldo was born in Brazil. Since 2018, lives in the USA. His career in the oilfield started when he was 21 and on the years after he worked in places like Siberia, Abu Dhabi, and Central America. All that excitement was not enough for him and, in 2018, he decided to pursue a dream and became a full-time poker player in Las Vegas. He succeeded for three years, and after getting married, decided to go back to work in a 'normal' job that could give him more financial stability. After working with different types of technology, he found love in coding and decided to take a step out of his comfort zone and started learning more about software engineering.   
+                        <span class='aboutImg' onclick='changePhoto(0)'>Geraldo</span> was born in Brazil. Since 2018, he lives in the USA. His career in the oilfield started when he was 21 and on the years after he worked in places like Siberia, <span onclick='changePhoto(1)'class='aboutImg'>Abu Dhabi</span>, and Central America. All that excitement was not enough for him and, in 2018, he decided to pursue a dream and became a <span onclick='changePhoto(2)' class='aboutImg'>full-time poker player in Las Vegas</span>. He succeeded for three years, and after getting <span onclick='changePhoto(3)' class='aboutImg'>married</span>, decided to go back to work in a 'normal' job that could give him more financial stability. After working with different types of technology, he found love in coding and decided to take a step out of his comfort zone and started learning more about software engineering.   
+                        
 
 
 
 
 
                     </div>
+                    <img src='img/about/me.jpg' id='selfie'>
                    </div>
    
 
@@ -209,21 +307,25 @@
         <div id='footerLine'></div>
 
         <div class="stepFoot">
+            <div id='smallTopFoot'>THE COURSE</div>
             <div id='topFoot'>I'm starting something new</div>
             <a href="#slide2"><div class='anchorFoot'></div></a>
             <div id='botFoot'>A software engineering program</div>
         </div>
         <div class="stepFoot">
+            <div id='smallTopFoot'>SKILLS</div>
             <div id='topFoot'>I want to share </div>
             <a href="#slide3"><div class='anchorFoot'></div></a>
             <div id='botFoot'>My progress as I go</div>
         </div>
         <div class="stepFoot">
+            <div id='smallTopFoot'>PROJECTS</div>
             <div id='topFoot'>Let's focus on growth</div>
             <a href="#slide4"><div class='anchorFoot'></div></a>
             <div id='botFoot'>With practice comes mastery</div>
         </div>
         <div class="stepFoot">
+            <div id='smallTopFoot'>ABOUT</div>
             <div id='topFoot'>Get to know me</div>
             <a href="#slide5"><div class='anchorFoot'></div></a>
             <div id='botFoot'>Experience and curiosities</div>
@@ -234,9 +336,16 @@
     <div id="sideWrap">
         <div id="sideContent">
             <span class='sideText'>CONTACT INFO:</span><BR><BR>
-            <span class='sideText'><a href="http://linkedin.com/in/ggomesneto">LINKEDIN</a></span><BR><BR>
-            <span class='sideText'><a href="http://instagram.com/ggomesneto">INSTAGRAM</a></span><BR><BR>
-            <span class='sideText'>GGOMESNETO@GMAIL.COM</span>
+            <span class='sideText'><a href="http://linkedin.com/in/ggomesneto" target="_blank">LINKEDIN</a></span><BR><BR>
+            <span class='sideText'><a href="http://instagram.com/ggomesneto" target="_blank">INSTAGRAM</a></span><BR><BR>
+            <span class='sideText'><a href="mailto:GGOMESNETO@GMAIL.COM" target="_blank">EMAIL</a></span>
+            <div id='sideImgs'>
+                <a href="http://instagram.com/ggomesneto" target="_blank"><img class='sideImg' src='img/insta.jpg'></a>
+                <a href="http://linkedin.com/in/ggomesneto" target="_blank"><img class='sideImg' src='img/linkedin.png'></a>
+                <a href="mailto:GGOMESNETO@GMAIL.COM" target="_blank"><img class='sideImg' src='img/mail.png'></a>
+            </div>
+
+
         </div>
     </div>
     
@@ -246,4 +355,5 @@
 <script src="typewriter.js" ></script>
 <script src="MemGame.js" ></script>
 <script src="memeGen.js" ></script>
+<script src="app.js" ></script>
 </html>
