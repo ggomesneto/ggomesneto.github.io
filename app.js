@@ -19,22 +19,3 @@ function changePhoto(n) {
 		selfie.style.width = '400px';
 	}
 }
-
-let skill = document.querySelector('#skill-one');
-let week = document.querySelector('#weekDisplay');
-
-let skillBig = Array.from(document.querySelectorAll('.skill-big'));
-let skillSmall = Array.from(document.querySelectorAll('.skill-small'));
-let skillArray = skillBig.concat(skillSmall);
-
-function showSkill() {
-	for (i = 0; i < skillArray.length; i++) {
-		if (skillArray[i].classList.contains('learned')) {
-			skillArray[i].style.opacity = '1';
-		} else {
-			skillArray[i].style.opacity = '0.5';
-		}
-	}
-}
-
-showSkill();

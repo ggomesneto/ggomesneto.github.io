@@ -158,16 +158,10 @@ img {
 #typewriter {
 	font-size: 30px;
 	margin: auto 20px;
-	/* font-family: "Courier New"; */
 	font-family: 'Roboto Condensed', sans-serif;
 	width: 52vw;
-
 	text-align: left;
 	position: absolute;
-}
-
-pre {
-	/* font-family: "Courier New"; */
 }
 
 /* ----------------------------SLIDES ( SLIDE 2 )----------------------------------- */
