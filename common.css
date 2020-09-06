@@ -198,91 +198,16 @@ pre {
 }
 /* ----------------------------SLIDES ( SLIDE 3 )----------------------------------- */
 
-#textSkill {
-	font-family: 'Inconsolata', monospace;
-	font-size: 30px;
+#skills {
+	width: 100%;
+	height: 100%;
 }
 
-.skill-big {
-	font-family: 'Inconsolata', monospace;
-
-	font-size: 115px;
-	cursor: pointer;
-}
-
-.skill-small {
-	font-family: 'Inconsolata', monospace;
-
-	font-size: 80px;
-}
-
-.tooltiptext {
-	font-size: 1vw;
-	visibility: hidden;
-	width: 20vw;
-	background-color: black;
-	color: #fff;
-	text-align: left;
-	border-radius: 6px;
+#subtitle {
 	position: absolute;
-	z-index: 1;
-}
-
-#skillSet {
-	min-width: 750px;
-}
-
-#skill-one {
-	left: 25vw;
-	top: 24vh;
-}
-
-#skill-one:hover .tooltiptext {
-	visibility: visible;
-}
-#skill-two {
-	top: 14vh;
-	left: 23vw;
-}
-
-#skill-two:hover .tooltiptext {
-	visibility: visible;
-}
-
-#skill-three:hover .tooltiptext {
-	visibility: visible;
-}
-
-#skill-four:hover .tooltiptext {
-	visibility: visible;
-}
-
-#skill-five:hover .tooltiptext {
-	visibility: visible;
-}
-
-#skill-five {
-	position: relative;
-	top: 3vh;
-}
-
-#skill-seven {
-	position: relative;
-	left: 6vw;
-}
-
-#skill-eight {
-	position: relative;
-	top: -7vh;
-}
-
-#skill-nine {
-	position: relative;
-	top: -7vh;
-}
-
-.learned:hover {
-	color: orangered;
+	bottom: 0px;
+	width: 10%;
+	margin: 0 auto;
 }
 
 /* ----------------------------SLIDES ( SLIDE 4 )----------------------------------- */
