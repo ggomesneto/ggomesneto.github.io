@@ -200,14 +200,13 @@ pre {
 
 #skills {
 	width: 100%;
-	height: 100%;
+	height: 90%;
 }
 
 #subtitle {
 	position: absolute;
 	bottom: 0px;
 	width: 10%;
-	margin: 0 auto;
 }
 
 /* ----------------------------SLIDES ( SLIDE 4 )----------------------------------- */
