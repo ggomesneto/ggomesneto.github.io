@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
 
     
     
@@ -93,30 +94,22 @@ display sideBar
 
 
                 <div id='slide2' class="slideWrap">
+                    <div id="textImg">
                     <div id='slide2Text'>"Each module of this 800-hour course covers key aspects of front-end web development,
                         back-end web development, databases, and data structures and algorithms.
                         Modules include learning resources, practice exercises, projects, and career-related coursework."</div>
                     <img src='img/springboard.png'>
+                    </div>
+
                 </div>
                 
                 <div id='slide3' class="slideWrap">
-                    <!-- <div id='skillSet'>
-                        <div id="levelSkill">BEGGINER | INTERMEDIATE | ADVANCED
-                        </div>
-                        <ul class='skill'>
-                            <li>HTML:<span class='blockInter'></span></li>
-                            <li>CSS:<span class='blockBegin'></span></li>
-                            <li>JAVASCRIPT:<span class='blockBegin'></span></li>
-                            <li>GIT:<span class='blockBegin'></span></li>
-                            <li>JASMINE:<span class='blockBegin'></span></li>
-                        </ul>
-                    </div> -->
-
-                    <!-- <img id='cloud' src='img/skills.png'> -->
+                  
 
 
                     <div id='skillSet'>
-                        <span id='skill-one' class='skill-big learned'>
+
+                        <span id='skill-one'  class='skill-big learned'>
                         <span class="tooltiptext">
                             <ul>
                                 <li>Working with HTML Documents</li>
@@ -126,10 +119,11 @@ display sideBar
                                 <li>Planning for Accessibility</li>
                             </ul>
                         </span>
-                        HTML</span>
+                            HTML</span>
 
+                        <span id='skill-six'  class='skill-small'>REACT</span>
 
-                        <span id='skill-two' class='skill-big learned'>
+                        <span id='skill-two'  class='skill-big learned'>
                             <span class="tooltiptext">
                                 <ul>
                                     <li>Modifying by element/id/class</li>
@@ -143,8 +137,23 @@ display sideBar
                             </span>
                             CSS</span>
 
+                        <span id='skill-five' class='skill-big learned'>
+                                <span class="tooltiptext">
+                                    <ul>
+                                        <li>Testing Tools</li>
+                                        <li>Matchers</li>
+                                        <li>Cleanup</li>
+                                        <li>Best Practices</li>
+                                        
+                                    </ul>
+                                
+                                </span>
+                            JASMINE</span>  
+                        
+                        <span id='skill-seven'  class='skill-small'>PYTHON</span>
+                        <span id='skill-nine'  class='skill-small'>SQL</span>
 
-                        <span id='skill-three' class='skill-big learned'>
+                        <span id='skill-three'  class='skill-big learned'>
                             <span class="tooltiptext">
                                 <ul>
                                     <li>Debugging</li>
@@ -157,7 +166,10 @@ display sideBar
                             
                             </span>
                             JAVASCRIPT</span>
+                        
+                        <span id='skill-ten'  class='skill-small'>NODEJS</span>
 
+                        <span id='skill-eight'  class='skill-small'>JQUERY</span>   
 
                         <span id='skill-four' class='skill-big learned'>
                             <span class="tooltiptext">
@@ -170,36 +182,26 @@ display sideBar
                             </span>
                             GIT</span>
 
-
-                        <span id='skill-five' class='skill-big learned'>
-                            <span class="tooltiptext">
-                                <ul>
-                                    <li>Testing Tools</li>
-                                    <li>Matchers</li>
-                                    <li>Cleanup</li>
-                                    <li>Best Practices</li>
-                                    
-                                </ul>
-                            
-                            </span>
-                            JASMINE</span>
-
-
-
-                        <span id='skill-six' class='skill-small'>REACT</span>
-                        <span id='skill-seven' class='skill-small'>PYTHON</span>
-                        <span id='skill-eight' class='skill-small'>JQUERY</span>
-                        <span id='skill-nine' class='skill-small'>SQL</span>
-                        <span id='skill-ten' class='skill-small'>NODEJS</span>
-                        <span id='skill-eleven' class='skill-small'>FLASK</span>
+                                             
+                        <span id='skill-eleven'  class='skill-small'>FLASK</span>
+                        
+                        
+                        <!-- <div id='textSkill'>TOPICS COVERED UP TO NOW<p>HOVER TO CHECK</p></div> -->
+                       
+                       
                     </div>
+                   
+
+                    
+
+                    
 
 
                 </div>
 
                 <div id='slide4' class="slideWrap">
                     
-                    <div id='projectLeft'>
+                    <div id='projectList'>
                         <ul>
                             <li onclick='openDisplay(0)'>Memory Game</li>
                             <li onclick='openDisplay(1)'>Meme Generator</li>
@@ -213,19 +215,16 @@ display sideBar
                       
                         
                     </div>
-
-                    <div id='projectRight'>
+                    <div id='disclaimer'>Project Display needs a min width of: 1500px</div>
 
                     
-                        
-                    </div>
                     
                     <div id="displayContent1"  style="display:none;" class="displayContent">
                         <span id="closeX" onclick="closeDisplay()">X</span>
                         <button id="restart" onclick="reset()">Restart</button>
-                        <span id="record">Record:</span>
+                        <span id="record">Record</span>
                         <span id="recordN"></span>
-                        <span id="current">Current:</span>
+                        <span id="current">Current</span>
                         <span id="currentN"></span>
                        
                     </div>
@@ -248,27 +247,15 @@ display sideBar
                             <label for="fontSize">Font Size:</label>
                             <input type="range" name="fontSize" min="20" max="100">
                         
-                        
-                            
                             <input type="submit" value="Submit">
                         
-                        
-                        
                         </form>
-            
-            
-            
-                    </div> 
+                        </div> 
                     
-                    <div id="wrapMeme">
-            
-            
-                    </div> 
-            
-            
-            
-                    </div>
+                        <div id="wrapMeme">
 
+                        </div> 
+                    </div>
 
                 </div>
 
@@ -282,11 +269,6 @@ display sideBar
                         <p>The Long</p>
                         <span class='aboutImg' onclick='changePhoto(0)'>Geraldo</span> was born in Brazil. Since 2018, he lives in the USA. His career in the oilfield started when he was 21 and on the years after he worked in places like Siberia, <span onclick='changePhoto(1)'class='aboutImg'>Abu Dhabi</span>, and Central America. All that excitement was not enough for him and, in 2018, he decided to pursue a dream and became a <span onclick='changePhoto(2)' class='aboutImg'>full-time poker player in Las Vegas</span>. He succeeded for three years, and after getting <span onclick='changePhoto(3)' class='aboutImg'>married</span>, decided to go back to work in a 'normal' job that could give him more financial stability. After working with different types of technology, he found love in coding and decided to take a step out of his comfort zone and started learning more about software engineering.   
                         
-
-
-
-
-
                     </div>
                     <img src='img/about/me.jpg' id='selfie'>
                    </div>
@@ -305,31 +287,11 @@ display sideBar
     <div id="footerWrap">
         
         <div id='footerLine'></div>
+        <div id='race'></div>
+        <img id='raceIcon' src='img/code.png'>
+        <div id='percent'>7%</div>
 
-        <div class="stepFoot">
-            <div id='smallTopFoot'>THE COURSE</div>
-            <div id='topFoot'>I'm starting something new</div>
-            <a href="#slide2"><div class='anchorFoot'></div></a>
-            <div id='botFoot'>A software engineering program</div>
-        </div>
-        <div class="stepFoot">
-            <div id='smallTopFoot'>SKILLS</div>
-            <div id='topFoot'>I want to share </div>
-            <a href="#slide3"><div class='anchorFoot'></div></a>
-            <div id='botFoot'>My progress as I go</div>
-        </div>
-        <div class="stepFoot">
-            <div id='smallTopFoot'>PROJECTS</div>
-            <div id='topFoot'>Let's focus on growth</div>
-            <a href="#slide4"><div class='anchorFoot'></div></a>
-            <div id='botFoot'>With practice comes mastery</div>
-        </div>
-        <div class="stepFoot">
-            <div id='smallTopFoot'>ABOUT</div>
-            <div id='topFoot'>Get to know me</div>
-            <a href="#slide5"><div class='anchorFoot'></div></a>
-            <div id='botFoot'>Experience and curiosities</div>
-        </div>
+       
 
     </div>
         
