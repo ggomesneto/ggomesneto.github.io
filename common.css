@@ -513,7 +513,7 @@ label {
 }
 
 .sideImg {
-	width: 50%;
+	width: 70%;
 	display: block;
 	margin: 15px auto;
 	display: none;
@@ -536,7 +536,7 @@ label {
 	}
 
 	#sideWrap {
-		width: 100px;
+		width: 70px;
 		z-index: 1;
 	}
 
