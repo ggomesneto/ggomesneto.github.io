@@ -19,3 +19,13 @@ function changePhoto(n) {
 		selfie.style.width = '400px';
 	}
 }
+
+function hoverSkill(n) {
+	let content = document.querySelector(`#tooltip${n}`);
+	content.style.display = 'block';
+}
+
+function outhoverSkill(n) {
+	let content = document.querySelector(`#tooltip${n}`);
+	content.style.display = 'none';
+}

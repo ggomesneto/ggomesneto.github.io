@@ -27,6 +27,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
     
     
@@ -54,15 +55,15 @@
       
       
         <div id='menuButtons'>
-            <a class="menuBut" href='#slide1' >HOME</a>
+            <a class="menuBut" href='index.html#slide1' >HOME</a>
             <span class="menuDash">/</span>
-            <a class="menuBut" href='#slide2'>THE COURSE</a>
+            <a class="menuBut" href='index.html#slide2'>THE COURSE</a>
             <span class="menuDash" >/</span>
-            <a class="menuBut" href='#slide3'>SKILLS</a>
+            <a class="menuBut" href='index.html#slide3'>SKILLS</a>
             <span class="menuDash">/</span>
-            <a class="menuBut" href='#slide4'>PROJECTS</a>
+            <a class="menuBut" href='index.html#slide4'>PROJECTS</a>
             <span class="menuDash">/</span>
-            <a class="menuBut" href='#slide5'>ABOUT</a>
+            <a class="menuBut" href='index.html#slide5'>ABOUT</a>
         </div>
 
 
@@ -78,14 +79,7 @@
 
 
                  <pre id="typewriter">
-downloading ggomesneto.github.io
-...
-display topMenu
-display botMenu
-display sideBar
-...
-...
-...
+
 <span class="var-highlight">var</span> newProject = {
         postOn: <span class="string-highlight">'My Website'</span>,
         skill: <span class="string-highlight">'Beginner'</span>,
@@ -114,164 +108,198 @@ display sideBar
                   
 
                     <div id='allSkills'>
-                        <div id='skill1' class='skill learned'>
+                        <div id='skill1' onmouseout='outhoverSkill(1)' onmouseover='hoverSkill(1)' class='skill learned'>
                             HTML
-                            <ul id='tooltip1' class='tooltip'>
-                                <li>Displaying content</li>
-                                <li>Creating Lists</li>
-                                <li>Linking documents</li>
-                                <li>Planning for Acessibility</li>
-                            </ul>
+                            
                         </div>
                     
-                        <div id='skill2' class='skill learned'>
+                        <div id='skill2' onmouseout='outhoverSkill(2)' onmouseover='hoverSkill(2)' class='skill learned'>
                             CSS
-                            <ul id='tooltip2' class='tooltip'>
-                                <li>CSS Fundamentals</li>
-                                <li>On Hover elements</li>
-                                <li>Animations</li>
-                                <li>Transitions</li>
-                            </ul>
+                           
                         </div>
                     
-                        <div id='skill3' class='skill learned'>
+                        <div id='skill3' onmouseout='outhoverSkill(3)' onmouseover='hoverSkill(3)' class='skill learned'>
                             JAVASCRIPT
-                            <ul id='tooltip3' class='tooltip'>
-                                <li>DOM Manipulation</li>
-                                <li>Debugging</li>
-                                <li>Timers</li>
-                                <li>JS Events</li>
-                                <li>Advanced Array Methods</li>
-                            </ul>
+                           
                         </div>
                     
-                        <div id='skill4' class='skill learned'>
+                        <div id='skill4' onmouseout='outhoverSkill(4)' onmouseover='hoverSkill(4)' class='skill learned'>
                             JQUERY
-                            <ul id='tooltip4' class='tooltip'>
-                                <li>jQuery Events</li>
-                                <li>jQuery Text and HTML</li>
-                                <li>jQuery Attributes</li>
-                                <li>jQuery Values</li>
-                                <li>jQuery Animations</li>
-                                <li>jQuery Method Chaining</li>
-                            </ul>
+                           
                         </div>
                     
-                        <div id='skill5' class='skill learned'>
+                        <div id='skill5' onmouseout='outhoverSkill(5)' onmouseover='hoverSkill(5)' class='skill learned'>
                             AJAX
-                            <ul id='tooltip5' class='tooltip'>
-                                <li>Starting a Server</li>
-                                <li>Axios</li>
-                                <li>Multiple Requests</li>
-                                <li>Error Handling </li>
-                                <li>Post Requests </li>
-                            </ul>
+                           
                         </div>
                     
-                        <div id='skill6' class='skill learned'>
+                        <div id='skill6' onmouseout='outhoverSkill(6)' onmouseover='hoverSkill(6)' class='skill learned'>
                             FLASK
-                            <ul id='tooltip6' class='tooltip'>
-                                <li>Development Mode</li>
-                                <li>Flask Jinja</li>
-                                <li>Flask Testing</li>
-                                <li>WTForms</li>
-                                <li>External API Requests</li> 
-                                <li>RESTFUL JSON APIs</li>
-                            </ul>
+                           
                         </div>
                     
-                        <div id='skill7' class='skill'>
+                        <div id='skill7' onmouseout='outhoverSkill(7)' onmouseover='hoverSkill(7)' class='skill'>
                             REACT
-                            <ul id='tooltip7' class='tooltip'>
-                                <li>React Components</li>
-                                <li>App Layout</li>
-                                <li>JSX Basic Rules</li>
-                                <li>Props in React</li>
-                            </ul>
+                           
                         </div>
                     
-                        <div id='skill8' class='skill'>
+                        <div id='skill8' onmouseout='outhoverSkill(8)' onmouseover='hoverSkill(8)' class='skill'>
                             PYTHON
-                            <ul id='tooltip8' class='tooltip'>
-                                <li>Python Data Structures</li>
-                                <li>Python Tools</li>
-                                <li>Python OOP</li>
-                            </ul>
+                           
                         </div>
                     
-                        <div id='skill9' class='skill'>
+                        <div id='skill9' onmouseout='outhoverSkill(9)' onmouseover='hoverSkill(9)' class='skill'>
                             REDUX
-                            <ul id='tooltip9' class='tooltip'>
-                                <li>React Redux</li>
-                                <li>React Redux Patterns</li>
-                                <li>Async Redux</li>
-                            </ul>
+                            
                         </div>
                     
-                        <div id='skill10' class='skill'>
+                        <div id='skill10' onmouseout='outhoverSkill(10)' onmouseover='hoverSkill(10)' class='skill'>
                             SQL
-                            <ul id='tooltip10' class='tooltip'>
-                                <li>SQL Querying</li>
-                                <li>SQL Relationships</li>
-                                <li>DDL & Schema Design</li>
-                                <li>SQLAlchemy</li>
-                            </ul>
+                            
                         </div>
                     
-                        <div id='skill11' class='skill'>
+                        <div id='skill11' onmouseout='outhoverSkill(11)' onmouseover='hoverSkill(11)' class='skill'>
                             NODEJS
-                            <ul id='tooltip11' class='tooltip'>
-                                <li>JavaScript Promises</li>
-                                <li>Async & Await</li>
-                                <li>Testing with Jest and Node</li>
-                            </ul>
+                           
                         </div>
                     
-                        <div id='skill12' class='skill'>
+                        <div id='skill12' onmouseout='outhoverSkill(12)' onmouseover='hoverSkill(12)' class='skill'>
                             ES2015
-                            <ul id='tooltip12' class='tooltip'>
-                                <li>let and const</li>
-                                <li>Arrow Functions</li>
-                                <li>rest / spread</li>
-                                <li>Object Enhancements</li>
-                                <li>Destructuring</li>
-                                <li>Maps and Sets</li>
-                            </ul>
+                           
                         </div>
                     
                         <div id='skill13' class='skill'>DATABASES</div>
                         <div id='skill14' class='skill'>GITHUB</div>
                         
-                        <div id='skill15' class='skill'>
+                        <div id='skill15' onmouseout='outhoverSkill(15)' onmouseover='hoverSkill(15)' class='skill'>
                             EXPRESS
-                            <ul id='tooltip15' class='tooltip'>
-                                <li>Express Introduction  </li>
-                                <li>Routing and Middleware</li>
-                            </ul>
+                            
                         </div>
                         
                         <div id='skill16' class='skill'>POSTGRES</div>
                         <div id='skill17' class='skill'>FRONTEND</div>
                         <div id='skill18' class='skill'>BACKEND</div>
                     
-                        <div id='skill19' class='skill'>
+                        <div id='skill19' onmouseout='outhoverSkill(19)' onmouseover='hoverSkill(19)' class='skill'>
                             JASMINE
-                            <ul id='tooltip19' class='tooltip'>
-                                <li>Unit Testing</li>
-                                <li>Testing Best Practices</li>
-                            </ul>
+                            
                     
                             
                         </div>
                     
-                        <div id='skill20' class='skill'>
+                        <div id='skill20' onmouseout='outhoverSkill(20)' onmouseover='hoverSkill(20)' class='skill'>
                             GIT
-                            <ul id='tooltip20' class='tooltip'>
-                                <li>Git Fundamentals</li>
-                                <li>Branching and Merging</li>
-                            </ul>
+                            
                         </div>
                     
+                    </div>
+
+                    <div id= 'skillContent'>
+
+                        <ul id='tooltip1' class='tooltip'>
+                            <li>Displaying content</li>
+                            <li>Creating Lists</li>
+                            <li>Linking documents</li>
+                            <li>Planning for Acessibility</li>
+                        </ul>
+
+                        <ul id='tooltip2' class='tooltip'>
+                            <li>CSS Fundamentals</li>
+                            <li>On Hover elements</li>
+                            <li>Animations</li>
+                            <li>Transitions</li>
+                        </ul>
+
+                        <ul id='tooltip3' class='tooltip'>
+                            <li>DOM Manipulation</li>
+                            <li>Debugging</li>
+                            <li>Timers</li>
+                            <li>JS Events</li>
+                            <li>Advanced Array Methods</li>
+                        </ul>
+
+                        <ul id='tooltip4' class='tooltip'>
+                            <li>jQuery Events</li>
+                            <li>jQuery Text and HTML</li>
+                            <li>jQuery Attributes</li>
+                            <li>jQuery Values</li>
+                            <li>jQuery Animations</li>
+                            <li>jQuery Method Chaining</li>
+                        </ul>
+
+                        <ul id='tooltip5' class='tooltip'>
+                            <li>Starting a Server</li>
+                            <li>Axios</li>
+                            <li>Multiple Requests</li>
+                            <li>Error Handling </li>
+                            <li>Post Requests </li>
+                        </ul>
+
+                        <ul id='tooltip6' class='tooltip'>
+                            <li>Development Mode</li>
+                            <li>Flask Jinja</li>
+                            <li>Flask Testing</li>
+                            <li>WTForms</li>
+                            <li>External API Requests</li> 
+                            <li>RESTFUL JSON APIs</li>
+                        </ul>
+
+                        <ul id='tooltip7' class='tooltip'>
+                            <li>React Components</li>
+                            <li>App Layout</li>
+                            <li>JSX Basic Rules</li>
+                            <li>Props in React</li>
+                        </ul>
+
+                        <ul id='tooltip8' class='tooltip'>
+                            <li>Python Data Structures</li>
+                            <li>Python Tools</li>
+                            <li>Python OOP</li>
+                        </ul>
+
+                        <ul id='tooltip9' class='tooltip'>
+                            <li>React Redux</li>
+                            <li>React Redux Patterns</li>
+                            <li>Async Redux</li>
+                        </ul>
+
+                        <ul id='tooltip10' class='tooltip'>
+                            <li>SQL Querying</li>
+                            <li>SQL Relationships</li>
+                            <li>DDL & Schema Design</li>
+                            <li>SQLAlchemy</li>
+                        </ul>
+
+                        <ul id='tooltip11' class='tooltip'>
+                            <li>JavaScript Promises</li>
+                            <li>Async & Await</li>
+                            <li>Testing with Jest and Node</li>
+                        </ul>
+
+                        <ul id='tooltip12' class='tooltip'>
+                            <li>let and const</li>
+                            <li>Arrow Functions</li>
+                            <li>rest / spread</li>
+                            <li>Object Enhancements</li>
+                            <li>Destructuring</li>
+                            <li>Maps and Sets</li>
+                        </ul>
+
+                        <ul id='tooltip15' class='tooltip'>
+                            <li>Express Introduction  </li>
+                            <li>Routing and Middleware</li>
+                        </ul>
+
+                        <ul id='tooltip19' class='tooltip'>
+                            <li>Unit Testing</li>
+                            <li>Testing Best Practices</li>
+                        </ul>
+
+                        <ul id='tooltip20' class='tooltip'>
+                            <li>Git Fundamentals</li>
+                            <li>Branching and Merging</li>
+                        </ul>
+
                     </div>
                    
                 
@@ -281,9 +309,9 @@ display sideBar
                     
                     <div id='projectList'>
                         <ul>
-                            <li onclick='openDisplay(0)'>Memory Game</li>
-                            <li onclick='openDisplay(1)'>Meme Generator</li>
-                            <li>Connect Four</li>
+                            <li ><a href='memoryGame.html'>Memory Game</a></li>
+                            <li ><a href='memeGenerator.html'>Meme Generator</a></li>
+                            <li><a href='connectFour.html'>Connect Four</a></li>
                             <li>Jeopardy</li>
                             <li>Hacker News</li>
                             <li>Forex Converter</li>
@@ -293,47 +321,9 @@ display sideBar
                       
                         
                     </div>
-                    <div id='disclaimer'>Project Display needs a min width of: 1500px</div>
+                                                                  
 
-                    
-                    
-                    <div id="displayContent1"  style="display:none;" class="displayContent">
-                        <span id="closeX" onclick="closeDisplay()">X</span>
-                        <button id="restart" onclick="reset()">Restart</button>
-                        <span id="record">Record</span>
-                        <span id="recordN"></span>
-                        <span id="current">Current</span>
-                        <span id="currentN"></span>
-                       
-                    </div>
-
-                    <div id="displayContent2" style="display:none;" class="displayContent">
-                        <span id="closeX" onclick="closeDisplay()">X</span>
-                    
-                        <div id="memeFormWrap">
-            
-                        <form id="memeForm" action="">
-                            <label for="imageLink">Image Link:</label>
-                            <input type="text" name="imageLink" >
-                            <br>
-                            <label for="topText">Top Text:</label>
-                            <input type="text" name="topText" >
-                            <br>
-                            <label for="botText">Bottom Text:</label>
-                            <input type="text" name="botText">
-                            <br>
-                            <label for="fontSize">Font Size:</label>
-                            <input type="range" name="fontSize" min="20" max="100">
-                        
-                            <input type="submit" value="Submit">
-                        
-                        </form>
-                        </div> 
-                    
-                        <div id="wrapMeme">
-
-                        </div> 
-                    </div>
+                  
 
                 </div>
 
@@ -386,7 +376,6 @@ display sideBar
 
 
 <script src="typewriter.js" ></script>
-<script src="MemGame.js" ></script>
-<script src="memeGen.js" ></script>
+
 <script src="app.js" ></script>
 </html>

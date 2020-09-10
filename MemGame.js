@@ -38,7 +38,7 @@ let count = 0;
 
 let clicks = 0;
 
-let area = document.getElementById('displayContent1');
+let area = document.getElementById('gameArea');
 
 area.addEventListener('click', function(e) {
 	let value = e.target.classList.value;
@@ -80,7 +80,7 @@ function shuffle(array) {
 }
 
 function createCards() {
-	var board = document.getElementById('displayContent1');
+	var board = document.getElementById('gameArea');
 
 	for (let i = 0; i < imgArray.length; i++) {
 		var cards = document.createElement('div');
