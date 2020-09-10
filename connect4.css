@@ -7,7 +7,8 @@
 #board td {
 	width: 50px;
 	height: 50px;
-	border: solid 3px yellow;
+	border: solid 3px lightgrey;
+	border-radius: 15px;
 	position: relative;
 }
 
@@ -16,13 +17,14 @@
 .piece {
 	/* TODO: make into circles */
 	margin: 5px;
-	width: 99%;
-	height: 99%;
+	width: 93%;
+	height: 93%;
 	border-radius: 50%;
 	position: absolute;
 	margin: 0px;
 	z-index: -1;
 	transition: 0.5s linear;
+	border: 2px solid black;
 }
 
 .p1 {
@@ -44,11 +46,11 @@
 #column-top td:hover {
 	background-color: blue;
 	border-radius: 50%;
-	border: 0px;
+	border: 2px solid black;
 }
 
 #column-top .toggleColor:hover {
 	background-color: red;
 	border-radius: 50%;
-	border: 0px;
+	border: 2px solid black;
 }

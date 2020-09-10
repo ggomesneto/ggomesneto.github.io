@@ -133,7 +133,17 @@ function placeInTable(y, x) {
 
 function endGame(msg) {
 	// TODO: pop up alert message
-	alert(msg);
+
+	let htmlBoard = document.querySelector('#board');
+	console.log('aaaa');
+
+	setTimeout(function() {
+		htmlBoard.innerHTML = '';
+		board = [];
+		alert(msg);
+		makeBoard();
+		makeHtmlBoard();
+	}, 500);
 }
 
 /** handleClick: handle click of column top to play piece */
