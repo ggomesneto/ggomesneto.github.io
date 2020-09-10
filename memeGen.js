@@ -1,5 +1,5 @@
 const form = document.querySelector('#memeForm');
-const body = document.querySelector('#wrapMeme');
+const body = document.querySelector('#gameArea');
 const imageLink = document.querySelector('input[name="imageLink"]');
 const inputTop = document.querySelector('input[name="topText"]');
 const inputBot = document.querySelector('input[name="botText"]');

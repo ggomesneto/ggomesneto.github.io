@@ -1,0 +1,169 @@
+#gameWrap {
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+
+	display: flex;
+	transition: 0.5s;
+	width: 80vw;
+	height: 80vh;
+	min-width: 750px;
+}
+
+#gameArea {
+	width: 70%;
+	height: 80%;
+	/* border: 2px solid black; */
+	overflow: scroll;
+	overflow-x: hidden;
+	margin: auto;
+	position: relative;
+}
+
+.memCard {
+	width: 9.5vw;
+	height: 25vh;
+	border: 2px solid black;
+	display: inline-block;
+	margin: 10px 5px 5px 10px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.6);
+	min-width: 150px;
+	min-height: 200px;
+}
+
+#controlArea {
+	position: relative;
+
+	width: 14vw;
+	height: 100%;
+	margin: 10px;
+	display: flex;
+}
+
+#controls {
+	margin: auto;
+	align-items: center;
+
+	font-size: 25px;
+	font-family: 'Roboto', sans-serif;
+}
+
+#restart {
+	font-size: 25px;
+
+	font-family: 'Roboto', sans-serif;
+}
+
+#memGame:hover {
+	cursor: pointer;
+}
+
+/* Meme Generator */
+
+#memeGen:hover {
+	cursor: pointer;
+}
+
+#memeFormWrap {
+	width: 10vw;
+	text-align: right;
+	display: flex;
+	float: left;
+	position: relative;
+	top: 20px;
+}
+
+#memeForm {
+	width: 300px;
+	left: 0px;
+	padding: 0px;
+}
+
+label {
+	font-size: 15px;
+}
+#wrapMeme {
+	width: 700px;
+	height: 50vh;
+	position: relative;
+	top: 1vh;
+	display: inline-block;
+	overflow-y: scroll;
+	border: 2px solid black;
+}
+
+#wrapMeme::-webkit-scrollbar-track {
+	background: black;
+}
+
+#wrapMeme img {
+	width: 40vw;
+	height: 42.5vh;
+	min-width: 500px;
+}
+
+.WrapperMeme {
+	width: 35vw;
+	height: 42.5vh;
+	/* border: solid 2px black; */
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin: 10px auto 10px;
+	min-width: 500px;
+	overflow-wrap: break-word;
+}
+
+.Top {
+	top: 0px;
+	width: 100%;
+	position: absolute;
+	text-align: center;
+
+	color: white;
+	text-shadow: 2px 2px #000000;
+}
+
+.Bot {
+	width: 100%;
+	bottom: 0px;
+	text-align: center;
+	position: absolute;
+
+	color: white;
+	text-shadow: 2px 2px #000000;
+}
+
+.close {
+	position: absolute;
+	padding: 4px;
+	right: 0px;
+	top: 0px;
+	font-size: 1vw;
+	font-family: 'Roboto', sans-serif;
+}
+
+.close:hover {
+	font-size: 25px;
+	cursor: pointer;
+}
+
+/* Connect Four */
+
+#container {
+	background-color: lightgrey;
+	position: relative;
+	display: flex;
+	margin: auto;
+}
+
+.unit {
+	width: 50px;
+	height: 50px;
+	border: 2px solid black;
+	margin: 5px;
+}
+
+.selector {
+	border-style: dashed;
+}
