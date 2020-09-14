@@ -64,4 +64,8 @@ var typer = document.getElementById('typewriter');
 
 typewriter = setupTypewriter(typewriter);
 
-typewriter.type();
+//
+
+window.addEventListener('DOMContentLoaded', (event) => {
+	typewriter.type();
+});

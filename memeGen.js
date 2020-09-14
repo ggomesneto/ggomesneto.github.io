@@ -42,3 +42,19 @@ body.addEventListener('click', function(event) {
 		event.target.parentElement.remove();
 	}
 });
+
+window.onload = function() {
+	const canvas = document.getElementById('WrapperMeme');
+	const context = canvas.getContext('2d');
+	const imageObj = new Image();
+	imageObj.onload = function() {
+		context.drawImage(imageObj, 10, 10);
+		context.font = '20px Calibri';
+		context.fillText(inputTop.value, 50, 200);
+		// open the image in a new browser tab
+		// the user can right-click and save that image
+		const win = window.open();
+		win.document.write("<img src='" + canvas.toDataURL() + "'/>");
+	};
+	imageObj.src = imageLink.value;
+};

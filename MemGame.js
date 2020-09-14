@@ -38,6 +38,8 @@ let count = 0;
 
 let clicks = 0;
 
+let $area = $('gameArea');
+
 let area = document.getElementById('gameArea');
 
 area.addEventListener('click', function(e) {
@@ -177,3 +179,14 @@ function closeDisplay() {
 		content.style.display = 'none';
 	}
 }
+
+// $area.on('click', function(e) {
+// 	let value = e.target.classList.value;
+
+// 	if (value === 'memCard') {
+// 		clicks++;
+// 		CurrentClick.innerText = clicks;
+// 		let selCard = e.target.getAttribute('sequence');
+// 		selectedCard(selCard);
+// 	}
+// });
