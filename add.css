@@ -1,0 +1,132 @@
+.fontOswald {
+	font-family: 'Oswald', sans-serif;
+}
+
+.font-SansCond {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 1.5em;
+}
+
+.font-Kufam {
+	font-family: 'Kufam', cursive;
+}
+
+.card:hover {
+	cursor: pointer;
+}
+
+.initPageHeight {
+	height: 95vh;
+}
+
+.photoMaxHeight {
+	max-height: 305px;
+}
+.intContHeight {
+	height: 80%;
+}
+
+.helloFont {
+	font-size: 30vw;
+}
+
+.floatRight {
+	right: 0px;
+}
+
+.hoverSkills:hover {
+	color: orangered;
+	cursor: pointer;
+}
+
+.var-highlight {
+	color: #c0ad60;
+}
+.string-highlight {
+	color: rgba(253, 149, 90, 0.8);
+}
+
+#typewriter {
+	font-size: 30px;
+	margin: auto 20px;
+	font-family: 'Roboto Condensed', sans-serif;
+	width: 52vw;
+	text-align: left;
+}
+
+/* game board table */
+
+#board td {
+	width: 50px;
+	height: 50px;
+	border: solid 3px lightgrey;
+	border-radius: 15px;
+}
+
+#board {
+	margin: auto;
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+	margin: 5px;
+	width: 80%;
+	height: 80%;
+	border-radius: 50%;
+	border: 2px solid black;
+}
+
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+	border: dashed 1px lightgray;
+}
+
+#column-top td:hover {
+	background-color: gold;
+}
+
+#game {
+	margin: auto;
+	width: 600px;
+	height: 600px;
+}
+
+.memCard {
+	width: 220px;
+	height: 150px;
+	border: 2px solid black;
+	display: inline-block;
+	margin: 10px 5px 5px 10px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.6);
+
+	background-size: contain;
+}
+
+#controlArea {
+	position: relative;
+
+	width: 14vw;
+	height: 100%;
+	margin: 10px;
+	display: flex;
+}
+
+#controls {
+	margin: auto;
+	align-items: center;
+
+	font-size: 25px;
+	font-family: 'Roboto', sans-serif;
+}
+
+#restart {
+	font-size: 25px;
+
+	font-family: 'Roboto', sans-serif;
+}
+
+#memGame:hover {
+	cursor: pointer;
+}

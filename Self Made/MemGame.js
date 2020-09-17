@@ -1,34 +1,34 @@
 var imgArray = new Array();
 
 imgArray[0] = new Image();
-imgArray[0].src = 'img/memGame/dog1.jpg';
+imgArray[0].src = 'img/memGame/chihuahua1.jpg';
 
 imgArray[1] = new Image();
-imgArray[1].src = 'img/memGame/dog1.jpg';
+imgArray[1].src = 'img/memGame/chihuahua1.jpg';
 
 imgArray[2] = new Image();
-imgArray[2].src = 'img/memGame/dog2.jpg';
+imgArray[2].src = 'img/memGame/chihuahua2.jpg';
 
 imgArray[3] = new Image();
-imgArray[3].src = 'img/memGame/dog2.jpg';
+imgArray[3].src = 'img/memGame/chihuahua2.jpg';
 
 imgArray[4] = new Image();
-imgArray[4].src = 'img/memGame/dog3.jpg';
+imgArray[4].src = 'img/memGame/chihuahua3.jpg';
 
 imgArray[5] = new Image();
-imgArray[5].src = 'img/memGame/dog3.jpg';
+imgArray[5].src = 'img/memGame/chihuahua3.jpg';
 
 imgArray[6] = new Image();
-imgArray[6].src = 'img/memGame/dog4.jpg';
+imgArray[6].src = 'img/memGame/chihuahua4.jpg';
 
 imgArray[7] = new Image();
-imgArray[7].src = 'img/memGame/dog4.jpg';
+imgArray[7].src = 'img/memGame/chihuahua4.jpg';
 
 imgArray[8] = new Image();
-imgArray[8].src = 'img/memGame/dog5.jpg';
+imgArray[8].src = 'img/memGame/chihuahua5.jpg';
 
 imgArray[9] = new Image();
-imgArray[9].src = 'img/memGame/dog5.jpg';
+imgArray[9].src = 'img/memGame/chihuahua5.jpg';
 
 let card1 = 0;
 
@@ -89,7 +89,7 @@ function createCards() {
 		cards.classList.add('memCard');
 		cards.id = `card${i}`;
 		cards.setAttribute('sequence', i);
-		cards.style.backgroundImage = 'url(img/memGame/backcard.jpg)';
+		cards.style.backgroundImage = 'url(img/memGame/backcard.png)';
 		board.appendChild(cards);
 	}
 }
@@ -99,7 +99,7 @@ function reset() {
 
 	let cards = document.querySelectorAll('.memCard');
 	for (card of cards) {
-		card.style.backgroundImage = 'url(img/memGame/backcard.jpg)';
+		card.style.backgroundImage = 'url(img/memGame/backcard.png)';
 		card.style.opacity = '1';
 	}
 	clicks = 0;
@@ -154,11 +154,11 @@ function selectedCard(n) {
 			}
 		} else {
 			setTimeout(function() {
-				card1.style.backgroundImage = 'url(img/memGame/backcard.jpg)';
-				card2.style.backgroundImage = 'url(img/memGame/backcard.jpg)';
+				card1.style.backgroundImage = 'url(img/memGame/backcard.png)';
+				card2.style.backgroundImage = 'url(img/memGame/backcard.png)';
 				card1 = 0;
 				card2 = 0;
-			}, 500);
+			}, 300);
 		}
 	}
 }

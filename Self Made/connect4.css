@@ -1,13 +1,13 @@
 /* game board table */
 
-#board-3 td {
+#board td {
 	width: 50px;
 	height: 50px;
 	border: solid 3px lightgrey;
 	border-radius: 15px;
 }
 
-#board-3 {
+#board {
 	margin: auto;
 }
 
