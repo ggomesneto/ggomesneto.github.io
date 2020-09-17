@@ -309,16 +309,34 @@
                   
                   <div id='controlArea'>
                     <div id='controls'>
-                    <button id="restart" onclick="reset()">Restart</button>
+                    <button id="restart" class= ' btn btn-success' onclick="reset()">Restart</button>
                     <br>
                     <br>
-                    <span id="record">Record</span>
-                    <br>
-                    <span id="recordN"></span>
-                    <br>
-                    <span id="current">Current</span>
-                    <br>
-                    <span id="currentN"></span>
+
+                    <div class="row">
+                      <div class="col-sm text-center">
+                        <span id="record">Record</span>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm text-center">
+                        <span id="recordN"></span>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm text-center">
+                        <span id="current">Current</span>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm text-center">
+                        <span id="currentN"></span>
+                      </div>
+                    </div>
+
+
+
+                    
                     </div>
                 </div>
 
@@ -369,7 +387,7 @@
           <div class="modal-body text-center">
             
            
-              <button id='restart-3' class='mb-3'>Start Game</button>
+              <button id='restart-3' class='mb-3 btn btn-success'>Start Game</button>
               <form>
                 <label for='player1' >Player 1 Color</label>
                 <input id='player1' value='red'>
