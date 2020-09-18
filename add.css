@@ -15,6 +15,9 @@
 	cursor: pointer;
 }
 
+.progressBarWidth {
+	width: 80%;
+}
 .initPageHeight {
 	height: 95vh;
 }
@@ -28,6 +31,11 @@
 
 .helloFont {
 	font-size: 30vw;
+}
+
+.linkedText {
+	text-decoration: none;
+	color: black;
 }
 
 .floatRight {
