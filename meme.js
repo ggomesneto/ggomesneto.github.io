@@ -2,11 +2,19 @@
 
 function createMeme() {
 
-let fontSize = $(`#fontSize`)
+    $('#canvas').remove()
+    $('#inp').remove()
+    $('#inp2').remove()
+    $('#br').remove()
+
+
+
 
 let imgSrc = $('#imgSrc').val()
 
+
 $('#memeImg').attr('src', imgSrc)
+console.log($('#memeImg').attr('src'))
 
 $('<canvas>').attr('id', 'canvas').appendTo('.meme')
 
@@ -17,12 +25,18 @@ canvas.width = 400;
 canvas.crossOrigin = "Anonymous";
 canvas.height = 300;
 
-ctx.drawImage($('img').get(0), 0, 0, 400, 300);
+console.log($('#memeImg').get(0))
+
+ctx.drawImage($('#memeImg').get(0), 0, 0, 400, 300);
 ctx.font = `25px Verdana`
 
 $('#inp').remove()
 $('#inp2').remove()
 $('#br').remove()
+$('#br').remove()
+$('#br').remove()
+$('#br').remove()
+
 
 $('<p>').attr('id', 'br').appendTo('#formMeme')
 
@@ -47,7 +61,12 @@ $('<p>').attr('id', 'br').appendTo('#formMeme')
 $('<p>').attr('id', 'br').appendTo('#formMeme')
 
 
+
 $(document).on('input','#inp',function(){
+    // //redraw image
+    // ctx.clearRect(0,0,canvas.width,canvas.height);
+    // ctx.drawImage($('#memeImg').get(0), 0, 0);
+
     //refill text
     ctx.fillStyle = "white";
     
@@ -67,13 +86,6 @@ $('#subMeme').click(function(evt){
     createMeme()
 });
 
-$('#resetMeme').click(function(event){
-    event.preventDefault()
-    $('#canvas').remove()
-    $('#inp').remove()
-    $('#inp2').remove()
-    $('#br').remove()
-  
-});
+
 
 
