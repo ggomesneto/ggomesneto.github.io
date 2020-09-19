@@ -148,7 +148,7 @@ class Game {
 }
 
 let button = document.querySelector(`#restart-3`);
-console.log(button);
+
 
 button.addEventListener('click', () => {
 	console.log('click');
