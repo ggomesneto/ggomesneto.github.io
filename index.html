@@ -9,13 +9,15 @@
   <link rel="stylesheet" href="add.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
   <link rel="stylesheet" href="connect4.css">
+  <link rel="stylesheet" href="jeopardy.css">
 
 
   <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Grandstander&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Kufam&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Copse&display=swap"
+        rel="stylesheet">
   
 
 
@@ -291,6 +293,21 @@
             </div>
           </div>
         </div>
+
+        <div class="row m-1">
+          
+          <div class="col-sm ">
+            <div class="card shadow  rounded" style="width: 18rem;">
+              <img class="card-img-top openJeopardy" src="img/jeopardy.jpg" alt="Card image cap" >
+             <div class="card-body openJeopardy" >
+                <h5 class="card-title">JEOPARDY</h5>
+                <h6 class="card-subtitle mb-2 text-muted">My first game using API</h6>
+                <p class="card-text">Gaming using AJAX to get data from API</p>
+              </div>
+            </div>
+          </div>
+
+
       </div>
     </div>
 
@@ -389,7 +406,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body text-center">
+          <div class="modal-body text-center connect4">
             
            
               <button id='restart-3' class='mb-3 btn btn-success'>Start Game</button>
@@ -403,8 +420,8 @@
                 <label for='check' >Play against computer?</label>
                 <input id='check' type="checkbox">
               </form>
-              </form>
-              <table id="board-3"></table>
+              <div class='container' id='board-3'></div>
+              
             
 
           </div>
@@ -417,6 +434,17 @@
     </div>
 
 
+  </div>
+
+  <div id='jeopardy' class="jumbotron jumbotron-fluid bg-white mb-0 ">
+    <div class="container">
+     
+      <div class='container-fluid text-center jeopardy'>
+      
+      </div>
+
+
+    </div>
   </div>
 
   <div id='area5' class="jumbotron jumbotron-fluid bg-light mb-0 ">
@@ -696,9 +724,13 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+<script src="https://unpkg.com/lodash"></script>
 <script src='typewriter.js'></script>
 <script src='ConnectFour.js'></script>
 <script src='MemGame.js'></script>
 <script src='meme.js'></script>
+<script src='jeopardy.js'></script>
 </body>
 </html>

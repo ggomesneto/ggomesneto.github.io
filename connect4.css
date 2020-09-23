@@ -9,6 +9,7 @@
 
 #board-3 {
 	margin: auto;
+	max-width: 380px;
 }
 
 /* pieces are div within game table cells: draw as colored circles */
@@ -19,7 +20,6 @@
 	height: 80%;
 	border-radius: 50%;
 	border: 2px solid black;
-	
 }
 
 /* column-top is table row of clickable areas for each column */

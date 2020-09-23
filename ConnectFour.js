@@ -146,13 +146,13 @@ class Game {
 		}
 	}
 }
-
+console.log(document);
 let button = document.querySelector(`#restart-3`);
-
 
 button.addEventListener('click', () => {
 	console.log('click');
 	const board = document.querySelector(`#board-3`);
+	console.log(board);
 
 	let colorP1 = document.querySelector(`#player1`);
 	let colorP2 = document.querySelector(`#player2`);
