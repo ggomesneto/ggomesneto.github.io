@@ -26,7 +26,7 @@ $(`<button class='btn btn-success mb-3'>Restart</button><br>`)
 async function getCategoryIds() {
 	const catQty = 6;
 
-	let res = await axios.get('http://jservice.io/api/categories', { params: { count: 100 } });
+	let res = await axios.get('https://jservice.io/api/categories', { params: { count: 100 } });
 	let catList = res.data;
 
 	//while to repeat getting the random category until we have 6 different ones
@@ -46,7 +46,7 @@ async function getCategory(catId) {
 	//for loop to go through each category
 	for (cat of catId) {
 		let idCat = cat;
-		let res = await axios.get(`http://jservice.io//api/category/`, { params: { id: idCat } });
+		let res = await axios.get(`https://jservice.io//api/category/`, { params: { id: idCat } });
 
 		let clues = res.data.clues;
 		//organizing array of clues with 'showing' status
