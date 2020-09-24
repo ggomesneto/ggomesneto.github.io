@@ -15,6 +15,10 @@
 	cursor: pointer;
 }
 
+
+.article {
+	min-height: 250px
+}
 .progressBarWidth {
 	width: 100%;
 }
