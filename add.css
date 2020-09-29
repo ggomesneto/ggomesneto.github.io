@@ -2,6 +2,10 @@
 	font-family: 'Oswald', sans-serif;
 }
 
+.featuredImg {
+	width: 400px;
+}
+
 .font-SansCond {
 	font-family: 'Open Sans Condensed', sans-serif;
 	font-size: 1.5em;
@@ -38,6 +42,11 @@
 }
 
 .linkedText {
+	text-decoration: none;
+	color: black;
+}
+
+.linkedText:hover {
 	text-decoration: none;
 	color: black;
 }

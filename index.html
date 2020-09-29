@@ -189,7 +189,7 @@
             <a tabindex="0"  role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true" title="Study Subjects" data-content="REACT Elements<br>APP Layout<br>JSX Basic Rules<br>Props in REACT">REACT</a>
           </div>
           <div class="col-md-auto p-0 display-4 hoverSkills lineHeight ">
-            <a tabindex="0"  role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true" title="Study Subjects" data-content="Data Structures<br>Python Tools<br>Python OOP">PYTHON</a>
+            <a tabindex="0"  role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true" title="Study Subjects" data-content="Data Structures<br>Python Tools<br>Python OOP">AJAX</a>
           </div>
         </div>
 
@@ -220,7 +220,7 @@
          </div>
  
          <div class="col-md-auto p-0 display-1 hoverSkills lineHeight " >
-          <a tabindex="0"  role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true" title="Study Subjects" data-content="AXIOS<br>Multiple Requests<br>Error Handling<br>Post Requests">AJAX</a>
+          <a tabindex="0"  role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true" title="Study Subjects" data-content="AXIOS<br>Multiple Requests<br>Error Handling<br>Post Requests">PYTHON</a>
          </div>
  
          <div class="col-md-auto p-0 display-4 lineHeight ">
@@ -250,91 +250,175 @@
 
   </div>
 
+  <div id='jeopardy' class="jumbotron jumbotron-fluid bg-white mb-0 ">
+    <div class="container">
+      <button type="button" class="openJeopardy btn btn-danger">Close</button>
+      <div class='container-fluid text-center jeopardy'>
+      
+      </div>
+
+
+    </div>
+  </div>
+
   <div id='area4' class="jumbotron jumbotron-fluid  mb-0">
     <div class="container">
       
       <div class="container">
-        <div class="row  m-3 display-4">
+        <div class="row  m-3 display-2">
           <div class="col-sm text-center font-SansCond">
            PORTFOLIO
 
           </div>
         </div>
+        
 
-        <div class="row m-1">
-          
-          <div class="col-sm ">
-            <div class="card shadow  rounded" style="width: 18rem;">
-              <img class="card-img-top" src="img/memory-card.jpg" alt="Card image cap" data-toggle="modal" data-target="#Modal1">
-              <div class="card-body" data-toggle="modal" data-target="#Modal1">
-                <h5 class="card-title">MEMORY GAME</h5>
-                <h6 class="card-subtitle mb-2 text-muted">My first game</h6>
-                <p class="card-text">Basic Memory Game using CSS and Vanilla JavaScript</p>
-              </div>
+        <div id="accordion">
+          <div class="card text-center">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-light " data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <span class='display-4'>FEATURED</span>
+                </button>
+              </h5>
             </div>
-          </div>
-          <div class="col-sm">
-            <div class="card shadow  rounded" style="width: 18rem;">
-              <img class="card-img-top" src="img/meme-card.png" alt="Card image cap" data-toggle="modal" data-target="#Modal2">
-              <div class="card-body" data-toggle="modal" data-target="#Modal2">
-                <h5 class="card-title">MEME GENERATOR</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Going deep on JavaScript</h6>
-                <p class="card-text">Make your on Meme using an image and text.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm">
-           
-            <div class="card shadow  rounded  " style="width: 18rem;">
-              <img class="card-img-top" src="img/connect-card.png" alt="Card image cap" data-toggle="modal" data-target="#Modal3">
-              <div class="card-body" data-toggle="modal" data-target="#Modal3">
-                <h5 class="card-title">Connect Four</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Learning about Classes</h6>
-                <p class="card-text">First attempt using classes to make a game. </p>
+        
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">     
                
+
+              <div class="row m-1 collapse show">
+
+                <div class="container">
+                    <div class="row">
+                      <div class="col-md-auto">
+                        <a href="HackOrSnooze/index.html" target='_blank'><img class="rounded float-left featuredImg " src="img/Hacker-News.jpg" alt="Card image cap" ></a>
+                      </div>
+                      <div class="col text-center font-Kufam">
+                        <span class='display-4'>HACK or SNOOZE</span><br><br>
+                        This project used AJAX to request data from an API that clones the website Hacker News. It was intended to be my first attempt on working with APIs.<br><br>
+                        <a href="HackOrSnooze/index.html" target='_blank'><button type="button" class="btn btn-success">Open</button></a>
+                      </div>
+                    </div>
+                </div>
+
+              </div>
+        
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="row m-1">
+          <div class="card text-center">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-light collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <span class='display-4'>HTML / CSS / JAVASCRIPT</span>
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                
+                <div class="row m-1 mb-4 collapse show ">
           
-          <div class="col-sm ">
-            <div class="card shadow  rounded" style="width: 18rem;">
-              <img class="card-img-top openJeopardy" src="img/jeopardy.jpg" alt="Card image cap" >
-             <div class="card-body openJeopardy" >
-                <h5 class="card-title">JEOPARDY</h5>
-                <h6 class="card-subtitle mb-2 text-muted">My first game using API</h6>
-                <p class="card-text">Gaming using AJAX to get data from API</p>
+                  <div class="col-sm collapse show">
+                    <div class="card shadow  rounded " style="width: 18rem;">
+                      <img class="card-img-top" src="img/memory-card.jpg" alt="Card image cap" data-toggle="modal" data-target="#Modal1">
+                      <div class="card-body" data-toggle="modal" data-target="#Modal1">
+                        <h5 class="card-title">MEMORY GAME</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">My first game</h6>
+                        <p class="card-text">Basic Memory Game using CSS and Vanilla JavaScript</p>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="col-sm collapse show">
+                    <div class="card shadow  rounded" style="width: 18rem;">
+                      <img class="card-img-top" src="img/meme-card.png" alt="Card image cap" data-toggle="modal" data-target="#Modal2">
+                      <div class="card-body" data-toggle="modal" data-target="#Modal2">
+                        <h5 class="card-title">MEME GENERATOR</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Going deep on JavaScript</h6>
+                        <p class="card-text">Make your on Meme using an image and text.</p>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="col-sm collapse show">
+                   
+                    <div class="card shadow  rounded  " style="width: 18rem;">
+                      <img class="card-img-top" src="img/connect-card.png" alt="Card image cap" data-toggle="modal" data-target="#Modal3">
+                      <div class="card-body" data-toggle="modal" data-target="#Modal3">
+                        <h5 class="card-title">Connect Four</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Learning about Classes</h6>
+                        <p class="card-text">First attempt using classes to make a game. </p>
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
+          <div class="card text-center">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-light collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <span class='display-4'>AJAX / JQUERY</span>
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+           
+           <div class="row m-1 collapse show">
+          
+            <div class="col-sm ">
+              <a href="#jeopardy" class='linkedText'>
+                <div class="card shadow  rounded" style="width: 18rem;">
+                <img class="card-img-top openJeopardy" src="img/jeopardy.jpg" alt="Card image cap" >
+               <div class="card-body openJeopardy" >
+                  <h5 class="card-title">JEOPARDY</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">My first game using API</h6>
+                  <p class="card-text">Gaming using AJAX to get data from API</p>
+                </div>
+                </div>
+              </a>
+            </div>
+  
+            
+  
+            <div class="col-sm ">
+              <div class="card shadow  rounded" style="width: 18rem;">
+                <a href="HackOrSnooze/index.html" target='_blank'><img class="card-img-top " src="img/Hacker-News.jpg" alt="Card image cap" ></a>
+               <div class="card-body " >
+                  <h5 class="card-title">HACKER NEWS CLONE</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Cloning a existed website</h6>
+                  <p class="card-text">GET / POST / DELETE Requests using AJAX</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-sm ">
+              <div class="card shadow  rounded" style="width: 18rem;">
+                <img class="card-img-top " src="img/upcoming.jpg" alt="Card image cap" >
+               <div class="card-body " >
+                  <h5 class="card-title">Coming Next</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Forex Converter </h6>
+                  <p class="card-text"></p>
+                </div>
+              </div>
+            </div>
+  
+          </div>
 
-          <div class="col-sm ">
-            <div class="card shadow  rounded" style="width: 18rem;">
-              <a href="HackOrSnooze/index.html" target='_blank'><img class="card-img-top " src="img/Hacker-News.jpg" alt="Card image cap" ></a>
-             <div class="card-body " >
-                <h5 class="card-title">HACKER NEWS CLONE</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Cloning a existed website</h6>
-                <p class="card-text">GET / POST / DELETE Requests using AJAX</p>
               </div>
             </div>
           </div>
-
-          <div class="col-sm ">
-            <div class="card shadow  rounded" style="width: 18rem;">
-              <img class="card-img-top " src="img/upcoming.jpg" alt="Card image cap" >
-             <div class="card-body " >
-                <h5 class="card-title">Coming Next</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Forex Converter </h6>
-                <p class="card-text"></p>
-              </div>
-            </div>
-          </div>
-
-        </div>
+        </div>        
 
       </div>
+
+      
 
 
     <div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -462,17 +546,6 @@
   </div>
   </div>
 
-  <div id='jeopardy' class="jumbotron jumbotron-fluid bg-white mb-0 ">
-    <div class="container">
-     
-      <div class='container-fluid text-center jeopardy'>
-      
-      </div>
-
-
-    </div>
-  </div>
-
   <div id='area5' class="jumbotron jumbotron-fluid bg-light mb-0 ">
     <div class="container">
      
@@ -586,7 +659,7 @@
           <div class="col-sm">
             <span >JavaScript</span>
           </div>
-          <div class="col-sm">
+          <div class="col-sm ">
             <span >Python</span>
           </div>
           <div class="col-sm">
@@ -818,19 +891,19 @@
         </div>
 
         <div class="col-sm ">
-          <div class="card shadow article linkedText rounded" style="width: 18rem;">
-            <img class="card-img-top " src="img/upcoming.jpg" alt="Card image cap" >
+          <a target='_blank' href='https://medium.com/@ggomesneto/ajax-and-the-power-of-await-f98f86fc5ef7?postPublishedType=initial' ><div class="card shadow article linkedText rounded" style="width: 18rem;">
+            <img class="card-img-top " src="img/art-6.jpg" alt="Card image cap" >
            <div class="card-body " >
-              <h5 class="card-title">Coming Next</h5>
-              <h6 class="card-subtitle mb-2 text-muted">AJAX</h6>
-              <p class="card-text"></p>
+              <h5 class="card-title">AJAX AND THE POWER OF AWAIT</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Content</h6>
+              <p class="card-text">Awaiting for requests</p>
             </div>
-          </div>
+          </div></a>
         </div>
 
       </div>
         
-
+      
       
 
     </div>
