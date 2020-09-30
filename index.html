@@ -10,14 +10,17 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
   <link rel="stylesheet" href="connect4.css">
   <link rel="stylesheet" href="jeopardy.css">
+  <link rel="stylesheet" href="grid.css">
 
 
   <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Grandstander&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Kufam&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Copse&display=swap"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Copse&display=swap"rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+
+
   
 
 
@@ -239,7 +242,7 @@
       <div class='container-fluid mt-4 text-center'>
         Current Status on BootCamp:
         <div class="progress progressBarWidth"> 
-          <div class="progress-bar " role="progressbar" style="width: 16%;" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100">16%</div>
+          <div class="progress-bar " role="progressbar" style="width: 18%;" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100">18%</div>
         </div>
       </div>
     
@@ -264,7 +267,7 @@
   <div id='area4' class="jumbotron jumbotron-fluid  mb-0">
     <div class="container">
       
-      <div class="container">
+      <div class="container portfolio-items">
         <div class="row  m-3 display-2">
           <div class="col-sm text-center font-SansCond">
            PORTFOLIO
@@ -273,148 +276,35 @@
         </div>
         
 
-        <div id="accordion">
-          <div class="card text-center">
-            <div class="card-header" id="headingOne">
-              <h5 class="mb-0">
-                <button class="btn btn-light " data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  <span class='display-4'>FEATURED</span>
-                </button>
-              </h5>
+        <div class="row ">
+          <div class="col-6 border p-0 featured">
+            <a  href='HackOrSnooze/index.html' target='_blank'>
+            <div class='text-img'><span class='port'>HACK or SNOOZE</span></div>
+            <img class ='img-min' src='img/Hacker-News.jpg'>
+          </div></a>
+         
+          <div class="col-sm p-0 ">
+            <div class="col-sm p-0 min openJeopardy">
+              <a  href='#jeopardy'>
+              <div class='text-img'><span class='text-img-min'>JEOPARDY</span></div>
+              <img class ='img-min' src='img/jeopardy.jpg'></a>
             </div>
-        
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-              <div class="card-body">     
-               
-
-              <div class="row m-1 collapse show">
-
-                <div class="container">
-                    <div class="row">
-                      <div class="col-md-auto">
-                        <a href="HackOrSnooze/index.html" target='_blank'><img class="rounded float-left featuredImg " src="img/Hacker-News.jpg" alt="Card image cap" ></a>
-                      </div>
-                      <div class="col text-center font-Kufam">
-                        <span class='display-4'>HACK or SNOOZE</span><br><br>
-                        This project used AJAX to request data from an API that clones the website Hacker News. It was intended to be my first attempt on working with APIs.<br><br>
-                        <a href="HackOrSnooze/index.html" target='_blank'><button type="button" class="btn btn-success">Open</button></a>
-                      </div>
-                    </div>
-                </div>
-
-              </div>
-        
-              </div>
+            <div class="col-sm p-0 min " data-toggle="modal" data-target="#Modal1">
+              <div class='text-img'><span class='text-img-min'>MEMORY GAME</span></div>
+              <img class ='img-min'  src='img/memory-card.jpg'>
             </div>
           </div>
-          <div class="card text-center">
-            <div class="card-header" id="headingTwo">
-              <h5 class="mb-0">
-                <button class="btn btn-light collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  <span class='display-4'>HTML / CSS / JAVASCRIPT</span>
-                </button>
-              </h5>
+          <div class="col-sm p-0 ">
+            <div class="col-sm p-0 min" data-toggle="modal" data-target="#Modal2">
+              <div class='text-img'><span class='text-img-min'>MEME GENERATOR</span></div>
+              <img class ='img-min' src='img/meme-card.png'>
             </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-              <div class="card-body">
-                
-                <div class="row m-1 mb-4 collapse show ">
-          
-                  <div class="col-sm collapse show">
-                    <div class="card shadow  rounded " style="width: 18rem;">
-                      <img class="card-img-top" src="img/memory-card.jpg" alt="Card image cap" data-toggle="modal" data-target="#Modal1">
-                      <div class="card-body" data-toggle="modal" data-target="#Modal1">
-                        <h5 class="card-title">MEMORY GAME</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">My first game</h6>
-                        <p class="card-text">Basic Memory Game using CSS and Vanilla JavaScript</p>
-                      </div>
-                    </div>
-                  </div>
-        
-                  <div class="col-sm collapse show">
-                    <div class="card shadow  rounded" style="width: 18rem;">
-                      <img class="card-img-top" src="img/meme-card.png" alt="Card image cap" data-toggle="modal" data-target="#Modal2">
-                      <div class="card-body" data-toggle="modal" data-target="#Modal2">
-                        <h5 class="card-title">MEME GENERATOR</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Going deep on JavaScript</h6>
-                        <p class="card-text">Make your on Meme using an image and text.</p>
-                      </div>
-                    </div>
-                  </div>
-        
-                  <div class="col-sm collapse show">
-                   
-                    <div class="card shadow  rounded  " style="width: 18rem;">
-                      <img class="card-img-top" src="img/connect-card.png" alt="Card image cap" data-toggle="modal" data-target="#Modal3">
-                      <div class="card-body" data-toggle="modal" data-target="#Modal3">
-                        <h5 class="card-title">Connect Four</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Learning about Classes</h6>
-                        <p class="card-text">First attempt using classes to make a game. </p>
-                       
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
+            <div class="col-sm p-0 min" data-toggle="modal" data-target="#Modal3">
+              <div class='text-img'><span class='text-img-min'>CONNECT FOUR</span></div>
+              <img class ='img-min' src='img/connect-card.png'>
+            </div>  
           </div>
-          <div class="card text-center">
-            <div class="card-header" id="headingThree">
-              <h5 class="mb-0">
-                <button class="btn btn-light collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  <span class='display-4'>AJAX / JQUERY</span>
-                </button>
-              </h5>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-              <div class="card-body">
-           
-           <div class="row m-1 collapse show">
-          
-            <div class="col-sm ">
-              <a href="#jeopardy" class='linkedText'>
-                <div class="card shadow  rounded" style="width: 18rem;">
-                <img class="card-img-top openJeopardy" src="img/jeopardy.jpg" alt="Card image cap" >
-               <div class="card-body openJeopardy" >
-                  <h5 class="card-title">JEOPARDY</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">My first game using API</h6>
-                  <p class="card-text">Gaming using AJAX to get data from API</p>
-                </div>
-                </div>
-              </a>
-            </div>
-  
-            
-  
-            <div class="col-sm ">
-              <div class="card shadow  rounded" style="width: 18rem;">
-                <a href="HackOrSnooze/index.html" target='_blank'><img class="card-img-top " src="img/Hacker-News.jpg" alt="Card image cap" ></a>
-               <div class="card-body " >
-                  <h5 class="card-title">HACKER NEWS CLONE</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Cloning a existed website</h6>
-                  <p class="card-text">GET / POST / DELETE Requests using AJAX</p>
-                </div>
-              </div>
-            </div>
-  
-            <div class="col-sm ">
-              <div class="card shadow  rounded" style="width: 18rem;">
-                <img class="card-img-top " src="img/upcoming.jpg" alt="Card image cap" >
-               <div class="card-body " >
-                  <h5 class="card-title">Coming Next</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Forex Converter </h6>
-                  <p class="card-text"></p>
-                </div>
-              </div>
-            </div>
-  
-          </div>
-
-              </div>
-            </div>
-          </div>
-        </div>        
+        </div>     
 
       </div>
 
@@ -668,13 +558,13 @@
         </div>
         <div class="row">
           <div class="col-sm">
-            <span >Object Oriented Programming</span>
-          </div>
-          <div class="col-sm">
-            <span >REACT</span>
-          </div>
-          <div class="col-sm">
             <span >NODEJS</span>
+          </div>
+          <div class="col-sm">
+            <span >FLASK</span>
+          </div>
+          <div class="col-sm">
+            <span >OOP</span>
           </div>
         </div>
       </div>
@@ -758,6 +648,12 @@
                 2007 - 2009<br>
                 CEFET<br>
                 Macae, Brazil
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm text-center">
+              <span class='h6 '><strong>A list of my Oilfield related training can be found <a href='https:linkedin.com/in/ggomesneto'>here</a></strong></span> <br>
+               
             </div>
           </div>
 

@@ -3,7 +3,7 @@
 }
 
 .featuredImg {
-	width: 400px;
+	width: 70vw;
 }
 
 .font-SansCond {
@@ -155,4 +155,12 @@
 #inp {
 	margin-right: 5px;
 	margin-bottom: 5px;
+}
+
+.portfolio-items a {
+	color: black
+}
+
+.portfolio-items:hover {
+	cursor: pointer;
 }
