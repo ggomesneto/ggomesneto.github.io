@@ -37,7 +37,7 @@
 }
 
 .helloFont {
-	font-size: 30vw;
+	font-size: 27vw;
 }
 
 .linkedText {
@@ -52,6 +52,23 @@
 
 .floatRight {
 	right: 0px;
+}
+
+.bigText {
+	font-size: 6vw;
+}
+
+.smallText {
+	font-size: 3vw;
+}
+
+@media (max-width: 750px) {
+	.bigText {
+		font-size: 7vw;
+	}
+	.smallText {
+		font-size: 5vw;
+	}
 }
 
 .hoverSkills:hover {
@@ -156,6 +173,10 @@
 	margin-bottom: 5px;
 }
 
+.port-title {
+	font-size: 1em;
+}
+
 .portfolio-items a {
 	color: black;
 }
@@ -193,12 +214,12 @@
 }
 
 .text {
-	font-size: 5rem;
+	font-size: 5vw;
 }
 
 .author {
 	float: right;
-	font-size: 3rem;
+	font-size: 3vw;
 }
 
 .hide {
@@ -208,5 +229,5 @@
 
 .hide span {
 	display: inline-block;
-	transform: translateY(100%);
+	transform: translateY(102%);
 }
