@@ -231,3 +231,6 @@
 	display: inline-block;
 	transform: translateY(102%);
 }
+.cv-name {
+	font-size: 5.5rem;
+}
