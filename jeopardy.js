@@ -116,7 +116,6 @@ async function fillTable() {
 		for (j = 0; j < numCat; j++) {
 			$(`<td class='tdJeopardy' ><span class='display-3'>?</span></td>`)
 				.attr({
-					id: `${i}-${j}`,
 					x: i,
 					y: j
 				})
