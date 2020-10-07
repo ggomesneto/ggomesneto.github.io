@@ -173,7 +173,7 @@
 	margin-bottom: 5px;
 }
 
-.port-title {
+.size-title {
 	font-size: 0.8em;
 }
 
@@ -232,5 +232,5 @@
 	transform: translateY(102%);
 }
 .cv-name {
-	font-size: 5.5rem;
+	font-size: 5.2rem;
 }
