@@ -71,15 +71,20 @@ function formTimeline() {
 function hashPass() {
 	let pass = $('#password');
 	password = pass.val();
+	let fillPass = false;
+	while (fillPass === false) {
+		if (pass.val() === '') {
+			$(`#msg`).remove();
+			let markup = `<span id='msg' class='text'>Enter Password</span>`;
+			$contentText.append(markup);
+			return;
+		} else {
+			fillPass = true;
+		}
+	}
+	$contentText.empty();
 
-	if (pass.val() === '') {
-		$(`#msg`).remove();
-		let markup = `<span id='msg' class='text'>Enter Password</span>`;
-		$contentText.append(markup);
-	} else {
-		$contentText.empty();
-
-		let markup = ` 
+	let markup = ` 
         
         <div class="container">
             <div class="row row-cols-3">
@@ -117,17 +122,16 @@ function hashPass() {
         
         `;
 
-		$contentText.append(markup);
+	$contentText.append(markup);
 
-		let submitButton = `
+	let submitButton = `
     
         <h1 class='hide text-center'>
             <i id='submit' class="fas fa-arrow-right"></i>
         </h1>
         `;
 
-		$contentText.append(submitButton);
-	}
+	$contentText.append(submitButton);
 
 	const tl = gsap.timeline({ defaults: { ease: 'power1.out' } });
 	tl.to('.text-2', { y: '0%', duration: 1, stagger: 0.25 });
