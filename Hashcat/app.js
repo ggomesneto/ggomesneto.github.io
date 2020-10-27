@@ -147,8 +147,8 @@ function hashPass() {
 	$('#submit').on('click', function() {
 		timeline_1([
 			`The Hacker can't revert`,
-			'your password to the original value',
-			'They use several methods to discover your password.',
+			'your password to the original value,',
+			'but there are several methods to discover it.',
 			'The most used ones are:',
 			'-Brute Force',
 			'-Dictionary'
