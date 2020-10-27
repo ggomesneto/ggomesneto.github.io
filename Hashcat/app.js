@@ -7,10 +7,8 @@ function timeline_1(textArr) {
 
 	markup(textElements);
 
-	const tl = gsap.timeline({ defaults: { ease: 'power1.out' } });
-
-	tl.to('.text', { y: '0%', duration: 1, stagger: 0.25 });
-	tl.to('#submit', { y: '0%', duration: 1, stagger: 0.25 });
+	tl_main();
+	tl_secondary();
 }
 
 function markup(textArr) {
@@ -44,24 +42,16 @@ function formTimeline() {
         
         <input id='password' name='pass-input' maxlength='10' size='10' class='pass-input'>
         </span>
+	</h1>
+	
+	<h1 class='hide'>
+        <i id='submit' class="fas fa-arrow-right"></i>
     </h1>
 `;
 
 	$contentText.append(markup);
 
-	let submitButton = `
-    
-    <h1 class='hide'>
-        <i id='submit' class="fas fa-arrow-right"></i>
-    </h1>
-    `;
-
-	$contentText.append(submitButton);
-
-	const tl = gsap.timeline({ defaults: { ease: 'power1.out' } });
-
-	tl.to('.text', { y: '0%', duration: 1, stagger: 0.25 });
-	tl.to('#submit', { y: '0%', duration: 1, stagger: 0.25 });
+	tl_main();
 
 	$('#submit').on('click', function() {
 		hashPass();
@@ -106,43 +96,29 @@ function hashPass() {
         
         
         <h1 class='hide text-center'>
-        <span class='text-2'>Your Password is HASHED.</span>
+        <span class='text'>Your Password is HASHED.</span>
         </h1>
         <h1 class='hide text-center'>
-        <span class='text-2'>WHICH MEANS: </span>
+        <span class='text'>WHICH MEANS: </span>
         </h1>
         <h1 class='hide text-center'>
-        <span class='text-2'>It has been turned into a</span>
+        <span class='text'>It has been turned into a</span>
         </h1>
         <h1 class='hide text-center'>
-        <span class='text-2'>scrambled representation of itself.</span>
+        <span class='text'>scrambled representation of itself.</span>
         </h1>
 
-        
+        <h1 class='hide text-center'>
+            <i id='submit' class="fas fa-arrow-right"></i>
+        </h1>
         
         `;
 
 	$contentText.append(markup);
+	$('.text').css('font-size', '3vw');
 
-	let submitButton = `
-    
-        <h1 class='hide text-center'>
-            <i id='submit' class="fas fa-arrow-right"></i>
-        </h1>
-        `;
-
-	$contentText.append(submitButton);
-
-	const tl = gsap.timeline({ defaults: { ease: 'power1.out' } });
-	tl.to('.text-2', { y: '0%', duration: 1, stagger: 0.25 });
-	tl.to('#submit', { y: '0%', duration: 1, stagger: 0.25 });
-
-	const tl2 = gsap.timeline({ defaults: { ease: 'power1.out' } });
-	tl2.to('#entry', { x: '150%', duration: 2, delay: 1 }, '-=1');
-	tl2.to('#exit', { x: '0%', duration: 2, delay: 1 }, '-=1');
-
-	tl2.repeatDelay(2);
-	tl2.repeat(100);
+	tl_main();
+	tl_secondary();
 
 	$('#submit').on('click', function() {
 		timeline_1([
@@ -200,19 +176,8 @@ function bruteForce(textElements) {
 
 	$contentText.append(markupAnim);
 
-	const tl = gsap.timeline({ defaults: { ease: 'power1.out' } });
-
-	tl.to('.text', { y: '0%', duration: 1, stagger: 0.25 });
-	tl.to('#submit', { y: '0%', duration: 1, stagger: 0.25 });
-
-	const tl2 = gsap.timeline({ defaults: { ease: 'power1.out' } });
-	tl2.to('#entry', { x: '320%', duration: 2, delay: 1 }, '-=1');
-	tl2.to('#exit', { x: '0%', duration: 2, delay: 1 }, '-=1');
-	tl2.to('.false', { color: 'red' });
-	tl2.to('.true', { color: 'green' });
-
-	tl2.repeatDelay(2);
-	tl2.repeat(100);
+	tl_main();
+	tl_secondary();
 
 	$('#submit').on('click', function() {
 		timeline_1([
@@ -223,6 +188,27 @@ function bruteForce(textElements) {
 		]);
 	});
 }
+
+function tl_main() {
+	const tl = gsap.timeline({ defaults: { ease: 'power1.out' } });
+
+	tl.to('.text', { y: '0%', duration: 1, stagger: 0.25 });
+
+	tl.to('#submit', { y: '0%', duration: 1, stagger: 0.25 });
+}
+
+function tl_secondary() {
+	const tl2 = gsap.timeline({ defaults: { ease: 'power1.out' } });
+	tl2.to('#entry', { x: '320%', duration: 2, delay: 1 }, '-=1');
+	tl2.to('#exit', { x: '0%', duration: 2, delay: 1 }, '-=1');
+	tl2.to('.false', { color: 'red' });
+	tl2.to('.true', { color: 'green' });
+
+	tl2.repeatDelay(2);
+	tl2.repeat(100);
+}
+
+// -------------------------
 
 timeline_1([ 'PASSWORD CRACKING', 'ELI5 EDITION' ]);
 

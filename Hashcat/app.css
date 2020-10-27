@@ -100,11 +100,6 @@ body {
 	font-family: 'Syne Mono', monospace;
 }
 
-.text-2 {
-	font-size: 3vw;
-	font-family: 'Syne Mono', monospace;
-}
-
 .hide {
 	background-color: black;
 	overflow: hidden;
