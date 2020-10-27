@@ -1,6 +1,7 @@
 const $contentText = $('.content-text');
 let password = '';
 
+// Create Page with lines of text and timeline of animation
 function timeline_1(textArr) {
 	$contentText.empty();
 	let textElements = textArr;
@@ -11,6 +12,7 @@ function timeline_1(textArr) {
 	tl_secondary();
 }
 
+// Creates markup for the text
 function markup(textArr) {
 	for (element of textArr) {
 		let elemMarkup = `
@@ -30,6 +32,7 @@ function markup(textArr) {
 	$contentText.append(submitButton);
 }
 
+// Special markup for password form page
 function formTimeline() {
 	$contentText.empty();
 
@@ -58,6 +61,7 @@ function formTimeline() {
 	});
 }
 
+//  Gets password and uses it in new page. Creates markup for it
 function hashPass() {
 	let pass = $('#password');
 	password = pass.val();
@@ -144,6 +148,7 @@ function hashPass() {
 	});
 }
 
+// Uses markup() and an unique markup to add text and an animation
 function bruteForce(textElements) {
 	$contentText.empty();
 
@@ -189,6 +194,7 @@ function bruteForce(textElements) {
 	});
 }
 
+// main timeline animation
 function tl_main() {
 	const tl = gsap.timeline({ defaults: { ease: 'power1.out' } });
 
@@ -197,6 +203,7 @@ function tl_main() {
 	tl.to('#submit', { y: '0%', duration: 1, stagger: 0.25 });
 }
 
+//Second timeline animation
 function tl_secondary() {
 	const tl2 = gsap.timeline({ defaults: { ease: 'power1.out' } });
 	tl2.to('#entry', { x: '320%', duration: 2, delay: 1 }, '-=1');
