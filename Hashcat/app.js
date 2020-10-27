@@ -181,8 +181,8 @@ function bruteForce(textElements) {
 
 	$('#submit').on('click', function() {
 		timeline_1([
-			`That's not a good approach because`,
-			'It would take DECADES',
+			`That's NOT a good approach because`,
+			'It could take DECADES',
 			`to solve a 10-digit password`,
 			'With numbers, letters and symbols'
 		]);
