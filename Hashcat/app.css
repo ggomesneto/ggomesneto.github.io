@@ -1,0 +1,139 @@
+body {
+	height: 95vh;
+	border: 2px solid black;
+
+	display: grid;
+	place-items: center;
+}
+
+/* #form-slide {
+	display: grid;
+	place-items: center;
+	flex-direction: column;
+	font-family: 'Roboto', sans-serif;
+}
+
+.form-wrap {
+	width: 25%;
+}
+
+.form {
+	width: 80%;
+	position: relative;
+	height: 70px;
+	overflow: hidden;
+}
+
+.form input {
+	font-size: 20px;
+	width: 100%;
+	height: 100%;
+	color: #595f6e;
+	padding-top: 15px;
+	border: none;
+	outline: none;
+}
+
+.form label {
+	position: absolute;
+	bottom: 0px;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	border-bottom: 1px solid black;
+}
+
+.form label::after {
+	content: "";
+	position: absolute;
+	left: 0px;
+	bottom: -1px;
+	height: 100%;
+	width: 100%;
+	border-bottom: 3px solid #5fa8d3;
+	transform: translateX(-100%);
+	transition: transform 0.3s ease;
+}
+
+.content-name {
+	position: absolute;
+	bottom: 5px;
+	transition: all 0.3s ease;
+}
+
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name {
+	transform: translateY(-150%);
+	font-size: 14px;
+	color: #5fa8d3;
+}
+
+.form input:focus + .label-name::after,
+.form input:valid + .label-name::after {
+	transform: translateX(0%);
+} */
+
+/* ---------------- */
+
+.content {
+	background-color: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 3;
+}
+
+.content-text {
+	color: white;
+
+	font-size: 3rem;
+}
+
+.text {
+	font-size: 5vw;
+	font-family: 'Syne Mono', monospace;
+}
+
+.text-2 {
+	font-size: 3vw;
+	font-family: 'Syne Mono', monospace;
+}
+
+.hide {
+	background-color: black;
+	overflow: hidden;
+}
+
+.hide span {
+	display: inline-block;
+	transform: translateY(102%);
+}
+
+.hide i {
+	display: inline-block;
+	transform: translateY(102%);
+	cursor: pointer;
+}
+
+/* ---------- */
+
+.col {
+	width: 270px;
+	display: grid;
+	place-items: center;
+	overflow: hidden;
+}
+
+#entry {
+	transform: translateX(-150%);
+}
+
+#exit {
+	transform: translateX(-150%);
+}
