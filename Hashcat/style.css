@@ -1,9 +1,9 @@
 #areas {
-	height: 85%;
+	height: 70%;
 }
 
 body {
-	height: 90vh;
+	height: 100vh;
 }
 
 #main_wrap {
@@ -116,3 +116,29 @@ body {
 }
 
 /* ------------------------------------- */
+
+#menuCol {
+	display: grid;
+	place-items: center;
+}
+
+.menuLink {
+	width: 10vw;
+	font-size: 2em;
+	font-family: 'Syne Mono', monospace;
+}
+
+.menuBar {
+	border: 2px solid black;
+	border-radius: 50%;
+	width: 80%;
+	margin: auto;
+}
+
+.wrap {
+	display: flex;
+}
+
+#basics:hover {
+	cursor: pointer;
+}

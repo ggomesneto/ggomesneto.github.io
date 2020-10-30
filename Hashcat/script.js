@@ -1,5 +1,5 @@
 const tl = gsap.timeline({ defaults: { ease: 'power1.out' } });
-const $password = $('#password');
+
 let passVal = '';
 const $bruteForce = $('#line7');
 const $dic_link = $('#dic_link');
@@ -8,7 +8,9 @@ const $terminal = $('#terminal');
 
 tl.fromTo('#line1', { opacity: 0 }, { opacity: 1, duration: 0.5 });
 
-$password.on('keypress', function(e) {
+$(document).on('keypress', '#password', function(e) {
+	let $password = $('#password');
+
 	if (e.which == 13) {
 		console.log('submit');
 		if ($password.val() === '') {
@@ -155,6 +157,40 @@ $(document).on('click', '#dic_link', function() {
 			.to('.group-5', 1, { width: '500px', stagger: 0.5 });
 	}, 1000);
 });
+
+$(document).on('click', '#basics', function() {
+	basics();
+});
+
+function basics() {
+	$content.empty();
+	$terminal.empty();
+
+	let markup = `
+	<span  class='text_content' id='line1'>LET'S START SETTING A PASSWORD</span>
+	`;
+
+	$content.append(markup);
+
+	let terminaltop = `<div class='terminal_top text-center'>TERMINAL</div>`;
+
+	$terminal.append(terminaltop);
+
+	let terminalMarkup = `
+			
+            <span id='passlabel'>PASSWORD:</span>
+            <div class="cursor">
+              <input type="text" id='password' maxlength='10' class="rq-form-element" />
+              <i></i>
+            </div>
+	`;
+
+	$terminal.append(terminalMarkup);
+
+	tl.fromTo('.text_content', 0.5, { opacity: 0 }, { opacity: 1, duration: 0.5 });
+}
+
+basics();
 
 function hashing() {
 	let charset = ' !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_`abcdefghijklmnopqrstuvwxyz{|}~ ';
