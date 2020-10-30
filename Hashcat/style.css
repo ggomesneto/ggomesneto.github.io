@@ -18,9 +18,7 @@ body {
 }
 #area1 {
 	width: 300px;
-	display: grid;
-	place-items: center;
-}
+	}
 
 #content {
 	width: 80%;
