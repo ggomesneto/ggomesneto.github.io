@@ -1,0 +1,112 @@
+#areas {
+	height: 100%;
+}
+
+#main_wrap {
+	height: 85vh;
+	position: relative;
+}
+
+#title {
+	font-family: 'Syne Mono', monospace;
+	font-size: 5rem;
+}
+#area1 {
+	width: 300px;
+	display: grid;
+	place-items: center;
+}
+
+#content {
+	width: 80%;
+	height: 80%;
+	font-family: 'Trispace', sans-serif;
+}
+
+#terminal {
+	padding: 0px;
+	height: 60%;
+	max-height: 500px;
+	border: 2px solid lightgrey;
+	background-color: black;
+	color: greenyellow;
+	font-family: 'Syne Mono', monospace;
+	box-shadow: 0px 18px 72px -14px rgba(0, 0, 0, 0.68);
+	overflow: hidden;
+}
+
+#dic_link:hover {
+	cursor: pointer;
+}
+
+.terminal_top {
+	width: 100%;
+	background-color: lightgrey;
+	color: black;
+}
+
+.text_content {
+	opacity: 0;
+	display: block;
+}
+
+#line3,
+#brute_link,
+#dic_link {
+	font-size: 1.5em;
+}
+
+#brute_link:hover,
+#dic_link:hover {
+	cursor: pointer;
+}
+
+#line3 {
+	color: red;
+}
+
+.term_content {
+	display: block;
+	width: 0px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+/* ------------------------------------- */
+.cursor {
+	position: relative;
+	display: inline-block;
+}
+.cursor i {
+	position: absolute;
+	width: 1px;
+	height: 80%;
+	background-color: gray;
+	left: 5px;
+	top: 10%;
+	animation-name: blink;
+	animation-duration: 800ms;
+	animation-iteration-count: infinite;
+	opacity: 1;
+}
+
+.cursor input {
+	background-color: black;
+	border: 0px;
+	color: white;
+	outline: none;
+}
+
+.cursor input:focus + i {
+	display: none;
+}
+
+@keyframes blink {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+/* ------------------------------------- */
