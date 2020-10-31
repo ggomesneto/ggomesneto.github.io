@@ -15,6 +15,7 @@ $(document).on('keypress', '#cryptoChoice', function(e) {
 	if (e.which == 13) {
 		if (cryptoOptions.includes(cryptoChoice)) {
 			$(`.cursor`).remove();
+			$('#error').remove();
 
 			let cryptoAppend = `
 			<span  id='cryptoChoice'>${cryptoChoice}</span>
@@ -24,6 +25,8 @@ $(document).on('keypress', '#cryptoChoice', function(e) {
 
 			bruteForce();
 		} else {
+			$('#error').remove();
+			$terminalText.append(`<span id='error'>Wrong Crypto</span>`);
 		}
 	}
 });
@@ -72,6 +75,7 @@ $(document).on('keypress', '#passTry', async function(e) {
 				`;
 
 				$terminalText.append(mismatch);
+				$('#options').focus();
 
 				$(document).on('keypress', '#options', function(e) {
 					if (e.which == 13) {
@@ -136,6 +140,8 @@ function bruteExplain() {
 	`;
 	$terminalText.empty();
 	$terminalText.append(bruteMarkup);
+
+	$('#dicChoice').focus();
 	tl.to(`.term_content`, 0.5, { width: '100%', stagger: 0.5 });
 
 	$(document).on('keypress', '#dicChoice', async function(e) {
@@ -146,6 +152,20 @@ function bruteExplain() {
 			}
 		}
 	});
+}
+
+function dicExplain() {
+	$terminalText.empty();
+
+	let dicMarkup = `
+	<span class='term_content'>A DICTIONARY ATTACK IS A BRUTE FORCE ATTACK IN WHICH A LIST OF MOST KNOWN USED PASSWORDS</span>
+	<span class='term_content'>IS USED INSTEAD OF RANDOMLY TRYING TO FIND THE RIGHT MATCH.</span>
+	<span class='term_content'>THERE ARE LISTS ONLINE WITH THOUSANDS OF USED PASSWORDS AVAILABLE FOR ANYONE TO USE.</span><br>
+	<span class='term_content'>IF YOU THINK ABOUT IT, HAVING A LIST WITH SOME HUNDRED THOUSAND POSSIBLE PASSWORDS</span>
+	<span class='term_content'>CAN SAVE A LOT OF TIME IF THERE ARE MILLIONS OF POSSIBILITIES.</span>
+	`;
+	$terminalText.append(dicMarkup);
+	tl.to(`.term_content`, 0.5, { width: '100%', stagger: 0.5 });
 }
 
 function startPage() {
@@ -185,6 +205,7 @@ function bruteForce() {
 	`;
 
 	$terminalText.append(terminalMarkup);
+	$('#passTry').focus();
 }
 
 function randomPass() {
@@ -207,7 +228,7 @@ function dicList() {
 		<span class='listInput'>abc123</span><br>
 		<span class='listInput'>superPassword</span><br>
 
-		<input id='nextInput' class='listInput'>
+		<input id='nextInput''>
 		
 		</div>
   </div>
@@ -228,7 +249,7 @@ function dicList() {
 
 				let inputMarkup = `
 				<br>
-				<input id='nextInput' class='listInput'>
+				<input id='nextInput'>
 				`;
 				$('#listText').append(inputMarkup);
 				$('#nextInput').focus();
@@ -265,7 +286,26 @@ $(document).on('click', '#save', function() {
 		$terminalText.append(listMarkup);
 	}
 
+	let endMarkup = `
+	<span class='term_content'>DICTIONARY ATTACK IS OVER - NO MATCHES</span>
+	<span class='term_content'>LEARN MORE? (y/n):</span>
+	<div class="cursor">
+      <input type="text" id='dicExplain' maxlength='10' autofocus class="rq-form-element" />
+      <i></i>
+    </div>
+	`;
+
+	$terminalText.append(endMarkup);
+
 	tl.to(`.term_content`, 0.5, { width: '100%', stagger: 0.5 });
+});
+
+$(document).on('keypress', '#dicExplain', function(e) {
+	if (e.which == 13) {
+		if ($('#dicExplain').val() === 'y') {
+			dicExplain();
+		}
+	}
 });
 
 function hashing(cryptoType) {
@@ -284,9 +324,7 @@ function hashing(cryptoType) {
 				hash = hash.concat(charset1[random]);
 			}
 		}
-	}
-
-	if (cryptoType === 'crypto2') {
+	} else if (cryptoType === 'crypto2') {
 		for (i = 0; i < 30; i++) {
 			let random = Math.floor(Math.random() * 52);
 
@@ -296,9 +334,7 @@ function hashing(cryptoType) {
 				hash = hash.concat(charset2[random]);
 			}
 		}
-	}
-
-	if (cryptoType === 'crypto3') {
+	} else if (cryptoType === 'crypto3') {
 		for (i = 0; i < 30; i++) {
 			let random = Math.floor(Math.random() * 41);
 
@@ -309,6 +345,7 @@ function hashing(cryptoType) {
 			}
 		}
 	}
+
 	return hash;
 }
 
