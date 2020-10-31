@@ -38,6 +38,15 @@ body {
 	white-space: nowrap;
 }
 
+#typewriter,
+#typewriter_intro {
+	color: greenyellow;
+}
+
+.typeList {
+	color: greenyellow;
+}
+
 .list_top {
 	text-align: left;
 	width: 100%;
@@ -55,7 +64,7 @@ body {
 }
 .cursor i {
 	position: absolute;
-	width: 1px;
+	width: 3px;
 	height: 80%;
 	background-color: gray;
 	left: 5px;
