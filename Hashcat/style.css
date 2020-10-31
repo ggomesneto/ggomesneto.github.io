@@ -1,30 +1,12 @@
-#areas {
-	height: 70%;
-}
-
 body {
 	height: 100vh;
 }
 
 #main_wrap {
-	height: 100vh;
+	height: 100%;
 	position: relative;
-	background-color: rgba(240, 231, 180, 0.835);
-}
 
-#title {
-	font-family: 'Syne Mono', monospace;
-	font-size: 5rem;
-}
-#area1 {
-	width: 300px;
-	}
-
-#content {
-	width: 80%;
-	height: 80%;
-	font-family: 'Trispace', sans-serif;
-	font-size: 1.5em;
+	background-color: black;
 }
 
 #terminal {
@@ -35,47 +17,38 @@ body {
 	background-color: black;
 	color: greenyellow;
 	font-family: 'Syne Mono', monospace;
-	box-shadow: 0px 18px 72px -14px rgba(0, 0, 0, 0.68);
+	box-shadow: 9px 11px 40px -9px rgba(255, 255, 255, 1);
 	overflow: hidden;
+	width: 50%;
+	margin: auto;
+	transition: all 1s ease;
+	position: relative;
+	top: 10%;
 }
 
-#dic_link:hover {
-	cursor: pointer;
+#terminal:focus {
+	transform: scale(1.05);
+	border: 5px solid lightgrey;
 }
 
 .terminal_top {
 	width: 100%;
 	background-color: lightgrey;
 	color: black;
-}
-
-.text_content {
-	opacity: 0;
-	display: block;
-}
-
-#line3,
-#brute_link,
-#dic_link {
-	font-size: 1.5em;
-}
-
-#brute_link:hover,
-#dic_link:hover {
-	cursor: pointer;
-}
-
-#line3 {
-	color: red;
-}
-
-.term_content {
-	display: block;
-	width: 0px;
-	overflow: hidden;
 	white-space: nowrap;
 }
-/* ------------------------------------- */
+
+.list_top {
+	text-align: left;
+	width: 100%;
+	background-color: white;
+	color: black;
+	border-bottom: 1px solid lightgrey;
+	white-space: nowrap;
+}
+
+/* ----- cursor */
+
 .cursor {
 	position: relative;
 	display: inline-block;
@@ -113,30 +86,63 @@ body {
 	}
 }
 
-/* ------------------------------------- */
+/* -------------- */
 
-#menuCol {
-	display: grid;
-	place-items: center;
+#title {
+	color: white;
+	font-size: 3em;
+	font-family: 'Syne Mono', monospace;
 }
 
-.menuLink {
-	width: 10vw;
+#passHash {
+	color: white;
 	font-size: 2em;
 	font-family: 'Syne Mono', monospace;
 }
 
-.menuBar {
-	border: 2px solid black;
-	border-radius: 50%;
-	width: 80%;
-	margin: auto;
+#terminalText {
+	position: absolute;
+	width: 100%;
+	height: 95%;
+	overflow-y: scroll;
+	bottom: 0px;
 }
 
-.wrap {
+#listText {
+	position: absolute;
+	width: 100%;
+	height: 90%;
+	overflow-y: scroll;
+	bottom: 0px;
+}
+
+#crypto {
 	display: flex;
+	justify-content: space-between;
 }
 
-#basics:hover {
+.term_content {
+	display: block;
+	width: 0px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#notepad {
+	position: absolute;
+	width: 30%;
+	height: 60%;
+	border: 2px solid black;
+	background-color: white;
+	z-index: 1;
+	overflow: hidden;
+}
+
+#nextInput {
+	outline: none;
+	border: 0px;
+}
+
+#save:hover {
 	cursor: pointer;
 }

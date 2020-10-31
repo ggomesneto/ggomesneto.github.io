@@ -1,208 +1,320 @@
+let $terminalText = $('#terminalText');
+let cryptoChoice = '';
+let cryptoOptions = [ 'crypto1', 'crypto2', 'crypto3' ];
+let randomPassword = '';
+let attempts = 0;
 const tl = gsap.timeline({ defaults: { ease: 'power1.out' } });
+let listArr = [];
 
-let passVal = '';
-const $bruteForce = $('#line7');
-const $dic_link = $('#dic_link');
-const $content = $('#content');
-const $terminal = $('#terminal');
+let passAttempts = [];
+let hashAttempts = [];
 
-tl.fromTo('#line1', { opacity: 0 }, { opacity: 1, duration: 0.5 });
-
-$(document).on('keypress', '#password', function(e) {
-	let $password = $('#password');
+$(document).on('keypress', '#cryptoChoice', function(e) {
+	cryptoChoice = $('#cryptoChoice').val().toLowerCase();
 
 	if (e.which == 13) {
-		console.log('submit');
-		if ($password.val() === '') {
+		if (cryptoOptions.includes(cryptoChoice)) {
+			$(`.cursor`).remove();
+
+			let cryptoAppend = `
+			<span  id='cryptoChoice'>${cryptoChoice}</span>
+			<br>
+			<span>----------------------------</span><br>`;
+			$terminalText.append(cryptoAppend);
+
+			bruteForce();
 		} else {
-			passVal = $password.val();
-			$('.cursor').empty();
-			$('.cursor').append(`<span id='password'>${passVal}`);
-			tl.to('#term_1', { width: '500px', duration: 1 });
-			tl.to('#term_2', { width: '500px', duration: 1 });
-
-			let hash = hashing();
-
-			let markup = `
-            
-            <span  class='text_content group-1' id='line2'>FOR PROTECTION, YOUR PASSWORD IS HASHED.</span><BR class='group-1'>
-            <span  class='text_content group-1' id='line3'>BUT, WHAT DOES THAT MEAN?</span><BR class='group-1'>
-            <span  class='text_content group-1' id='line4'>USING <u>CRYPTOGRAPHY</u>  , YOUR PASSWORD BECOMES A SCRAMBLED REPRESENTATION OF ITSELF.</span><br class='group-1  '>
-            <span  class='text_content group-1' id='line5'>IT IS <Strong>IMPOSSIBLE</Strong> TO REVERSE THE ENCRYPTION, BUT THERE ARE SEVERAL METHODS TO OVERCOME THAT.</span><br class='group-1'>
-            <span  class='text_content group-1' id='line6'>THE MOST USED ARE:</span>
-            <span  class='text_content group-1' id='brute_link'>- BRUTE FORCE</span>
-            <span  class='text_content group-1' id='dic_link'>- DICTIONARY ATTACK</span>
-            <small class='text_content group-1' id='line9'>Click to learn more</small><BR class='group-1'>
-
-            `;
-
-			$content.append(markup);
-
-			let terminalMarkup = `
-            <span id='term_1' class='term_content'>HASHING PASSWORD...</span>
-            <span id='term_2' class='term_content'>PASSWORD HASHED: # ${hash}</span>
-            `;
-
-			$terminal.append(terminalMarkup);
-
-			tl
-				.fromTo('.group-1', 0.5, { opacity: 0 }, { opacity: 1, stagger: 0.5 })
-				.to('#term_1', 1, { width: '500px' }, 1)
-				.to('#term_2', 1, { width: '500px' }, 2);
 		}
 	}
 });
 
-$(document).on('click', '#brute_link', async function() {
-	$terminal.append(`<span id='clear'>clear()</span>`);
+$(document).on('keypress', '#passTry', async function(e) {
+	let passTry = $('#passTry').val();
+	let hash = '';
+	if (passAttempts.includes(passTry)) {
+		let index = passAttempts.indexOf(passTry);
+		hash = hashAttempts[index];
+	} else {
+		passAttempts.push(passTry);
+		hash = hashing(cryptoChoice);
 
-	tl.to('#clear', { width: '500px', duration: 1 });
+		hashAttempts.push(hash);
+	}
 
-	let attempts = [ 'attempt1', 'attempt2', 'attempt3', `attempt4` ];
+	if (e.which == 13) {
+		if (passTry != '') {
+			attempts++;
+			let attemptClass = `atp-${attempts}`;
 
-	setTimeout(function() {
-		$content.empty();
-		$terminal.empty();
-		let passLen = passVal.length;
+			$(`.cursor`).remove();
 
-		let markup = `
-        <span class='text_content group-2'>ON BRUTE FORCE ATTACKS, THE HACKER TRIES EACH POSSIBLE PASSWORD AGAINST EACH POSSIBLE CRYPTOGRAPHY, UNTIL IT FINDS A MATCH.</span><br class='group-2'>
-        <span class='text_content group-2'>THE PASSWORD YOU ADDED IS ${passLen} CHARACTERS LONG, AND USING BRUTE FORCE, IT WOULD HAVE 95<sup>${passLen}</sup> POSSIBLE COMBINATIONS.</span><BR class='group-2'>
-        <SPAN class='text_content group-2'>BEAR IN MIND THAT A 10 DIGIT PASSWORD, CONTAINING UPPER AND LOWER LETTERS, NUMBERS AND SYMBOLS HAVE <strong>BILLIONS</strong> OF UNIQUE COMBINATIONS.</SPAN><BR class='group-2'>
-        <SPAN id='dic_link' class='text_content group-2'><U>DICTIONARY ATTACK</U></SPAN><BR class='group-2'>
-        `;
+			let crackMarkup = `
+			<span  id='passAttempt'>${passTry}</span><br>
+			<span class='term_content ${attemptClass}'>HASHING PASSWORD...</span>
+			`;
+			$terminalText.append(crackMarkup);
 
-		$content.append(markup);
+			let hashMarkup = `
+			<span class='term_content ${attemptClass}' id='hash'>${hash}</span>`;
 
-		let terminaltop = `<div class='terminal_top text-center'>TERMINAL</div>`;
+			$terminalText.append(hashMarkup);
 
-		$terminal.append(terminaltop);
+			if (hash != randomPassword) {
+				let mismatch = `
+				<span class='term_content ${attemptClass}'>HASH DOES NOT MATCH - CHECK PASSWORD</span>
+				<span class='term_content ${attemptClass}'>Input 'restart', 'help' or 'try':</span>
+				<div class="cursor">
+      				<input type="text" id='options' autofocus maxlength='10' class="rq-form-element" />
+      				<i></i>
+    			</div>
 
-		for (attempt of attempts) {
-			let hash = hashing();
+				
+				`;
 
-			let terminalMarkup = `
-            <span id='term_4' class='term_content group-3'>PASSWORD: ${attempt} </span>
-            <span id='term_5' class='term_content group-3'>HASHING PASSWORD...</span>
-            <span id='term_6' class='term_content group-3'>PASSWORD HASHED: # ${hash}</span>
-            <span id='term_7' class='term_content group-3'>HASH DOES NOT MATCH - CHECK PASSWORD</span>
-            <br class='group-3'>
-            `;
+				$terminalText.append(mismatch);
 
-			$terminal.append(terminalMarkup);
+				$(document).on('keypress', '#options', function(e) {
+					if (e.which == 13) {
+						let $option = $('#options').val().toLowerCase();
+
+						if ($option === 'help') {
+							bruteExplain();
+						} else if ($option === 'restart') {
+							passAttempts = [];
+							hashAttempts = [];
+							startPage();
+						} else if ($option === 'try') {
+							$('.cursor').remove();
+							let answerMarkup = `
+							<span id='answer'>${$option}</span><br>
+							<span>----------------------------</span><br>
+							
+							`;
+							$terminalText.append(answerMarkup);
+
+							bruteForce();
+						}
+					}
+				});
+
+				tl.to(`.${attemptClass}`, 0.5, { width: '100%', stagger: 0.5 });
+				await sleep(2000);
+			} else {
+				let match = `
+				<span  class='term_content ${attemptClass}'>YOU JUST BREAKED THE PASSWORD!</span>
+				`;
+				$terminalText.append(match);
+				tl.to(`.${attemptClass}`, 0.5, { width: '100%', stagger: 0.5 });
+			}
+		} else {
 		}
-
-		tl
-			.fromTo('.group-2', 0.5, { opacity: 0 }, { opacity: 1, stagger: 0.5 })
-			.to('.group-3', 1, { width: '500px', stagger: 0.5 }, '-=3');
-	}, 1000);
+	}
 });
 
-$(document).on('click', '#dic_link', function() {
-	$terminal.append(`<span id='clear'>clear()</span>`);
+setInterval(function() {
+	var objDiv = document.getElementById('terminalText');
+	objDiv.scrollTop = objDiv.scrollHeight;
+}, 4000);
 
-	let attempts = [ 'admin1', 'letmein', '12345679', 'JohnSmith1', 'baseball' ];
+function bruteExplain() {
+	let bruteMarkup = `
+	
+	<span class='term_content'>ON BRUTE FORCE ATTACKS, THE HACKER TRIES EACH POSSIBLE PASSWORD AGAINST EACH POSSIBLE CRYPTOGRAPHY, </span>
+	<span class='term_content'>UNTIL IT FINDS A MATCH.</span>
+	<SPAN class='term_content'>BEAR IN MIND THAT A 10 DIGIT PASSWORD, CONTAINING UPPER AND LOWER LETTERS, NUMBERS AND SYMBOLS HAVE </span>
+	<SPAN class='term_content'><strong>BILLIONS</strong> OF UNIQUE COMBINATIONS.</SPAN>
+	
+	<br>
+	<SPAN class='term_content'>AS YOU PROBABLY NOTICED, DOING THAT MANNUALLY IS EXAUSTIVE AND HAS A MINIMAL CHANCE OF SUCCESS.</SPAN>
+	<SPAN class='term_content'>TO WORKOUT THIS PROBLEM, <strong>AUTOMATION</strong> IS NECESSARY.</SPAN>
+	<SPAN class='term_content'>ONE OF THE MOST USED METHODS IS THE <STRONG>DICTIONARY ATTACK.</STRONG></SPAN><br>
+	<SPAN class='term_content'>Try DICTIONARY ATTACK?(y/n)</SPAN>
+	<div class="cursor">
+      <input type="text" id='dicChoice' maxlength='10' autofocus class="rq-form-element" />
+      <i></i>
+    </div>
+	`;
+	$terminalText.empty();
+	$terminalText.append(bruteMarkup);
+	tl.to(`.term_content`, 0.5, { width: '100%', stagger: 0.5 });
 
-	$('#terminal').append(`<span class='group-3' id='term_3'>clear()</span>`);
-
-	setTimeout(function() {
-		$content.empty();
-		$terminal.empty();
-
-		let markup = `
-        <span class='text_content group-4'>A DICTIONARY ATTACK USES A LIST OF MOST USED PASSWORDS TO FIND A MATCH BEFORE GOING TO FULL BRUTE FORCE MODE.</span><br class='group-4'>
-        <span class='text_content group-4'>THE LIST ALSO CONTAINS ALL GATHERED INFORMATION ABOUT THE VICTIM.</span>
-        <Span class='text_content group-4'>SOCIAL MEDIA IS ONE OF THE MOST USED SOURCES FOR THIS TYPE OF INFO.</Span><br class='group-4'>
-        <span class='text_content group-4'>NOWADAYS YOU CAN FIND ONLINE LISTS WITH THOUSANDS OF MOST USED PASSWORDS, SUCH AS <Strong>'ADMIN1','123456', OR 'LETMEIN'</Strong></span><br class='group-4'>
-        <SPAN id='brute_link' class='text_content group-4'><U>BRUTE FORCE</U></SPAN><BR class='group-2'>
-        `;
-
-		$content.append(markup);
-
-		let terminaltop = `<div class='terminal_top text-center'>TERMINAL</div>`;
-
-		$terminal.append(terminaltop);
-
-		let listMarkup = `
-        <Span id='term_9'  class='term_content list-content'>UPLOADING LIST...</SPAn>
-        <span id='term_10' class='term_content list-content'>admin1</span>
-        <span id='term_11' class='term_content list-content'>letmein</span>
-        <span id='term_12' class='term_content list-content'>12345679</span>
-        <span id='term_13' class='term_content list-content'>JohnSmith1</span>
-        <span id='term_14' class='term_content list-content'>baseball</span>
-        <br>
-        
-        `;
-
-		$('#terminal').append(listMarkup);
-
-		for (attempt of attempts) {
-			let hash = hashing();
-
-			let terminalMarkup = `
-
-            <span id='term_15' class='term_content group-5'>PASSWORD: ${attempt} </span>
-            <span id='term_16' class='term_content group-5'>HASHING PASSWORD...</span>
-            <span id='term_17' class='term_content group-5'>PASSWORD HASHED: # ${hash}</span>
-            <span id='term_18' class='term_content group-5'>HASH DOES NOT MATCH - CHECK PASSWORD</span>
-            <br>
-            
-            `;
-			$('#terminal').append(terminalMarkup);
+	$(document).on('keypress', '#dicChoice', async function(e) {
+		if (e.which == 13) {
+			let dicChoice = $('#dicChoice').val();
+			if (dicChoice == 'y') {
+				dicList();
+			}
 		}
-
-		tl
-			.fromTo('.group-4', 0.5, { opacity: 0 }, { opacity: 1, stagger: 0.5 })
-			.to('.list-content', 1, { width: '500px', stagger: 0.5 }, '-=3')
-			.to('.group-5', 1, { width: '500px', stagger: 0.5 });
-	}, 1000);
-});
-
-$(document).on('click', '#basics', function() {
-	basics();
-});
-
-function basics() {
-	$content.empty();
-	$terminal.empty();
-
-	let markup = `
-	<span  class='text_content' id='line1'>LET'S START SETTING A PASSWORD</span>
-	`;
-
-	$content.append(markup);
-
-	let terminaltop = `<div class='terminal_top text-center'>TERMINAL</div>`;
-
-	$terminal.append(terminaltop);
-
-	let terminalMarkup = `
-			
-            <span id='passlabel'>PASSWORD:</span>
-            <div class="cursor">
-              <input type="text" id='password' maxlength='10' class="rq-form-element" />
-              <i></i>
-            </div>
-	`;
-
-	$terminal.append(terminalMarkup);
-
-	tl.fromTo('.text_content', 0.5, { opacity: 0 }, { opacity: 1, duration: 0.5 });
+	});
 }
 
-basics();
+function startPage() {
+	$terminalText.empty();
+	let terminalMarkup = `
+	<span >THE PASSWORD ABOVE IS <sTRONG>HASHED</STRONG>.</span><BR>
+	<span >A HASHED PASSWORD IS A SCRAMBLED REPRESENTATION OF ITSELF.</span><BR>
+	<span >THE PASSWORD INPUTED BY AN USER GOES THROUGH AN ENCRYPTION THAT IS IMPOSSIBLE TO BE REVERSED,</span><BR>
+	<span >LEAVING THE HACKER TRYING TO DISCOVER THE USER'S INPUT BY TRIAL & ERROR</span>
+	 <BR><BR><bR>
+	
 
-function hashing() {
-	let charset = ' !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_`abcdefghijklmnopqrstuvwxyz{|}~ ';
+
+	<div id='crypto'><div class='container text-center'><span class='p-3'id='crypto1'>CRYPTO1</span><span class='p-3' id='crypto2'>CRYPTO2</span><span class='p-3' id='crypto3'>CRYPTO3</span></div></div><br>
+	
+	<span>SELECT CRYTOGRAPHY:</span>
+	<div class="cursor">
+      <input type="text" id='cryptoChoice' maxlength='10' autofocus class="rq-form-element" />
+      <i></i>
+    </div>
+	
+	
+	`;
+
+	$terminalText.append(terminalMarkup);
+}
+
+function bruteForce() {
+	let terminalMarkup = `
+	
+	<span>PASSWORD:</span>
+	<div class="cursor">
+      <input type="text" id='passTry' autofocus maxlength='10' class="rq-form-element" />
+      <i></i>
+	</div>
+	
+	`;
+
+	$terminalText.append(terminalMarkup);
+}
+
+function randomPass() {
+	random = Math.floor(Math.random() * 3);
+	let cryptoType = cryptoOptions[random];
+	randomPassword = hashing(cryptoType);
+
+	$('#passHash').text(randomPassword);
+}
+
+function dicList() {
+	$terminalText.empty();
+	let listMarkup = `
+	<div id='notepad'>
+    	<div class='terminal_top text-center'><i class="far fa-sticky-note"></i>DICTIONARY LIST</div>
+    	<div class='list_top '><span id='save' class='p-3'>Save</span></div>
+		<div id='listText'>
+		<span class='listInput'>password123</span><br>
+		<span class='listInput'>letmein</span><br>
+		<span class='listInput'>abc123</span><br>
+		<span class='listInput'>superPassword</span><br>
+
+		<input id='nextInput' class='listInput'>
+		
+		</div>
+  </div>
+	`;
+
+	$('#main_wrap').prepend(listMarkup);
+	$('#nextInput').focus();
+
+	$(document).on('keypress', '#nextInput', function(e) {
+		let input = $('#nextInput').val();
+
+		if (e.which == 13) {
+			if (input != '') {
+				$('#nextInput').remove();
+				let lastInputMark = `
+				<span class='listInput'>${input}</span>`;
+				$('#listText').append(lastInputMark);
+
+				let inputMarkup = `
+				<br>
+				<input id='nextInput' class='listInput'>
+				`;
+				$('#listText').append(inputMarkup);
+				$('#nextInput').focus();
+			}
+		}
+	});
+}
+
+$(document).on('click', '#save', function() {
+	let dicList = $('.listInput');
+
+	for (item of dicList) {
+		listArr.push(item.innerText);
+	}
+
+	tl.to(`#notepad`, 2, { width: '0%', stagger: 0.5 });
+
+	let dicListMarkup = `
+	<SPAN class='term_content'>Uploading List...</span>
+	<SPAN class='term_content'>Starting DICTIONARY ATTACK</span>
+	<br>
+	`;
+	$terminalText.append(dicListMarkup);
+
+	for (item of listArr) {
+		let listMarkup = `
+
+		<span class='term_content'>PASSWORD: ${item}</span>
+		<span class='term_content'>HASHING PASSWORD...</span>
+		<span class='term_content'>HASH DOES NOT MATCH - CHECK PASSWORD</span>
+		<span class='term_content'>-------------------</span>
+		`;
+
+		$terminalText.append(listMarkup);
+	}
+
+	tl.to(`.term_content`, 0.5, { width: '100%', stagger: 0.5 });
+});
+
+function hashing(cryptoType) {
+	let charset1 = '!"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_`abcdefghijklmnopqrstuvwxyz{|}~';
+	let charset2 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+	let charset3 = '!"#$%&\'()*+,-./0123456789:;<=>?@[]^_`{|}~';
+
 	let hash = '';
-	for (i = 0; i < 30; i++) {
-		let random = Math.floor(Math.random() * 95);
+	if (cryptoType === 'crypto1') {
+		for (i = 0; i < 30; i++) {
+			let random = Math.floor(Math.random() * 93);
 
-		if (hash === '') {
-			hash = charset[random];
-		} else {
-			hash = hash.concat(charset[random]);
+			if (hash === '') {
+				hash = charset1[random];
+			} else {
+				hash = hash.concat(charset1[random]);
+			}
+		}
+	}
+
+	if (cryptoType === 'crypto2') {
+		for (i = 0; i < 30; i++) {
+			let random = Math.floor(Math.random() * 52);
+
+			if (hash === '') {
+				hash = charset2[random];
+			} else {
+				hash = hash.concat(charset2[random]);
+			}
+		}
+	}
+
+	if (cryptoType === 'crypto3') {
+		for (i = 0; i < 30; i++) {
+			let random = Math.floor(Math.random() * 41);
+
+			if (hash === '') {
+				hash = charset3[random];
+			} else {
+				hash = hash.concat(charset3[random]);
+			}
 		}
 	}
 	return hash;
 }
+
+function sleep(ms) {
+	return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+startPage();
+randomPass();
