@@ -1,6 +1,6 @@
 let $terminalText = $('#terminalText');
 let cryptoChoice = '';
-let cryptoOptions = [ 'crypto1', 'crypto2', 'crypto3' ];
+let cryptoOptions = [ '1', '2', '3' ];
 let randomPassword = '';
 let attempts = 0;
 const tl = gsap.timeline({ defaults: { ease: 'power1.out' } });
@@ -77,6 +77,7 @@ function dicExplain() {
 
 <span>IF YOU THINK ABOUT IT, HAVING A LIST WITH SOME HUNDRED THOUSAND POSSIBLE PASSWORDS</span>
 <span>CAN SAVE A LOT OF TIME IF THERE ARE MILLIONS OF POSSIBILITIES.</span>
+<span>WANT TO LEARN ABOUT BRUTE FORCE ATTACKS?(y/n)</span>
 </pre>
 	`;
 	$terminalText.append(dicMarkup);
@@ -84,6 +85,16 @@ function dicExplain() {
 	var typer = document.getElementById('typewriter');
 	typewriter = setupTypewriter(typer);
 	typewriter.type();
+
+	let markup = `
+	<div class="cursor">
+  		<input type="text" id='bruteChoice' maxlength='10' autofocus class="rq-form-element" />
+  		<i></i>
+	</div>
+	`;
+	let typeInput = $('#typewriter');
+
+	finishAnimation(typeInput, 530, $terminalText, markup);
 }
 
 async function startPage() {
@@ -105,7 +116,7 @@ async function startPage() {
 	await typewriter.type();
 
 	let markup = `
-	<div id='crypto'><div class='container text-center'><span class='p-3'id='crypto1'>CRYPTO1</span><span class='p-3' id='crypto2'>CRYPTO2</span><span class='p-3' id='crypto3'>CRYPTO3</span></div></div><br>
+	<div id='crypto'><div class='container text-center'><span class='p-3'id='crypto1'>1- CRYPTO1</span><span class='p-3' id='crypto2'>2- CRYPTO2</span><span class='p-3' id='crypto3'>3- CRYPTO3</span></div></div><br>
 	
 <span>SELECT CRYTOGRAPHY:</span>
 <div class="cursor">
@@ -127,7 +138,6 @@ async function finishAnimation(idTag, n, appendTag, markup) {
 		len = idTag[0].innerHTML.length;
 		finishAnimation(idTag, n, appendTag, markup);
 	} else {
-		console.log('foi');
 		appendTag.append(markup);
 	}
 }
@@ -155,12 +165,11 @@ function randomPass() {
 	$('#passHash').text(randomPassword);
 }
 
-function dicList() {
-	$terminalText.empty();
+async function dicList() {
 	let listMarkup = `
 	<div id='notepad'>
     	<div class='terminal_top text-center'><i class="far fa-sticky-note"></i>DICTIONARY LIST</div>
-    	<div class='list_top '><span id='save' class='p-3'>Save</span></div>
+    	<div class='list_top '><span id='save' class='p-3'>Save</span><span id='close' class='p-3'>Close</span></div>
 		<div id='listText'>
 		<span class='listInput'>password123</span><br>
 		<span class='listInput'>letmein</span><br>
@@ -174,6 +183,9 @@ function dicList() {
 	`;
 
 	$('#main_wrap').prepend(listMarkup);
+
+	tl.to(`#notepad`, 0.5, { width: '20%', stagger: 0.5 });
+
 	$('#nextInput').focus();
 
 	$(document).on('keypress', '#nextInput', function(e) {
@@ -203,7 +215,7 @@ function hashing(cryptoType) {
 	let charset3 = '!"#$%&\'()*+,-./0123456789:;<=>?@[]^_`{|}~';
 
 	let hash = '';
-	if (cryptoType === 'crypto1') {
+	if (cryptoType === '1') {
 		for (i = 0; i < 30; i++) {
 			let random = Math.floor(Math.random() * 93);
 
@@ -213,7 +225,7 @@ function hashing(cryptoType) {
 				hash = hash.concat(charset1[random]);
 			}
 		}
-	} else if (cryptoType === 'crypto2') {
+	} else if (cryptoType === '2') {
 		for (i = 0; i < 30; i++) {
 			let random = Math.floor(Math.random() * 52);
 
@@ -223,7 +235,7 @@ function hashing(cryptoType) {
 				hash = hash.concat(charset2[random]);
 			}
 		}
-	} else if (cryptoType === 'crypto3') {
+	} else if (cryptoType === '3') {
 		for (i = 0; i < 30; i++) {
 			let random = Math.floor(Math.random() * 41);
 
@@ -238,14 +250,19 @@ function hashing(cryptoType) {
 	return hash;
 }
 
+function sleep(ms) {
+	return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 $(document).on('click', '#save', async function() {
 	let dicList = $('.listInput');
 
+	$terminalText.empty();
 	for (item of dicList) {
 		listArr.push(item.innerText);
 	}
 
-	tl.to(`#notepad`, 2, { width: '0%', stagger: 0.5 });
+	tl.to(`#notepad`, 0.5, { width: '0%', stagger: 0.5 });
 
 	let dicListMarkup = `
 	<pre id='typewriter'>
@@ -280,9 +297,12 @@ $(document).on('click', '#save', async function() {
     </div>
 	`;
 
+	let time = (103 + 149 * listArr.length) * 1.2;
+	console.log(time);
+
 	let typeInput = $('#typewriter');
 
-	finishAnimation(typeInput, 910, $terminalText, endMarkup);
+	finishAnimation(typeInput, time, $terminalText, endMarkup);
 
 	$('#dicExplain').focus();
 });
@@ -291,6 +311,14 @@ $(document).on('keypress', '#dicExplain', function(e) {
 	if (e.which == 13) {
 		if ($('#dicExplain').val() === 'y') {
 			dicExplain();
+		}
+	}
+});
+
+$(document).on('keypress', '#bruteChoice', function(e) {
+	if (e.which == 13) {
+		if ($('#bruteChoice').val() === 'y') {
+			startPage();
 		}
 	}
 });
@@ -406,9 +434,9 @@ $(document).on('keypress', '#passTry', async function(e) {
 	}
 });
 
-function sleep(ms) {
-	return new Promise((resolve) => setTimeout(resolve, ms));
-}
+$(document).on('click', '#close', function() {
+	tl.to(`#notepad`, 0.5, { width: '0%', stagger: 0.5 });
+});
 
 startPage();
 randomPass();

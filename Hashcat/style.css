@@ -109,12 +109,29 @@ body {
 	font-family: 'Syne Mono', monospace;
 }
 
+.desktop {
+	color: white;
+	display: inline-block;
+	position: absolute;
+}
+
+.icon:hover {
+	cursor: pointer;
+}
+
+.desktop img {
+	max-width: 50px;
+}
 #terminalText {
 	position: absolute;
 	width: 100%;
 	height: 95%;
 	overflow-y: scroll;
 	bottom: 0px;
+}
+
+pre {
+	white-space: pre-wrap;
 }
 
 #listText {
@@ -137,14 +154,21 @@ body {
 	white-space: nowrap;
 }
 
+#close:hover {
+	cursor: pointer;
+	font-weight: bold;
+}
+
 #notepad {
 	position: absolute;
-	width: 30%;
+	width: 0%;
 	height: 60%;
 	border: 2px solid black;
 	background-color: white;
 	z-index: 1;
 	overflow: hidden;
+	top: 10%;
+	left: 5%;
 }
 
 #nextInput {
@@ -154,4 +178,5 @@ body {
 
 #save:hover {
 	cursor: pointer;
+	font-weight: bold;
 }
