@@ -49,8 +49,9 @@ async function bruteExplain() {
 	
 	`;
 
-	await sleep(3000);
-	$terminalText.append(markup);
+	let typeInput = $('#typewriter');
+
+	finishAnimation(typeInput, 700, $terminalText, markup);
 
 	$('#dicChoice').focus();
 
@@ -101,7 +102,7 @@ async function startPage() {
 	$terminalText.append(terminalMarkup);
 	var typer = document.getElementById('typewriter_intro');
 	typewriter = setupTypewriter(typer);
-	typewriter.type();
+	await typewriter.type();
 
 	let markup = `
 	<div id='crypto'><div class='container text-center'><span class='p-3'id='crypto1'>CRYPTO1</span><span class='p-3' id='crypto2'>CRYPTO2</span><span class='p-3' id='crypto3'>CRYPTO3</span></div></div><br>
@@ -112,8 +113,23 @@ async function startPage() {
   <i></i>
 </div>
 	`;
-	await sleep(4500);
-	$terminalText.append(markup);
+
+	let typeInput = $('#typewriter_intro');
+
+	finishAnimation(typeInput, 360, $terminalText, markup);
+}
+
+async function finishAnimation(idTag, n, appendTag, markup) {
+	let len = idTag[0].innerHTML.length;
+
+	if (len < n) {
+		await sleep(500);
+		len = idTag[0].innerHTML.length;
+		finishAnimation(idTag, n, appendTag, markup);
+	} else {
+		console.log('foi');
+		appendTag.append(markup);
+	}
 }
 
 function bruteForce() {
@@ -264,8 +280,10 @@ $(document).on('click', '#save', async function() {
     </div>
 	`;
 
-	await sleep(10000);
-	$terminalText.append(endMarkup);
+	let typeInput = $('#typewriter');
+
+	finishAnimation(typeInput, 910, $terminalText, endMarkup);
+
 	$('#dicExplain').focus();
 });
 
@@ -377,9 +395,6 @@ $(document).on('keypress', '#passTry', async function(e) {
 						}
 					}
 				});
-
-				// tl.to(`.${attemptClass}`, 0.5, { width: '100%', stagger: 0.5 });
-				// await sleep(2000);
 			} else {
 				let match = `
 				<span  class='term_content ${attemptClass}'>YOU JUST BREAKED THE PASSWORD!</span>
@@ -409,11 +424,10 @@ function setupTypewriter(t) {
 		tag = '',
 		writingTag = false,
 		tagOpen = false,
-		typeSpeed = 0.1,
+		typeSpeed = 1,
 		tempTypeSpeed = 0;
 
 	var type = function() {
-		isAnimationRunning = true;
 		if (writingTag === true) {
 			tag += HTML[cursorPosition];
 		}
@@ -456,7 +470,6 @@ function setupTypewriter(t) {
 		if (cursorPosition < HTML.length - 1) {
 			setTimeout(type, tempTypeSpeed);
 		}
-		isAnimationRunning = false;
 	};
 
 	return {
