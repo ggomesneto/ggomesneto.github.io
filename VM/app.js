@@ -126,7 +126,7 @@ $(document).on('click', '#left', function() {
 	let markup = `
 
     <div class='folderItem text-center firstLine' id='projects'>
-    <i class="far fa-folder fa-5x"><br>
+    <i class="far fa-folder fa-5x"></i><br>
             <span>Projects</span>
         </div>
 
