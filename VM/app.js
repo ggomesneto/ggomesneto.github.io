@@ -67,9 +67,9 @@ $(document).on('dblclick', '#portFile', function() {
             <span>Curriculum Vitae</span>
         </div>
 
-        <div class='folderItem text-center secLine' id='email'>
-            <i class="far fa-envelope-open fa-5x"></i><Br>
-            <span>Email</span>
+        <div class='folderItem text-center secLine' id='info'>
+        <i class="far fa-address-card fa-5x"></i><Br>
+            <span>Contact Info</span>
         </div>
 
         
@@ -145,9 +145,9 @@ $(document).on('click', '#left', function() {
             <span>Curriculum Vitae</span>
         </div>
 
-        <div class='folderItem text-center secLine' id='email'>
-            <i class="far fa-envelope-open fa-3x"></i><Br>
-            <span>Email</span>
+        <div class='folderItem text-center secLine' id='info'>
+        <i class="far fa-address-card fa-5x"></i><Br>
+            <span>Contact Info</span>
         </div>
     
     `;
@@ -265,4 +265,41 @@ $(document).on('dblclick', '#aboutMe', function() {
 	});
 });
 
-let count = 1;
+$(document).on('dblclick', '#info', function() {
+	$('#contactCard').remove();
+	let markup = `
+    <div class='text-center' id='contactCard'>
+    
+    <div id='cardBar'>
+
+         <span id='close'>x</span>
+
+    </div>
+
+    
+
+    <div  id='Info'>
+
+    <div id='logo'>G|</DIV>
+    
+    
+    <span id='cName' >GERALDO GOMES</SPAN><Br>
+    <SPAN>GGOMESNETO@GMAIL.COM</SPAN><br>
+    <A HREF='HTTPS://GGOMESNETO.GITHUB.IO'>PORTFOLIO</A><SPAN>|</SPAN><A HREF='HTTPS://LINKEDIN.COM/IN/GGOMESNETO'>LINKEDIN</A><SPAN>|</SPAN>
+    <A HREF='https://github.com/ggomesneto/'>MY GITHUB</A><BR><br>
+    <SPAN>AUSTIN, TEXAS</SPAN>
+    
+    
+    
+    </div>
+    
+    
+
+
+    
+    </div>
+    
+    `;
+
+	$('#folderContent').append(markup);
+});

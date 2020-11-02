@@ -48,6 +48,15 @@
 	width: 100%;
 }
 
+#cardBar {
+	background-color: transparent;
+
+	position: absolute;
+	top: 0px;
+	font-family: 'Roboto', sans-serif;
+	width: 100%;
+}
+
 #topBar span {
 	padding-left: 5px;
 }
@@ -186,6 +195,23 @@
 	grid-template-rows: repeat(10, 10%);
 }
 
+#contactCard {
+	grid-column-start: 2;
+	grid-column-end: 5;
+	grid-row-start: 4;
+	grid-row-end: 8;
+	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
+
+	position: relative;
+	background-color: darkblue;
+	border: 5px solid white;
+
+	display: grid;
+
+	grid-template-columns: repeat(10, 10%);
+	grid-template-rows: repeat(10, 10%);
+}
+
 .lat {
 	position: absolute;
 	bottom: 50px;
@@ -216,4 +242,38 @@
 
 #right:hover {
 	cursor: pointer;
+}
+
+#cName {
+	font-size: 2.5em;
+	color: white;
+}
+
+#Info {
+	font-family: 'Montserrat', sans-serif;
+	background-color: transparent;
+	grid-column-start: 1;
+	grid-column-end: 11;
+	grid-row-start: 2;
+	grid-row-end: 10;
+	color: white;
+	position: relative;
+}
+
+#Info a {
+	text-decoration: none;
+	padding-left: 5px;
+	padding-right: 5px;
+	color: white;
+}
+
+#Info a:hover {
+	border-bottom: 1px solid black;
+}
+
+#logo {
+	position: absolute;
+	left: 3%;
+	top: -18%;
+	font-size: 9em;
 }
