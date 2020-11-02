@@ -212,7 +212,7 @@ $(document).on('dblclick', '#aboutMe', function() {
         <br>
         <br>
         <br>
-        <br>
+        
         <i id='right' class="fas fa-arrow-right fa-3x"></i>
         
         
