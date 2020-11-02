@@ -145,12 +145,13 @@
 #Jeopardy {
 	grid-column-start: 2;
 	grid-column-end: 11;
-	grid-row-start: 1;
+	grid-row-start: 2;
 	grid-row-end: 11;
 	border: 2px solid rgb(226, 223, 223);
 	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
 	background-color: #33383d;
 	position: relative;
+	overflow-y: scroll;
 }
 
 .min {
