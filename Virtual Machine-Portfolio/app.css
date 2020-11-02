@@ -1,0 +1,175 @@
+#mainWrap {
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+
+	grid-template-columns: repeat(10, 10%);
+	grid-template-rows: repeat(20, 5%);
+
+	background-color: black;
+	border: 5px solid white;
+}
+
+.terminal {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	color: greenyellow;
+	white-space: nowrap;
+	font-family: 'Syne Mono', monospace;
+}
+
+.terminal pre {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+#virtualMachine {
+	grid-column-start: 2;
+	grid-column-end: 10;
+	grid-row-start: 3;
+	grid-row-end: 20;
+
+	background-color: white;
+	border: 2px solid rgb(226, 223, 223);
+	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
+	position: relative;
+}
+
+#topBar {
+	background-color: rgb(245, 241, 241);
+	border-bottom: 1px solid rgb(245, 241, 241);
+	position: absolute;
+	top: 0px;
+	font-family: 'Roboto', sans-serif;
+	width: 100%;
+}
+
+#topBar span {
+	padding-left: 5px;
+}
+
+#portFile {
+	display: inline-block;
+	grid-row-start: 2;
+	grid-column-start: 1;
+	justify-self: center;
+}
+
+#portFile:hover {
+	cursor: pointer;
+	border: 2px solid white;
+	background-color: rgba(255, 255, 255, 0.322);
+}
+
+#portFile span {
+	color: white;
+	text-shadow: 2px 2px 2px #000000;
+	font-size: 0.9em;
+}
+
+#portFile .fa-folder {
+	color: rgb(245, 245, 199);
+}
+
+#desktop {
+	width: 100%;
+	height: 100%;
+	background-image: url(background.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	display: grid;
+	grid-template-columns: repeat(10, 10%);
+	grid-template-rows: repeat(10, 10%);
+}
+
+#portFolder {
+	grid-column-start: 2;
+	grid-column-end: 10;
+	grid-row-start: 2;
+	grid-row-end: 10;
+	border: 2px solid rgb(226, 223, 223);
+	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
+	background-color: white;
+	position: relative;
+}
+
+.min {
+	color: rgb(214, 214, 62);
+}
+
+#close {
+	float: right;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+#close:hover {
+	cursor: pointer;
+	font-weight: bolder;
+}
+
+#latDetail {
+	grid-column-start: 5;
+	grid-column-end: 7;
+	grid-row-start: 2;
+	grid-row-end: 21;
+	border-left: 1px solid lightgray;
+}
+
+#folderContent {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(5, 20%);
+	grid-template-rows: repeat(10, 10%);
+	grid-auto-flow: column;
+}
+
+.firstLine {
+	grid-row-start: 2;
+}
+
+.secLine {
+	grid-row-start: 5;
+	grid-column-start: 1;
+}
+
+.folderItem:hover {
+	cursor: pointer;
+}
+
+.folderItem:hover span {
+	background-color: rgba(139, 236, 245, 0.377);
+}
+
+.folderItem span {
+	color: black;
+}
+
+#skills {
+	grid-column-start: 2;
+	grid-column-end: 10;
+	grid-row-start: 2;
+	grid-row-end: 10;
+	border: 2px solid rgb(226, 223, 223);
+
+	background-image: url(skills.png);
+	background-size: 100% 100%;
+	z-index: 1;
+	position: relative;
+}
+
+#folderContent img {
+	width: 100px;
+}
+
+#left:hover {
+	cursor: pointer;
+}
