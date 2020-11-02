@@ -94,17 +94,17 @@ $(document).on('dblclick', '#projects', function() {
     <span>Memory Game</span>
 </div>
 
-<div class='folderItem text-center firstLine' id='aboutMe'>
+<div class='folderItem text-center firstLine' id='jeopardy'>
 <img src='jeopardy.jpg'><br>
     <span>Jeopardy</span>
 </div>
 
-<div class='folderItem text-center firstLine' id='mySkills'>
+<div class='folderItem text-center firstLine' id='hackerNews'>
 <img src='Hacker-News.jpg'><br>
     <span>Hack or Snooze</span>
 </div>
 
-<div class='folderItem text-center secLine' id='curriculum'>
+<div class='folderItem text-center secLine' id='connect'>
 <img src='connect-card.png'><br>
     <span>Connect Four</span>
 </div>
@@ -131,7 +131,7 @@ $(document).on('click', '#left', function() {
         </div>
 
         <div class='folderItem text-center firstLine' id='aboutMe'>
-            <i class="fas fa-folder fa-5x min"></i><br>
+        <i class="far fa-file-powerpoint fa-5x"></i><br>
             <span>About Me</span>
         </div>
 
