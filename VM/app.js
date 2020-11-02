@@ -94,20 +94,14 @@ $(document).on('dblclick', '#projects', function() {
     <span>Memory Game</span>
 </div>
 
-<div class='folderItem text-center firstLine' id='jeopardy'>
-<img src='jeopardy.jpg'><br>
-    <span>Jeopardy</span>
-</div>
+
 
 <div class='folderItem text-center firstLine' id='hackerNews'>
 <img src='Hacker-News.jpg'><br>
     <span>Hack or Snooze</span>
 </div>
 
-<div class='folderItem text-center secLine' id='connect'>
-<img src='connect-card.png'><br>
-    <span>Connect Four</span>
-</div>
+
 
 <div id='latDetail'></div>
 
@@ -171,10 +165,7 @@ $(document).on('dblclick', '#aboutMe', function() {
                     
                     <br>
        
-        <br>
-        <br>
-        <br>
-        <br>
+        
         <span  class='title'>THAT'S ME WORKING OFFSHORE WHEN I WAS 23.</SPAN><br><br>
         <span>I WAS RESPONSIBLE FOR ALL THE LOGGING-WHILE-DRILLING (LWD) DATA AND EQUIPMENT ON OFFSHORE WELLS.</SPAN><br><br>
         <span>DURING MY TIME WORKING IN THE OILFIELD I WENT FROM AN <Strong>INTERN</Strong> IN BRAZIL TO A <Strong>SENIOR</Strong> LWD SPECIALIST, WORKING IN THE <Strong>US, RUSSIA, UAE AND A COUPLE OF OTHER COUNTRIES.</Strong> </SPAN><br><br>
@@ -201,11 +192,7 @@ $(document).on('dblclick', '#aboutMe', function() {
 
 			let markup = `
        
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+            <br>
         <span  class='title'>THAT'S ME PLAYING POKER</SPAN><br><br>
         <span>AFTER WORKING FOR ALMOST A DECADE OFFSHORE, I DECIDED TO TURN A HOBBY INTO A CAREER</SPAN><br><br>
         <span>DURING <STRONG>3 YEARS</STRONG>, I TRAVELLED THROUGH BRAZIL AND THE USA PLAYING POKER. LIFE WAS GOOD, BUT THERE WAS NO FINANCIAL STABILITY. </SPAN><br><span>THE BEST THING ABOUT THAT MOMENT WAS THAT IF I HAVE NEVER TRIED IT, I WOULDN'T MEET THE <STRONG>LOVE OF MY LIFE</STRONG></SPAN><br>
@@ -244,12 +231,8 @@ $(document).on('dblclick', '#aboutMe', function() {
 			$('#latDetail').empty();
 
 			let markup = `
-    
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+            <br>
+        
         <span  class='title'> THAT'S ME WORKING OFFSHORE WHEN I WAS 23.</SPAN><br><br>
         <span>I WAS RESPONSIBLE FOR ALL THE LOGGING-WHILE-DRILLING (LWD) DATA AND EQUIPMENT ON OFFSHORE WELLS.</SPAN><br><br>
         <span>DURING MY TIME WORKING IN THE OILFIELD I WENT FROM AN <Strong>INTERN</Strong> IN BRAZIL TO A <Strong>SENIOR</Strong> LWD SPECIALIST, WORKING IN THE <Strong>US, RUSSIA, UAE AND A COUPLE OF OTHER COUNTRIES.</Strong> </SPAN><br><br>

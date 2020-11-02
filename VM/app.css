@@ -8,8 +8,8 @@
 
 	background-color: black;
 
-	min-width: 1200px;
-	min-height: 800PX;
+	min-width: 1500px;
+	min-height: 900PX;
 }
 
 .terminal {
@@ -32,7 +32,7 @@
 	grid-column-end: 10;
 	grid-row-start: 3;
 	grid-row-end: 20;
-
+	min-width: 800px;
 	background-color: white;
 	border: 2px solid rgb(226, 223, 223);
 	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
@@ -68,13 +68,33 @@
 	justify-self: center;
 }
 
-#portFile:hover {
+#connect {
+	display: inline-block;
+	grid-row-start: 4;
+	grid-column-start: 1;
+	justify-self: center;
+}
+
+#jeopardyGame {
+	display: inline-block;
+	grid-row-start: 6;
+	grid-column-start: 1;
+	justify-self: center;
+}
+
+#portFile:hover,
+#connect:hover,
+#jeopardy:hover,
+#jeopardyGame:hover {
 	cursor: pointer;
 	border: 2px solid white;
 	background-color: rgba(255, 255, 255, 0.322);
 }
 
-#portFile span {
+#portFile span,
+#connect span,
+#jeopardy span,
+#jeopardyGame span {
 	color: white;
 	text-shadow: 2px 2px 2px #000000;
 	font-size: 0.9em;
@@ -82,6 +102,10 @@
 
 #portFile .fa-folder {
 	color: rgb(245, 245, 199);
+}
+
+#desktop img {
+	width: 80px;
 }
 
 #desktop {
@@ -104,6 +128,28 @@
 	border: 2px solid rgb(226, 223, 223);
 	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
 	background-color: white;
+	position: relative;
+}
+
+#connectFourGame {
+	grid-column-start: 3;
+	grid-column-end: 6;
+	grid-row-start: 2;
+	grid-row-end: 10;
+	border: 2px solid rgb(226, 223, 223);
+	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
+	background-color: #33383d;
+	position: relative;
+}
+
+#Jeopardy {
+	grid-column-start: 2;
+	grid-column-end: 11;
+	grid-row-start: 1;
+	grid-row-end: 11;
+	border: 2px solid rgb(226, 223, 223);
+	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
+	background-color: #33383d;
 	position: relative;
 }
 
@@ -130,7 +176,7 @@
 	border-left: 1px solid lightgray;
 	background-color: white;
 	font-family: 'Yanone Kaffeesatz', sans-serif;
-	font-size: 1.4em;
+	font-size: 19.2px;
 }
 
 #latDetail strong {
@@ -237,6 +283,7 @@
 
 .title {
 	font-weight: bolder;
+	font-size: 25px;
 }
 
 #right:hover {
@@ -275,4 +322,84 @@
 	left: 1%;
 	top: 1%;
 	font-size: 6em;
+}
+
+/* ---------CONNECT 4 ---------- */
+
+#board-connect td {
+	width: 150px;
+	height: 55px;
+	border: solid 3px black;
+	border-radius: 50%;
+	background-color: black;
+}
+
+#connectFourGame form {
+	color: white;
+}
+
+#board-connect {
+	position: absolute;
+	bottom: 0px;
+	background-color: #0173d4;
+	border: 5px solid white;
+}
+
+.piece {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+#column-top td {
+	border: 0px;
+	border-bottom: 3px solid black;
+	border-radius: 0px;
+	background-color: #33383d;
+}
+
+#column-top td:hover {
+	background-color: gold;
+}
+
+#game {
+	margin: auto;
+	width: 600px;
+	height: 600px;
+}
+
+/* CSS FOR JEOPARDY */
+
+.tdJeopardy {
+	font-size: 0.9rem;
+	text-align: center;
+	width: 220px;
+	height: 100px;
+
+	border: 5px solid black;
+	background-color: #060ce9;
+	color: white;
+	font-family: 'Copse', serif;
+}
+
+.tdHead {
+	font-size: 0.9rem;
+	text-align: center;
+	width: 220px;
+
+	border: 5px solid black;
+	background-color: #060ce9;
+	color: white;
+	font-family: 'Copse', serif;
+	height: 50px;
+}
+
+td:hover {
+	cursor: pointer;
+}
+
+.jeopardy div {
+	display: inline-block;
+	margin-right: 50px;
+	color: white;
 }
