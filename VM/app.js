@@ -89,10 +89,7 @@ $(document).on('dblclick', '#projects', function() {
 	$('#folderContent').empty();
 
 	let markup = `
-    <div class='folderItem text-center firstLine' id='memoryGame'>
-    <img src='memory-card.jpg'><br>
-    <span>Memory Game</span>
-</div>
+    
 
 
 
