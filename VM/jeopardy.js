@@ -184,7 +184,7 @@ $(document).on('dblclick', '#jeopardyGame', function() {
                     
     	<div id='topBar'>
 
-        	<i class="fas fa-folder min"></i><span id='header'>JEOPARDY</span><span id='close'>x</span>
+        	<span id='header'>JEOPARDY</span><span id='close'>x</span>
         
 
 		</div>

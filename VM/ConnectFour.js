@@ -169,7 +169,7 @@ $(document).on('dblclick', '#connect', function() {
                     
     	<div id='topBar'>
 
-        	<i class="fas fa-folder min"></i><span id='header'>Connect Four</span><span id='close'>x</span>
+        <span id='header'>Connect Four</span><span id='close'>x</span>
         
 
 		</div>

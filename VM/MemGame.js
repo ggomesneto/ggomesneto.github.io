@@ -175,7 +175,7 @@ $(document).on('dblclick', '#memoryGame', function() {
                     
     	<div id='topBar'>
 
-        	<i class="fas fa-folder min"></i><span id='header'>MEMORY GAME</span><span id='close'>x</span>
+        	<span id='header'>MEMORY GAME</span><span id='close'>x</span>
         
 
 		</div>
