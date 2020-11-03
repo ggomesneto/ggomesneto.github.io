@@ -260,3 +260,8 @@ $(document).on('dblclick', '#info', function() {
 		containment: 'parent'
 	});
 });
+
+$('#virtualMachine').draggable({
+	containment: 'parent',
+	handle: '#topBar'
+});
