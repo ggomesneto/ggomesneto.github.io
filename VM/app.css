@@ -64,44 +64,85 @@
 #portFile {
 	display: inline-block;
 	grid-row-start: 2;
-	grid-column-start: 1;
+	grid-column-start: 2;
 	justify-self: center;
 }
 
 #connect {
 	display: inline-block;
 	grid-row-start: 4;
-	grid-column-start: 1;
+	grid-column-start: 2;
+	justify-self: center;
+}
+
+#aboutMe {
+	display: inline-block;
+	grid-row-start: 2;
+	grid-column-start: 4;
+	justify-self: center;
+}
+
+#mySkills {
+	display: inline-block;
+	grid-row-start: 3;
+	grid-column-start: 4;
+	justify-self: center;
+}
+
+#curriculum {
+	display: inline-block;
+	grid-row-start: 4;
+	grid-column-start: 4;
 	justify-self: center;
 }
 
 #jeopardyGame {
 	display: inline-block;
 	grid-row-start: 6;
-	grid-column-start: 1;
+	grid-column-start: 2;
 	justify-self: center;
 }
 
 #memoryGame {
 	display: inline-block;
+	grid-row-start: 2;
+	grid-column-start: 2;
+	justify-self: center;
+}
+
+#hackerNews {
+	display: inline-block;
 	grid-row-start: 8;
-	grid-column-start: 1;
+	grid-column-start: 2;
 	justify-self: center;
 }
 
 #portFile:hover,
 #connect:hover,
 #jeopardyGame:hover,
-#memoryGame:hover {
+#memoryGame:hover,
+#aboutMe:hover,
+#mySkills:hover,
+#curriculum:hover,
+#hackerNews:hover {
 	cursor: pointer;
-	border: 2px solid white;
-	background-color: rgba(255, 255, 255, 0.322);
+	transform: scale(1.1);
+}
+
+#mySkills span,
+#aboutMe span,
+#curriculum span {
+	font-family: 'Red Hat Display', sans-serif;
+	font-size: 30px;
+	color: white;
+	text-shadow: 2px 2px 2px #000000;
 }
 
 #portFile span,
 #connect span,
 #memoryGame span,
-#jeopardyGame span {
+#jeopardyGame span,
+#hackerNews span {
 	color: white;
 	text-shadow: 2px 2px 2px #000000;
 	font-size: 0.9em;
@@ -112,7 +153,9 @@
 }
 
 #desktop img {
-	width: 80px;
+	width: 150px;
+	border: 3px solid black;
+	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
 }
 
 #desktop {
@@ -246,6 +289,19 @@
 	position: relative;
 }
 
+#CV {
+	grid-column-start: 1;
+	grid-column-end: 11;
+	grid-row-start: 1;
+	grid-row-end: 11;
+	border: 2px solid rgb(226, 223, 223);
+
+	background-image: url(CV.png);
+	background-size: 100% 100%;
+	z-index: 1;
+	position: relative;
+}
+
 #aboutMeFile {
 	grid-column-start: 4;
 	grid-column-end: 7;
@@ -320,21 +376,6 @@
 
 #left:hover {
 	cursor: pointer;
-}
-
-#postIt {
-	grid-column-start: 7;
-	grid-column-end: 10;
-	grid-row-start: 2;
-	grid-row-end: 7;
-	background-color: rgb(238, 238, 104);
-	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
-	font-family: 'Roboto', sans-serif;
-}
-
-#postIt span {
-	color: black;
-	text-shadow: none;
 }
 
 .title {

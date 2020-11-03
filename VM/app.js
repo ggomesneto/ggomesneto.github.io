@@ -31,96 +31,6 @@ $(document).on('dblclick', '#mySkills', function() {
 	});
 });
 
-$(document).on('dblclick', '#portFile', function() {
-	if ($('body')[0].innerHTML.includes('portFolder')) {
-		return;
-	}
-
-	let markup = `
-    
-    <div id='portFolder'>
-                    
-    <div id='topBar'>
-
-        <i class="fas fa-folder min"></i><span id='header'>PORTFOLIO V35.A</span><span id='close'>x</span>
-        <div id='functionalBar'>
-            <div id='buttons'>
-                <i id='left' class="fas fa-arrow-left"></i>
-            </div>
-        </div>
-
-    </div>
-    <div id='folderContent'>
-
-        <div class='folderItem text-center firstLine' id='projects'>
-        <i class="far fa-folder fa-5x"></i></i><br>
-            <span>Projects</span>
-        </div>
-
-        <div class='folderItem text-center firstLine' id='aboutMe'>
-        <i class="far fa-file-powerpoint fa-5x"></i><br>
-            <span>Photos</span>
-        </div>
-
-        <div class='folderItem text-center firstLine' id='mySkills'>
-            <i class="far fa-image fa-5x "></i><br>
-            <span>Skills</span>
-        </div>
-
-        <div class='folderItem text-center firstLine' id='curriculum'>
-            <i class="far fa-file-alt fa-5x"></i><Br>
-            <span>Curriculum Vitae</span>
-        </div>
-
-        <div class='folderItem text-center secLine' id='info'>
-        <i class="far fa-address-card fa-5x"></i><Br>
-            <span>Contact Info</span>
-        </div>
-
-        
-
-    </div>
-    
-   
-</div>
-
-    `;
-	$desktop.append(markup);
-
-	presentHTML = $('body')[0].innerHTML;
-
-	$('#portFolder').draggable({
-		containment: 'parent',
-		handle: '#topBar'
-	});
-});
-
-$(document).on('dblclick', '#projects', function() {
-	$('#folderContent').empty();
-
-	let markup = `
-    
-
-
-
-<div class='folderItem text-center firstLine' id='hackerNews'>
-<img src='Hacker-News.jpg'><br>
-    <span>Hack or Snooze</span>
-</div>
-
-
-
-<div id='latDetail'></div>
-
-    `;
-
-	$('#folderContent').append(markup);
-	$('#header').text('Projects');
-
-	pastHTML = presentHTML;
-	presentHTML = $('body')[0].innerHTML;
-});
-
 $(document).on('click', '#left', function() {
 	$('#folderContent').empty();
 
@@ -264,4 +174,26 @@ $(document).on('dblclick', '#info', function() {
 $('#virtualMachine').draggable({
 	containment: 'parent',
 	handle: '#topBar'
+});
+
+$(document).on('dblclick', '#curriculum', function() {
+	let markup = `
+    <div id='CV'>
+
+                    <div id='topBar'>
+
+                        <span id='vmName'>CV</span><span id='close'>x</span>
+                        
+
+                    </div>
+
+     </div>
+
+    `;
+	$desktop.append(markup);
+
+	$('#CV').draggable({
+		containment: 'parent',
+		handle: '#topBar'
+	});
 });
