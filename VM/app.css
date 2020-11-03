@@ -247,18 +247,48 @@
 }
 
 #aboutMeFile {
-	grid-column-start: 2;
-	grid-column-end: 10;
+	grid-column-start: 4;
+	grid-column-end: 7;
 	grid-row-start: 2;
 	grid-row-end: 10;
-	border: 2px solid rgb(226, 223, 223);
-
-	background-size: 60% 100%;
+	border: 5px solid rgb(226, 223, 223);
+	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
+	background-size: 100% 100%;
 	z-index: 1;
 	position: relative;
 	display: grid;
 	grid-template-columns: repeat(5, 20%);
 	grid-template-rows: repeat(10, 10%);
+}
+
+.slidePhoto {
+	width: 10%;
+	height: 100%;
+
+	position: absolute;
+	display: grid;
+	place-items: center;
+}
+
+.slidePhoto i {
+	color: black;
+	display: none;
+}
+
+.slidePhoto:hover {
+	background-color: rgba(255, 255, 255, 0.397);
+}
+
+.slidePhoto:hover i {
+	display: block;
+}
+
+#slideLeft {
+	left: 0px;
+}
+
+#slideRight {
+	right: 0px;
 }
 
 #contactCard {

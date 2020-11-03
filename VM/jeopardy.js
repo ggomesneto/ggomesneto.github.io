@@ -200,6 +200,12 @@ $(document).on('dblclick', '#jeopardyGame', function() {
 	`;
 
 	$desktop.append(markup);
+
+	$('#Jeopardy').draggable({
+		containment: 'parent',
+		handle: '#topBar'
+	});
+
 	// Creating name of the game + Restart Button
 	$('<div>JEOPARDY</div>')
 		.attr({

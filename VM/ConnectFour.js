@@ -197,6 +197,11 @@ $(document).on('dblclick', '#connect', function() {
 
 	$('#desktop').append(markup);
 
+	$('#connectFourGame').draggable({
+		containment: 'parent',
+		handle: '#topBar'
+	});
+
 	let button = document.querySelector(`#restart-3`);
 
 	button.addEventListener('click', () => {

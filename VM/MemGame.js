@@ -211,6 +211,11 @@ $(document).on('dblclick', '#memoryGame', function() {
 
 	$desktop.append(markup);
 
+	$('#memory').draggable({
+		containment: 'parent',
+		handle: '#topBar'
+	});
+
 	area = document.getElementById('gameArea');
 
 	area.addEventListener('click', function(e) {
