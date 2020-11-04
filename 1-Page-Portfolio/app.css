@@ -292,7 +292,7 @@ body {
 		grid-template-rows: 5% repeat(10, 9%) 5%;
 	}
 	#mySite pre {
-		font-size: 35px;
+		font-size: 30px;
 	}
 
 	#mySite {
@@ -357,11 +357,5 @@ body {
 		text-shadow: 5px 5px 5px #000000;
 
 		font-family: 'Montserrat', sans-serif;
-	}
-}
-
-@media (max-width: 480px) {
-	#mySite pre {
-		font-size: 15px;
 	}
 }
