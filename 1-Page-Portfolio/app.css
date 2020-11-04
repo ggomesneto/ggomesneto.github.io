@@ -101,7 +101,7 @@ body {
 	grid-row-start: 2;
 	grid-column-start: 2;
 	grid-column-end: 5;
-	font-size: 3.5vw;
+	font-size: 55px;
 	font-family: 'Montserrat', sans-serif;
 	color: white;
 	text-shadow: 5px 5px 5px #000000;
@@ -115,7 +115,7 @@ body {
 	grid-row-start: 2;
 	grid-column-start: 10;
 	grid-column-end: 11;
-	font-size: 3.5vw;
+	font-size: 55px;
 	font-family: 'Montserrat', sans-serif;
 	color: white;
 	text-shadow: 5px 5px 5px #000000;
