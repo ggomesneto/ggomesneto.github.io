@@ -138,7 +138,7 @@ body {
 	grid-column-end: 10;
 	position: relative;
 }
-	
+
 #contactInfo {
 	position: absolute;
 	bottom: 0px;
@@ -296,8 +296,8 @@ body {
 	}
 
 	#mySite {
-		grid-row-start: 4;
-		grid-row-end: 15;
+		grid-row-start: 3;
+		grid-row-end: 14;
 		grid-column-start: 1;
 		grid-column-end: 8;
 		z-index: 1;
