@@ -359,3 +359,9 @@ body {
 		font-family: 'Montserrat', sans-serif;
 	}
 }
+
+@media (max-width: 480px) {
+	#mySite pre {
+		font-size: 15px;
+	}
+}
