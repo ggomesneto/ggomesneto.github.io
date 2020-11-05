@@ -28,7 +28,7 @@ let markupFull = `
 let markupBoth = `
 <div class="carousel-item active">
                       
-<img class="p-3" src="jeopardy.jpg" alt="First slide">
+<img class="p-3" id='jeopardyGame' src="jeopardy.jpg" alt="First slide">
 <img class="p-3" src="connect-card.png" alt="Second slide">
 </div>
 <div class="carousel-item ">
