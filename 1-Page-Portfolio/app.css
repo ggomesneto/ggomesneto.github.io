@@ -1,361 +1,90 @@
-body {
+#wrap {
+	height: 100vh;
+	width: 100vw;
 	background-image: url(back.jpg);
+
+	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	height: 96vh;
-	display: grid;
-	grid-template-columns: 5% repeat(10, 9%) 5%;
-	grid-template-rows: 5% repeat(10, 9%) 5%;
-}
-
-#connect {
-	display: inline-block;
-	grid-row-start: 5;
-	grid-column-start: 2;
-	justify-self: center;
-}
-
-#jeopardyGame {
-	display: inline-block;
-	grid-row-start: 7;
-	grid-column-start: 2;
-	justify-self: center;
-}
-
-#memoryGame {
-	display: inline-block;
-	grid-row-start: 3;
-	grid-column-start: 2;
-	justify-self: center;
-}
-
-#hackerNews {
-	display: inline-block;
-	grid-row-start: 9;
-	grid-column-start: 2;
-	justify-self: center;
-}
-
-.portLink {
-	width: 150px;
-	border: 3px solid black;
-	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
-}
-
-#js {
-	grid-row-start: 4;
-	grid-column-start: 10;
-}
-
-#boot {
-	grid-row-start: 5;
-	grid-column-start: 10;
-}
-
-#css {
-	grid-row-start: 6;
-	grid-column-start: 10;
-}
-
-#git {
-	grid-row-start: 7;
-	grid-column-start: 10;
-}
-
-#html {
-	grid-row-start: 8;
-	grid-column-start: 10;
-}
-
-#mongo {
-	grid-row-start: 5;
-	grid-column-start: 11;
-}
-
-#node {
-	grid-row-start: 6;
-	grid-column-start: 11;
-}
-
-#postg {
-	grid-row-start: 7;
-	grid-column-start: 11;
-}
-
-#python {
-	grid-row-start: 3;
-	grid-column-start: 11;
-}
-
-#react {
-	grid-row-start: 4;
-	grid-column-start: 11;
-}
-
-#vscode {
-	grid-row-start: 3;
-
-	grid-column-start: 10;
-}
-
-#portfolio {
-	grid-row-start: 2;
-	grid-column-start: 2;
-	grid-column-end: 5;
-	font-size: 55px;
 	font-family: 'Montserrat', sans-serif;
-	color: white;
-	text-shadow: 5px 5px 5px #000000;
+	COLOR: WHITE;
 }
 
-#portfolio span {
-	margin: 0 5%;
+#content {
+	height: 60vh;
+	width: 100vw;
 }
 
-#toolkit {
-	grid-row-start: 2;
-	grid-column-start: 10;
-	grid-column-end: 11;
-	font-size: 55px;
-	font-family: 'Montserrat', sans-serif;
-	color: white;
-	text-shadow: 5px 5px 5px #000000;
-}
+#footer {
+	width: 100vw;
+	height: 20vh;
 
-.toolkit span {
-	margin: auto;
-}
-
-.toolkit div {
-	display: inline-block;
-	font-family: 'Montserrat', sans-serif;
-	color: white;
-}
-
-#mySite {
-	grid-row-start: 3;
-	grid-row-end: 15;
-	grid-column-start: 4;
-	grid-column-end: 10;
-	position: relative;
-}
-
-#contactInfo {
-	position: absolute;
+	position: fixed;
 	bottom: 0px;
-	margin: 0 12%;
-	color: white;
-	font-size: 2vw;
-	text-shadow: 5px 5px 5px #000000;
-}
-
-#mySite pre {
-	color: white;
-	font-size: 2vw;
-	text-shadow: 5px 5px 5px #000000;
-}
-#mySite a {
-	text-decoration: none;
-	color: white;
-}
-
-#css div,
-#git div {
-	margin: 0 10%;
-}
-
-#about {
-	grid-row-start: 11;
-
-	color: white;
-	font-size: 1.2vw;
-	grid-column-start: 11;
-	text-shadow: 5px 5px 5px #000000;
-
-	font-family: 'Montserrat', sans-serif;
-}
-
-#connect:hover,
-#jeopardyGame:hover,
-#memoryGame:hover,
-#hackerNews:hover {
-	cursor: pointer;
-	transform: scale(1.1);
-}
-
-#backOpacity {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	background-color: white;
 	left: 0px;
-	top: 0px;
-	opacity: 0.2;
-	z-index: -1;
+	display: grid;
+	place-items: center;
 }
 
-/* ------------------------------- */
-
-#connectFourGame {
-	grid-column-start: 3;
-	grid-column-end: 6;
-	grid-row-start: 2;
-	grid-row-end: 10;
-	border: 2px solid rgb(226, 223, 223);
-	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
-	background-color: #33383d;
-	position: relative;
+img {
+	width: 200px;
 }
 
-#connectFourGame form {
-	color: white;
+#portfolioID {
+	font-size: 2em;
 }
 
-#topBar {
-	background-color: rgb(245, 241, 241);
-	border-bottom: 1px solid rgb(245, 241, 241);
-	position: absolute;
-	top: 0px;
-	font-family: 'Roboto', sans-serif;
-	width: 100%;
+.toolkit {
+	display: grid;
+
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(8, 1fr);
+
+	grid-gap: 10px;
 }
 
-#topBar span {
-	padding-left: 5px;
+#toolName {
+	font-size: 3em;
 }
 
-#close {
-	float: right;
-	padding-right: 10px;
-	padding-left: 10px;
+nav img {
+	width: 100px;
 }
 
-#close:hover {
-	cursor: pointer;
-	font-weight: bolder;
+.areaText {
+	display: inline-block;
+	font-size: 3em;
 }
 
-/* ---------CONNECT 4 ---------- */
-
-#board-connect td {
-	width: 150px;
-	height: 55px;
-	border: solid 3px black;
-	border-radius: 50%;
-	background-color: black;
-}
-
-#connectFourGame form {
-	color: white;
-}
-
-#board-connect {
-	position: absolute;
-	bottom: 0px;
-	background-color: #0173d4;
-	border: 5px solid white;
-}
-
-.piece {
-	width: 100%;
+.area {
 	height: 100%;
-	border-radius: 50%;
+	display: grid;
+	place-items: center;
 }
 
-#column-top td {
-	border: 0px;
-	border-bottom: 3px solid black;
-	border-radius: 0px;
-	background-color: #33383d;
+sup {
+	margin: 0 20%;
 }
 
-#column-top td:hover {
-	background-color: gold;
+#code {
+	font-family: 'Syne Mono', monospace;
+	color: greenyellow;
 }
 
-#game {
-	margin: auto;
-	width: 600px;
-	height: 600px;
+#writer {
+	font-family: 'Patrick Hand', cursive;
 }
 
-#portfolioFolder {
-	display: none;
+#minimalist {
+	font-family: 'Gudea', sans-serif;
+	color: beige;
 }
 
-@media (max-width: 960px) {
-	body {
-		background-image: url(back.jpg);
-		background-size: 100% 100%;
-		height: 96vh;
-		display: grid;
-		grid-template-columns: repeat(6, 15%) 10%;
-		grid-template-rows: 5% repeat(10, 9%) 5%;
+@media (max-width: 750px) {
+	nav img {
+		width: 50px;
 	}
-	#mySite pre {
-		font-size: 30px;
-	}
-
-	#mySite {
-		grid-row-start: 4;
-		grid-row-end: 14;
-		grid-column-start: 1;
-		grid-column-end: 8;
-		z-index: 1;
-	}
-
-	#contactInfo {
-		position: absolute;
-		bottom: 0px;
-		margin: 0 5%;
-		color: white;
-		font-size: 35px;
-		text-shadow: 5px 5px 5px #000000;
-	}
-
-	#portfolio span {
-		margin: 0;
-	}
-
-	#portfolio {
-		font-size: 35px;
-	}
-
-	#toolkit {
-		grid-row-start: 2;
-		grid-column-start: 5;
-		grid-column-end: 6;
-		font-size: 35px;
-		font-family: 'Montserrat', sans-serif;
-		color: white;
-		text-shadow: 5px 5px 5px #000000;
-	}
-
-	#memoryGame,
-	#jeopardyGame,
-	#hackerNews,
-	#connect,
-	#python,
-	#vscode,
-	#js,
-	#react,
-	#boot,
-	#mongo,
-	#css,
-	#node,
-	#git,
-	#postg,
-	#html {
-		display: none;
-	}
-
-	#about {
-		grid-row-start: 11;
-
-		color: white;
-		font-size: 1.2vw;
-		grid-column-start: 3;
-		text-shadow: 5px 5px 5px #000000;
-
-		font-family: 'Montserrat', sans-serif;
+	.areaText {
+		display: inline-block;
+		font-size: 2em;
 	}
 }
