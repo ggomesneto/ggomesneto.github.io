@@ -48,6 +48,10 @@
 	width: 100%;
 }
 
+#topBar span {
+	padding-left: 5px;
+}
+
 #cardBar {
 	background-color: transparent;
 
@@ -55,10 +59,6 @@
 	top: 0px;
 	font-family: 'Roboto', sans-serif;
 	width: 100%;
-}
-
-#topBar span {
-	padding-left: 5px;
 }
 
 #portFile {

@@ -174,8 +174,8 @@ function openJeopardy() {
 	$('#jeopardy').toggle();
 }
 
-$(document).on('dblclick', '#jeopardyGame', function() {
-	if ($('body')[0].innerHTML.includes(`container-fluid text-center`)) {
+$(document).on('click', '#jeopardyGame', function() {
+	if ($('body')[0].innerHTML.includes(`container-fluid text-center jeopardy`)) {
 		return;
 	}
 	let markup = `
@@ -199,7 +199,7 @@ $(document).on('dblclick', '#jeopardyGame', function() {
 	
 	`;
 
-	$desktop.append(markup);
+	$('.area').prepend(markup);
 
 	$('#Jeopardy').draggable({
 		containment: 'parent',

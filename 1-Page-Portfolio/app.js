@@ -18,7 +18,7 @@ let $carousel = $('.carousel-inner');
 let markupFull = `
 <div class="carousel-item active">
                       
-<img class="p-3" src="jeopardy.jpg" alt="First slide">
+<img class="p-3" id='jeopardyGame' src="jeopardy.jpg" alt="First slide">
 <img class="p-3" src="connect-card.png" alt="Second slide">
 <img class="p-3" src="meme-card.png" alt="Third slide">
 <img class="p-3" src="Hacker-News.jpg" alt="Third slide">
@@ -41,3 +41,9 @@ let markupBoth = `
 var x = window.matchMedia('(max-width: 700px)');
 myFunction(x); // Call listener function at run time
 x.addListener(myFunction); // Attach listener function on state changes
+
+$(document).on('click', '#close', function() {
+	let $file = $(this).parent().parent();
+
+	$file.remove();
+});
