@@ -67,7 +67,7 @@ nav img {
 }
 
 sup {
-	margin: 0 20%;
+	margin: 0 auto;
 }
 
 #code {
@@ -77,11 +77,6 @@ sup {
 
 #writer {
 	font-family: 'Patrick Hand', cursive;
-}
-
-#minimalist {
-	font-family: 'Gudea', sans-serif;
-	color: beige;
 }
 
 .carousel-item img:hover {

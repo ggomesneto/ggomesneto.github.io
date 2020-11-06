@@ -202,7 +202,7 @@ $(document).on('click', '#jeopardyGame', function() {
 	$('.area').prepend(markup);
 
 	$('#Jeopardy').draggable({
-		containment: 'parent',
+		containment: $('#Jeopardy').parent().parent(),
 		handle: '#topBar'
 	});
 
