@@ -18,22 +18,22 @@ let $carousel = $('.carousel-inner');
 let markupFull = `
 <div class="carousel-item active">
                       
-<img class="p-3" id='jeopardyGame' src="jeopardy.jpg" alt>
-<img class="p-3" id='connect' src="connect-card.png">
-<img class="p-3" id='memoryGame' src="memory-card.jpg">
-<a href='/HackOrSnooze/index.html' target='_blank'><img class="p-3" src="Hacker-News.jpg"></a>
+<img class="p-3" id='jeopardyGame' src="img/jeopardy.jpg" alt>
+<img class="p-3" id='connect' src="img/connect-card.png">
+<img class="p-3" id='memoryGame' src="img/memory-card.jpg">
+<a href='/HackOrSnooze/index.html' target='_blank'><img class="p-3" src="img/Hacker-News.jpg"></a>
 </div>
 `;
 
 let markupBoth = `
 <div class="carousel-item active">
                       
-<img class="p-3" id='jeopardyGame' src="jeopardy.jpg" >
-<img class="p-3" src="connect-card.png" >
+<img class="p-3" id='jeopardyGame' src="img/jeopardy.jpg" >
+<img class="p-3" src="img/connect-card.png" >
 </div>
 <div class="carousel-item ">
-<img class="p-3" src="meme-card.png" >
-<img class="p-3" src="Hacker-News.jpg" >
+<img class="p-3" src="img/meme-card.png" >
+<img class="p-3" src="img/Hacker-News.jpg" >
 </div>
 
 `;
