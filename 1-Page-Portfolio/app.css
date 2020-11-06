@@ -50,6 +50,11 @@ nav img {
 	width: 100px;
 }
 
+nav a {
+	text-decoration: none;
+	color: white;
+}
+
 .areaText {
 	display: inline-block;
 	font-size: 3em;

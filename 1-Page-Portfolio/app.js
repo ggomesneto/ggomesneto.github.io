@@ -33,7 +33,7 @@ let markupBoth = `
 </div>
 <div class="carousel-item ">
 <img class="p-3" id='memoryGame src="img/memory-card.jpg" >
-<a href='/HackOrSnooze/index.html' target='_blank'><img class="p-3" src="img/Hacker-News.jpg" ></a>
+<a href='/HackOrSnooze/index.html' target='_blank'><img class="p-3" src="img/Hacker-News.jpg" ></a>d
 </div>
 
 `;
