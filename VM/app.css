@@ -181,17 +181,6 @@
 	position: relative;
 }
 
-#connectFourGame {
-	grid-column-start: 3;
-	grid-column-end: 6;
-	grid-row-start: 2;
-	grid-row-end: 10;
-	border: 2px solid rgb(226, 223, 223);
-	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
-	background-color: #33383d;
-	position: relative;
-}
-
 #Jeopardy {
 	grid-column-start: 2;
 	grid-column-end: 11;
@@ -431,6 +420,17 @@
 	background-color: black;
 }
 
+#connectFourGame {
+	grid-column-start: 3;
+	grid-column-end: 6;
+	grid-row-start: 2;
+	grid-row-end: 10;
+	border: 2px solid rgb(226, 223, 223);
+	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
+	background-color: #33383d;
+	position: relative;
+}
+
 #connectFourGame form {
 	color: white;
 }
@@ -547,5 +547,6 @@ td:hover {
 }
 
 .memoryBoard {
+	height: 50%;
 	margin-top: 50px;
 }

@@ -195,10 +195,10 @@ $(document).on('click', '#connect', function() {
 	
 	`;
 
-	$('body').append(markup);
+	$('.area').prepend(markup);
 
 	$('#connectFourGame').draggable({
-		containment: 'parent',
+		containment: $('#connectFourGame').parent().parent().parent(),
 		handle: '#topBar'
 	});
 
