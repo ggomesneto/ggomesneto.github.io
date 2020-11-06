@@ -202,9 +202,11 @@ $(document).on('click', '#jeopardyGame', function() {
 	$('.area').prepend(markup);
 
 	$('#Jeopardy').draggable({
-		containment: $('#Jeopardy').parent().parent(),
+		containment: $('#Jeopardy').parent().parent().parent(),
 		handle: '#topBar'
 	});
+
+	$('#Jeopardy').resizable();
 
 	// Creating name of the game + Restart Button
 	$('<div>JEOPARDY</div>')
