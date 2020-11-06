@@ -29,11 +29,11 @@ let markupBoth = `
 <div class="carousel-item active">
                       
 <img class="p-3" id='jeopardyGame' src="img/jeopardy.jpg" >
-<img class="p-3" src="img/connect-card.png" >
+<img class="p-3" id='connect' src="img/connect-card.png" >
 </div>
 <div class="carousel-item ">
-<img class="p-3" src="img/meme-card.png" >
-<img class="p-3" src="img/Hacker-News.jpg" >
+<img class="p-3" id='memoryGame src="img/memory-card.jpg" >
+<a href='/HackOrSnooze/index.html' target='_blank'><img class="p-3" src="img/Hacker-News.jpg" ></a>
 </div>
 
 `;
