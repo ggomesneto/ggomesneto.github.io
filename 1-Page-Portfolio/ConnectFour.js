@@ -158,7 +158,7 @@ class ComputerPlayer {
 	}
 }
 
-$(document).on('click', '#connect', function() {
+$(document).on('dblclick', '#connect', function() {
 	if ($('body')[0].innerHTML.includes('connectFourGame')) {
 		return;
 	}
@@ -195,10 +195,10 @@ $(document).on('click', '#connect', function() {
 	
 	`;
 
-	$('.area').prepend(markup);
+	$('#desktop').append(markup);
 
 	$('#connectFourGame').draggable({
-		containment: $('#connectFourGame').parent().parent().parent(),
+		containment: 'parent',
 		handle: '#topBar'
 	});
 

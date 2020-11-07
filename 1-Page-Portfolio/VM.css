@@ -1,42 +1,14 @@
-#mainWrap {
-	width: 100vw;
-	height: 100vh;
-	display: grid;
-
-	grid-template-columns: repeat(10, 10%);
-	grid-template-rows: repeat(20, 5%);
-
-	background-color: black;
-
-	min-width: 1500px;
-	min-height: 900PX;
-}
-
-.terminal {
-	grid-column-start: 1;
-	grid-column-end: 2;
-	grid-row-start: 2;
-	color: greenyellow;
-	white-space: nowrap;
-	font-family: 'Syne Mono', monospace;
-}
-
-.terminal pre {
-	grid-column-start: 1;
-	grid-column-end: 2;
-	grid-row-start: 2;
-}
-
 #virtualMachine {
 	grid-column-start: 2;
 	grid-column-end: 10;
-	grid-row-start: 3;
-	grid-row-end: 20;
+	grid-row-start: 2;
+	grid-row-end: 19;
 	min-width: 800px;
 	background-color: white;
 	border: 2px solid rgb(226, 223, 223);
 	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
 	position: relative;
+	z-index: 1;
 }
 
 #topBar {
@@ -549,4 +521,71 @@ td:hover {
 .memoryBoard {
 	height: 50%;
 	margin-top: 50px;
+}
+
+/* ----------------- */
+
+:root {
+	--border-size: 0.125rem;
+	--duration: 250ms;
+	--ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+	--font-family: monospace;
+	--color-primary: black;
+	--color-secondary: white;
+	--color-tertiary: dodgerblue;
+	--shadow: rgba(0, 0, 0, 0.1);
+	--space: 1rem;
+}
+
+.multi-button {
+	display: flex;
+	width: 40%;
+	box-shadow: var(--shadow) 4px 4px;
+	margin: 0 auto;
+}
+
+.multi-button button {
+	flex-grow: 1;
+	cursor: pointer;
+	position: relative;
+	padding: calc(var(--space) / 1.125) var(--space) var(--space);
+	border: var(--border-size) solid black;
+	color: var(--color-secondary);
+	background-color: var(--color-primary);
+	font-size: 1.8rem;
+	font-family: var(--font-family);
+	text-transform: lowercase;
+	text-shadow: var(--shadow) 2px 2px;
+	transition: flex-grow var(--duration) var(--ease);
+}
+
+.multi-button button + button {
+	border-left: var(--border-size) solid black;
+	margin-left: calc(var(--border-size) * -1);
+}
+
+.multi-button button:hover,
+.multi-button button:focus {
+	flex-grow: 2;
+	color: black;
+	outline: none;
+	text-shadow: none;
+	background-color: var(--color-secondary);
+	z-index: 1;
+}
+
+.multi-button button:focus {
+	outline: var(--border-size) dashed var(--color-primary);
+	outline-offset: calc(var(--border-size) * -3);
+}
+
+.multi-button:hover button:focus:not(:hover) {
+	flex-grow: 1;
+	color: var(--color-secondary);
+	background-color: var(--color-primary);
+	outline-color: var(--color-tertiary);
+}
+
+.multi-button button:active {
+	transform: translateY(var(--border-size));
 }

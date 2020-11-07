@@ -163,7 +163,7 @@ function closeDisplay() {
 	}
 }
 
-$(document).on('click', '#memoryGame', function() {
+$(document).on('dblclick', '#memoryGame', function() {
 	if ($('body')[0].innerHTML.includes(`controlArea`)) {
 		return;
 	}
@@ -180,27 +180,14 @@ $(document).on('click', '#memoryGame', function() {
 
 		</div>
 		<div class="container-fluid memoryBoard ">
-		
+		<br>
+		<button id="restart" class= ' btn btn-success' onclick="reset()">Restart</button>
 			<div class="row ">
-			
+
                 
 				
                 <div class="col-sm text-center">
-				  <div id= 'gameArea'>
-
-					<div id='controlArea'>
-       					<div id='controls'>
-            				<button id="restart" class= ' btn btn-success' onclick="reset()">Restart</button>
-                    		
-        				</div>
-					</div>
-
-				  
-
-				  
-				 
-				 
-				  </div>
+                  <div id= 'gameArea'></div>
 				</div>
 				
             </div>
@@ -214,13 +201,14 @@ $(document).on('click', '#memoryGame', function() {
 
 	`;
 
-	$('.area').prepend(markup);
+	$('#desktop').append(markup);
 
 	$('#memory').draggable({
-		containment: $('#memory').parent().parent().parent(),
+		containment: 'parent',
 		handle: '#topBar'
 	});
-	$('#memory').resizable();
+
+	$('#memory').resizable({ containment: $('#desktop') });
 
 	area = document.getElementById('gameArea');
 
