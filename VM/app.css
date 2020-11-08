@@ -1,0 +1,552 @@
+#mainWrap {
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+
+	grid-template-columns: repeat(10, 10%);
+	grid-template-rows: repeat(20, 5%);
+
+	background-color: black;
+
+	min-width: 1500px;
+	min-height: 900PX;
+}
+
+.terminal {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	color: greenyellow;
+	white-space: nowrap;
+	font-family: 'Syne Mono', monospace;
+}
+
+.terminal pre {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+}
+
+#virtualMachine {
+	grid-column-start: 2;
+	grid-column-end: 10;
+	grid-row-start: 3;
+	grid-row-end: 20;
+	min-width: 800px;
+	background-color: white;
+	border: 2px solid rgb(226, 223, 223);
+	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
+	position: relative;
+}
+
+#topBar {
+	background-color: rgb(245, 241, 241);
+	border-bottom: 1px solid rgb(245, 241, 241);
+	position: absolute;
+	top: 0px;
+	font-family: 'Roboto', sans-serif;
+	width: 100%;
+}
+
+#topBar span {
+	padding-left: 5px;
+}
+
+#cardBar {
+	background-color: transparent;
+
+	position: absolute;
+	top: 0px;
+	font-family: 'Roboto', sans-serif;
+	width: 100%;
+}
+
+#portFile {
+	display: inline-block;
+	grid-row-start: 2;
+	grid-column-start: 2;
+	justify-self: center;
+}
+
+#connect {
+	display: inline-block;
+	grid-row-start: 4;
+	grid-column-start: 2;
+	justify-self: center;
+}
+
+#aboutMe {
+	display: inline-block;
+	grid-row-start: 2;
+	grid-column-start: 4;
+	justify-self: center;
+}
+
+#mySkills {
+	display: inline-block;
+	grid-row-start: 3;
+	grid-column-start: 4;
+	justify-self: center;
+}
+
+#curriculum {
+	display: inline-block;
+	grid-row-start: 4;
+	grid-column-start: 4;
+	justify-self: center;
+}
+
+#jeopardyGame {
+	display: inline-block;
+	grid-row-start: 6;
+	grid-column-start: 2;
+	justify-self: center;
+}
+
+#memoryGame {
+	display: inline-block;
+	grid-row-start: 2;
+	grid-column-start: 2;
+	justify-self: center;
+}
+
+#hackerNews {
+	display: inline-block;
+	grid-row-start: 8;
+	grid-column-start: 2;
+	justify-self: center;
+}
+
+#portFile:hover,
+#connect:hover,
+#jeopardyGame:hover,
+#memoryGame:hover,
+#aboutMe:hover,
+#mySkills:hover,
+#curriculum:hover,
+#hackerNews:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+#mySkills span,
+#aboutMe span,
+#curriculum span {
+	font-family: 'Red Hat Display', sans-serif;
+	font-size: 30px;
+	color: white;
+	text-shadow: 2px 2px 2px #000000;
+}
+
+#portFile span,
+#connect span,
+#memoryGame span,
+#jeopardyGame span,
+#hackerNews span {
+	color: white;
+	text-shadow: 2px 2px 2px #000000;
+	font-size: 0.9em;
+}
+
+#portFile .fa-folder {
+	color: rgb(245, 245, 199);
+}
+
+#desktop img {
+	width: 150px;
+	border: 3px solid black;
+	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
+}
+
+#desktop {
+	width: 100%;
+	height: 100%;
+	background-image: url(background.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	display: grid;
+	grid-template-columns: repeat(10, 10%);
+	grid-template-rows: repeat(10, 10%);
+}
+
+#portFolder {
+	grid-column-start: 2;
+	grid-column-end: 10;
+	grid-row-start: 2;
+	grid-row-end: 10;
+	border: 2px solid rgb(226, 223, 223);
+	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
+	background-color: white;
+	position: relative;
+}
+
+#Jeopardy {
+	grid-column-start: 2;
+	grid-column-end: 11;
+	grid-row-start: 2;
+	grid-row-end: 11;
+	border: 2px solid rgb(226, 223, 223);
+	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
+	background-color: #33383d;
+	position: relative;
+	overflow-y: scroll;
+}
+
+#memory {
+	grid-column-start: 2;
+	grid-column-end: 11;
+	grid-row-start: 2;
+	grid-row-end: 10;
+	border: 2px solid rgb(226, 223, 223);
+	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
+	background-color: #33383d;
+	position: relative;
+	overflow-y: scroll;
+}
+
+.min {
+	color: rgb(214, 214, 62);
+}
+
+#close {
+	float: right;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+#close:hover {
+	cursor: pointer;
+	font-weight: bolder;
+}
+
+#latDetail {
+	grid-column-start: 4;
+	grid-column-end: 7;
+	grid-row-start: 1;
+	grid-row-end: 21;
+	border-left: 1px solid lightgray;
+	background-color: white;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 19.2px;
+}
+
+#latDetail strong {
+	color: red;
+}
+
+#folderContent {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(5, 20%);
+	grid-template-rows: repeat(10, 10%);
+	grid-auto-flow: column;
+}
+
+.firstLine {
+	grid-row-start: 2;
+}
+
+.secLine {
+	grid-row-start: 5;
+	grid-column-start: 1;
+}
+
+.folderItem:hover {
+	cursor: pointer;
+}
+
+.folderItem:hover span {
+	background-color: rgba(139, 236, 245, 0.377);
+}
+
+.folderItem span {
+	color: black;
+}
+
+#skills {
+	grid-column-start: 2;
+	grid-column-end: 10;
+	grid-row-start: 2;
+	grid-row-end: 10;
+	border: 2px solid rgb(226, 223, 223);
+
+	background-image: url(skills.png);
+	background-size: 100% 100%;
+	z-index: 1;
+	position: relative;
+}
+
+#CV {
+	grid-column-start: 1;
+	grid-column-end: 11;
+	grid-row-start: 1;
+	grid-row-end: 11;
+	border: 2px solid rgb(226, 223, 223);
+
+	background-image: url(CV.png);
+	background-size: 100% 100%;
+	z-index: 1;
+	position: relative;
+}
+
+#aboutMeFile {
+	grid-column-start: 4;
+	grid-column-end: 7;
+	grid-row-start: 2;
+	grid-row-end: 10;
+	border: 5px solid rgb(226, 223, 223);
+	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
+	background-size: 100% 100%;
+	z-index: 1;
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(5, 20%);
+	grid-template-rows: repeat(10, 10%);
+}
+
+.slidePhoto {
+	width: 10%;
+	height: 96%;
+	bottom: 0px;
+
+	position: absolute;
+	display: grid;
+	place-items: center;
+}
+
+.slidePhoto i {
+	color: black;
+	display: none;
+}
+
+.slidePhoto:hover {
+	background-color: rgba(255, 255, 255, 0.397);
+}
+
+.slidePhoto:hover i {
+	display: block;
+}
+
+#slideLeft {
+	left: 0px;
+}
+
+#slideRight {
+	right: 0px;
+}
+
+#contactCard {
+	width: 50%;
+	height: 35%;
+	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
+	top: 30%;
+	left: 25%;
+	position: absolute;
+	background-color: darkblue;
+	border: 5px solid white;
+
+	display: grid;
+
+	grid-template-columns: repeat(10, 10%);
+	grid-template-rows: repeat(10, 10%);
+}
+
+.lat {
+	position: absolute;
+	bottom: 50px;
+	color: black;
+}
+
+#folderContent img {
+	width: 100px;
+}
+
+#left:hover {
+	cursor: pointer;
+}
+
+.title {
+	font-weight: bolder;
+	font-size: 25px;
+}
+
+#right:hover {
+	cursor: pointer;
+}
+
+#cName {
+	font-size: 2.5em;
+	color: white;
+}
+
+#Info {
+	font-family: 'Montserrat', sans-serif;
+	background-color: transparent;
+	grid-column-start: 1;
+	grid-column-end: 11;
+	grid-row-start: 2;
+	grid-row-end: 10;
+	color: white;
+	position: relative;
+}
+
+#Info a {
+	text-decoration: none;
+	padding-left: 5px;
+	padding-right: 5px;
+	color: white;
+}
+
+#Info a:hover {
+	border-bottom: 1px solid black;
+}
+
+#logo {
+	position: absolute;
+	left: 1%;
+	top: 1%;
+	font-size: 6em;
+}
+
+/* ---------CONNECT 4 ---------- */
+
+#board-connect td {
+	width: 150px;
+	height: 55px;
+	border: solid 3px black;
+	border-radius: 50%;
+	background-color: black;
+}
+
+#connectFourGame {
+	grid-column-start: 3;
+	grid-column-end: 6;
+	grid-row-start: 2;
+	grid-row-end: 10;
+	border: 2px solid rgb(226, 223, 223);
+	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
+	background-color: #33383d;
+	position: relative;
+}
+
+#connectFourGame form {
+	color: white;
+}
+
+#board-connect {
+	position: absolute;
+	bottom: 0px;
+	background-color: #0173d4;
+	border: 5px solid white;
+}
+
+.piece {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+#column-top td {
+	border: 0px;
+	border-bottom: 3px solid black;
+	border-radius: 0px;
+	background-color: #33383d;
+}
+
+#column-top td:hover {
+	background-color: gold;
+}
+
+#game {
+	margin: auto;
+	width: 600px;
+	height: 600px;
+}
+
+/* CSS FOR JEOPARDY */
+
+.tdJeopardy {
+	font-size: 0.9rem;
+	text-align: center;
+	width: 220px;
+	height: 100px;
+
+	border: 5px solid black;
+	background-color: #060ce9;
+	color: white;
+	font-family: 'Copse', serif;
+}
+
+.tdHead {
+	font-size: 0.9rem;
+	text-align: center;
+	width: 220px;
+
+	border: 5px solid black;
+	background-color: #060ce9;
+	color: white;
+	font-family: 'Copse', serif;
+	height: 50px;
+}
+
+td:hover {
+	cursor: pointer;
+}
+
+.jeopardy div {
+	display: inline-block;
+	margin-right: 50px;
+	color: white;
+}
+
+/* CSS FOR MEMORY GAME */
+
+.memCard {
+	width: 220px;
+	height: 150px;
+	border: 2px solid black;
+	display: inline-block;
+	margin: 10px 5px 5px 10px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.6);
+
+	background-size: contain;
+}
+
+#controlArea {
+	position: relative;
+
+	width: 14vw;
+	height: 100%;
+	margin: 10px;
+	display: flex;
+}
+
+#controls {
+	margin: auto;
+	align-items: center;
+
+	font-size: 25px;
+	font-family: 'Roboto', sans-serif;
+}
+
+#restart {
+	font-size: 25px;
+
+	font-family: 'Roboto', sans-serif;
+}
+
+#memGame:hover {
+	cursor: pointer;
+}
+
+#inp {
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+.memoryBoard {
+	height: 50%;
+	margin-top: 50px;
+}
