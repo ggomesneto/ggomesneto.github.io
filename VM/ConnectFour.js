@@ -16,7 +16,7 @@ class Game {
 	}
 
 	makeHtmlBoard() {
-		const board = document.getElementById(`board-3`);
+		const board = document.getElementById(`board-connect`);
 
 		// make column tops (clickable area for adding a piece to that column)
 		const top = document.createElement('tr');
@@ -40,6 +40,7 @@ class Game {
 			for (let x = 0; x < this.WIDTH; x++) {
 				const cell = document.createElement('td');
 				cell.setAttribute('id', `${y}-${x}`);
+
 				row.append(cell);
 			}
 
@@ -69,7 +70,7 @@ class Game {
 
 	endGame(msg) {
 		setTimeout(function() {
-			const board = document.querySelector(`#board-3`);
+			const board = document.querySelector(`#board-connect`);
 			board.innerHTML = '';
 			this.board = [];
 
@@ -82,10 +83,8 @@ class Game {
 		let x = '';
 		if (this.currPlayer instanceof Player) {
 			x = +evt.target.id;
-			console.log('REAL PLAYER');
 		} else {
 			x = Math.floor(Math.random() * this.WIDTH);
-			console.log('COMPUTER PLAYER');
 		}
 
 		// get next spot in column (if none, ignore click)
@@ -147,28 +146,6 @@ class Game {
 	}
 }
 
-let button = document.querySelector(`#restart-3`);
-
-button.addEventListener('click', () => {
-	console.log('click');
-	const board = document.querySelector(`#board-3`);
-
-	let colorP1 = document.querySelector(`#player1`);
-	let colorP2 = document.querySelector(`#player2`);
-	let p1 = new Player(colorP1.value);
-	let p2 = '';
-
-	if ($(`#check`).prop('checked')) {
-		p2 = new ComputerPlayer(colorP2.value);
-	} else {
-		p2 = new Player(colorP2.value);
-	}
-
-	board.innerHTML = '';
-	this.board = [];
-	new Game(p1, p2);
-});
-
 class Player {
 	constructor(color) {
 		this.color = color;
@@ -180,3 +157,70 @@ class ComputerPlayer {
 		this.color = color;
 	}
 }
+
+$(document).on('dblclick', '#connect', function() {
+	if ($('body')[0].innerHTML.includes('connectFourGame')) {
+		return;
+	}
+
+	let markup = `
+
+	<div class='text-center' id='connectFourGame'>
+                    
+    	<div id='topBar'>
+
+        <span id='header'>Connect Four</span><span id='close'>x</span>
+        
+
+		</div>
+		<br>	
+		<br>
+		<button id='restart-3' class='mb-3 btn btn-success'>Start Game</button>
+		<form>
+		  <label for='player1' >Player 1 Color</label>
+		  <input id='player1' value='red'>
+		  <br>
+		  <label for='player2' >Player 2 Color</label>
+		  <input id='player2' value='yellow'>
+		  <br>
+		  <label for='check' >Play against computer?</label>
+		  <input id='check' type="checkbox">
+		</form>
+
+
+    	<div id='board-connect'>
+		</div>
+	</div
+	
+	
+	`;
+
+	$('#desktop').append(markup);
+
+	$('#connectFourGame').draggable({
+		containment: 'parent',
+		handle: '#topBar'
+	});
+
+	let button = document.querySelector(`#restart-3`);
+
+	button.addEventListener('click', () => {
+		console.log('click');
+		const board = document.querySelector(`#board-connect`);
+
+		let colorP1 = document.querySelector(`#player1`);
+		let colorP2 = document.querySelector(`#player2`);
+		let p1 = new Player(colorP1.value);
+		let p2 = '';
+
+		if ($(`#check`).prop('checked')) {
+			p2 = new ComputerPlayer(colorP2.value);
+		} else {
+			p2 = new Player(colorP2.value);
+		}
+
+		board.innerHTML = '';
+		this.board = [];
+		new Game(p1, p2);
+	});
+});

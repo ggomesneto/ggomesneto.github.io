@@ -38,25 +38,11 @@ let count = 0;
 
 let clicks = 0;
 
-let $area = $('gameArea');
+let area = '';
 
-let area = document.getElementById('gameArea');
+let RecScreen = '';
 
-area.addEventListener('click', function(e) {
-	let value = e.target.classList.value;
-
-	if (value === 'memCard') {
-		clicks++;
-		CurrentClick.innerText = clicks;
-		let selCard = e.target.getAttribute('sequence');
-		selectedCard(selCard);
-	}
-});
-
-let RecScreen = document.getElementById('recordN');
-
-let CurrentClick = document.getElementById('currentN');
-CurrentClick.innerText = clicks;
+let CurrentClick = '';
 
 if (localStorage.Record === undefined) {
 	RecScreen.innerText = '';
@@ -163,9 +149,6 @@ function selectedCard(n) {
 	}
 }
 
-shuffle(imgArray);
-createCards();
-
 function openDisplay(n) {
 	let dis = document.getElementsByClassName('displayContent');
 
@@ -180,13 +163,66 @@ function closeDisplay() {
 	}
 }
 
-// $area.on('click', function(e) {
-// 	let value = e.target.classList.value;
+$(document).on('click', '#memoryGame', function() {
+	if ($('body')[0].innerHTML.includes(`container-fluid memoryBoard`)) {
+		return;
+	}
 
-// 	if (value === 'memCard') {
-// 		clicks++;
-// 		CurrentClick.innerText = clicks;
-// 		let selCard = e.target.getAttribute('sequence');
-// 		selectedCard(selCard);
-// 	}
-// });
+	let markup = `
+	
+
+	<div class='text-center' id='memory'>
+                    
+    	<div id='topBar'>
+
+        	<span id='header'>MEMORY GAME</span><span id='close'>x</span>
+        
+
+		</div>
+		<div class="container-fluid memoryBoard ">
+		<br>
+		<button id="restart" class= ' btn btn-success' onclick="reset()">Restart</button>
+			<div class="row ">
+
+                
+				
+                <div class="col-sm text-center">
+                  <div id= 'gameArea'></div>
+				</div>
+				
+            </div>
+        </div>
+      
+	  
+	  
+	</div>
+	
+
+
+	`;
+
+	$('#portfolio').append(markup);
+
+	$('#memory').draggable({
+		containment: '#portfolio',
+		handle: '#topBar'
+	});
+
+	$('#memory').resizable({ containment: $('#portfolio') });
+
+	area = document.getElementById('gameArea');
+
+	area.addEventListener('click', function(e) {
+		value = e.target.classList.value;
+
+		if (value === 'memCard') {
+			clicks++;
+			CurrentClick.innerText = clicks;
+			let selCard = e.target.getAttribute('sequence');
+			selectedCard(selCard);
+		}
+	});
+
+	shuffle(imgArray);
+	createCards();
+});
