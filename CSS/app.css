@@ -203,7 +203,7 @@ td:hover {
 
 #journal {
 	position: absolute;
-	right: 30%;
+	right: -20%;
 	top: 20%;
 	transition: 1s ease;
 	z-index: -1;
@@ -213,4 +213,7 @@ td:hover {
 body {
 	background-image: url(/img/background.jpg);
 	background-size: 100% 100%;
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
 }

@@ -17,12 +17,12 @@ let $journalBttn = $('#journalBttn');
 $journalBttn.on({
 	mouseenter: function() {
 		if ($(window).width() > 1500) {
-			$journal.css('transform', 'translateX(180%) rotate(15deg');
+			$journal.css('transform', 'translateX(-180%) rotate(15deg');
 		}
 	},
 	mouseleave: function() {
 		if ($(window).width() > 1500) {
-			$journal.css('transform', 'translateX(-180%) rotate(-15deg');
+			$journal.css('transform', 'translateX(180%) rotate(15deg');
 		}
 	}
 });
