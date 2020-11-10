@@ -1,132 +1,13 @@
-#wrap {
-	height: 100vh;
-	width: 100vw;
-	background-image: url(back.jpg);
-
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	font-family: 'Montserrat', sans-serif;
-	COLOR: WHITE;
-}
-
-#terminal {
-	width: 100vw;
-	height: 100vh;
-	background-color: black;
-	z-index: 2;
-	color: yellowgreen;
-	font-family: 'Syne Mono', monospace;
-
-	display: grid;
-	grid-template-columns: repeat(10, 10%);
-	grid-template-rows: repeat(20, 5%);
-}
-
-#terminalText {
-	grid-column-start: 1;
-	grid-column-end: 4;
-	grid-row-start: 2;
-}
-
-.terminalText {
-	width: 0%;
-	overflow: hidden;
-	white-space: nowrap;
-	font-size: 2em;
-}
-
-#content {
-	height: 60vh;
-	width: 100vw;
-}
-
-#footer {
-	width: 100vw;
-	height: 10vh;
-	float: left;
-	position: fixed;
-	bottom: 0px;
-	left: 0px;
-}
-
-img {
-	width: 200px;
-}
-
-#portfolioID {
-	font-size: 2em;
-}
-
-.toolkit {
-	display: grid;
-
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(8, 1fr);
-
-	grid-gap: 10px;
-}
-
-#toolName {
-	font-size: 3em;
-}
-
-nav img {
-	width: 100px;
-}
-
-nav a {
-	text-decoration: none;
-	color: white;
-}
-
-.areaText {
-	display: inline-block;
-	font-size: 3em;
-	grid-column-start: 2;
-	grid-column-end: 11;
-	grid-row-start: 2;
-	grid-row-end: 8;
-	justify-self: center;
-}
-
-.area {
-	height: 100%;
-	display: grid;
-	grid-template-columns: repeat(10, 10%);
-	grid-template-rows: repeat(10, 10%);
-}
-
-sup {
-	margin: 0 auto;
-}
-
-#code {
-	font-family: 'Syne Mono', monospace;
-	color: greenyellow;
-}
-
-#writer {
-	font-family: 'Patrick Hand', cursive;
-}
-
-.carousel-item img:hover {
-	cursor: pointer;
-}
+/* CSS FOR JEOPARDY */
 
 #Jeopardy {
 	border: 2px solid rgb(226, 223, 223);
 	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
 	background-color: #33383d;
-	position: relative;
+	position: absolute;
 
-	grid-column-start: 2;
-	grid-column-end: 11;
-	grid-row-start: 1;
-	grid-row-end: 11;
 	z-index: 1;
 }
-
-/* CSS FOR JEOPARDY */
 
 .tdJeopardy {
 	font-size: 0.9rem;
@@ -179,14 +60,12 @@ td:hover {
 }
 
 #connectFourGame {
-	grid-column-start: 3;
-	grid-column-end: 6;
-	grid-row-start: 1;
-	grid-row-end: 11;
+	width: 20%;
+	height: 60%;
 	border: 2px solid rgb(226, 223, 223);
 	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
 	background-color: #33383d;
-	position: relative;
+	position: absolute;
 	z-index: 1;
 }
 
@@ -270,22 +149,13 @@ td:hover {
 	margin-top: 50px;
 }
 
-#memoryGame {
-	display: inline-block;
-	grid-row-start: 2;
-	grid-column-start: 2;
-	justify-self: center;
-}
-
 #memory {
-	grid-column-start: 1;
-	grid-column-end: 12;
-	grid-row-start: 1;
-	grid-row-end: 11;
+	width: 65%;
+	height: 50%;
 	border: 2px solid rgb(226, 223, 223);
 	box-shadow: 3px 10px 19px 0px rgba(0, 0, 0, 0.75);
 	background-color: #33383d;
-	position: relative;
+	position: absolute;
 	overflow-y: scroll;
 	overflow-x: hidden;
 	z-index: 1;
@@ -323,40 +193,10 @@ td:hover {
 	font-weight: bolder;
 }
 
-body {
-	font-family: sans-serif;
-	background-color: #111111;
-}
-
-a {
-	color: #ff5f2e;
-}
-
-#footer button:hover {
-	transform: scale(1.1);
-}
-
-h1 {
-	text-align: center;
-}
-
-.screen {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	content: " ";
-	overflow: hidden;
-
-	background: white;
-}
-
-@media (max-width: 750px) {
-	nav img {
-		width: 50px;
-	}
-	.areaText {
-		display: inline-block;
-		font-size: 2em;
-	}
+#portfolio {
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+	position: absolute;
 }

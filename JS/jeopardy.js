@@ -7,19 +7,6 @@ let catIdArr = [];
 //Event listener for all 'td' on the page (Even the ones that don't exist when the page first load)
 $(document).on('click', 'tbody td', handleClick);
 
-// Creating name of the game + Restart Button
-$('<div>JEOPARDY</div>')
-	.attr({
-		class: 'container text-center display-4'
-	})
-	.appendTo(`.jeopardy`);
-
-$(`<button class='btn btn-success mb-3'>Restart</button><br>`)
-	.on('click', function() {
-		setupAndStart();
-	})
-	.appendTo(`.jeopardy`);
-
 // ------------------------------- FUNCTIONS ----------------------------
 
 //Getting Category ID from API
@@ -144,7 +131,7 @@ function handleClick(evt) {
 	}
 }
 
-//Adding the loading spinner
+// Adding the loading spinner
 function showLoadingView() {
 	//making sure there is no table on the DOM and clearing the arrays
 	$('table').remove();
@@ -158,7 +145,7 @@ function showLoadingView() {
 	spinner.appendTo($('.jeopardy'));
 }
 
-//Removing the loading spinner when the table is filled with content
+// Removing the loading spinner when the table is filled with content
 function hideLoadingView() {
 	$('.spinner-border').remove();
 }
@@ -179,8 +166,6 @@ async function setupAndStart() {
 
 //Calling the function so we have a game when the page is first loaded
 
-setupAndStart();
-
 $('.openJeopardy').on('click', openJeopardy);
 
 $('#jeopardy').toggle();
@@ -188,3 +173,55 @@ $('#jeopardy').toggle();
 function openJeopardy() {
 	$('#jeopardy').toggle();
 }
+
+$(document).on('click', '#jeopardyGame', function() {
+	if ($('body')[0].innerHTML.includes(`container-fluid text-center`)) {
+		return;
+	}
+	let markup = `
+	
+	<div class='text-center' id='Jeopardy'>
+                    
+    	<div id='topBar'>
+
+        	<span id='header'>JEOPARDY</span><span id='close'>x</span>
+        
+
+		</div>
+		<Br>
+		
+
+	<div class='container-fluid text-center jeopardy'>
+      
+	  </div>
+	  
+	</div>
+	
+	`;
+
+	$('#portfolio').append(markup);
+
+	$('#Jeopardy').draggable({
+		containment: 'parent',
+		handle: '#topBar'
+	});
+
+	$('#Jeopardy').resizable({
+		containment: 'parent'
+	});
+
+	// Creating name of the game + Restart Button
+	$('<div>JEOPARDY</div>')
+		.attr({
+			class: 'display-4'
+		})
+		.appendTo(`.jeopardy`);
+
+	$(`<button class='btn btn-success mb-3'>Restart</button><br>`)
+		.on('click', function() {
+			setupAndStart();
+		})
+		.appendTo(`.jeopardy`);
+
+	setupAndStart();
+});
