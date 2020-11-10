@@ -14,15 +14,16 @@ $(function() {
 let $journal = $('#journal');
 let $journalBttn = $('#journalBttn');
 
-$journalBttn.on({
-	mouseenter: function() {
-		if ($(window).width() > 1800) {
-			$journal.css('transform', 'translateX(-180%) rotate(15deg');
-		}
-	},
-	mouseleave: function() {
-		if ($(window).width() > 1800) {
-			$journal.css('transform', 'translateX(180%) rotate(15deg');
-		}
-	}
+$journalBttn.on('click', function() {
+	let markup = `
+			<div id='journalDiv'>
+				<div id='topBar'>
+					<span id='header'>Journal</span><span id='close'>x</span>	
+				</div>
+				<img id='journal' src='img/Journal.jpeg'>
+			</div>
+			
+			`;
+
+	$('#portfolio').append(markup);
 });

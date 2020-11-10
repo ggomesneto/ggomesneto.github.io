@@ -201,12 +201,13 @@ td:hover {
 	position: absolute;
 }
 
-#journal {
+#journalDiv {
 	position: absolute;
-	right: -20%;
-	top: 20%;
-	transition: 1s ease;
-	z-index: -1;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	z-index: 2;
 	box-shadow: 0px 10px 23px 5px rgba(0, 0, 0, 0.75);
 }
 
