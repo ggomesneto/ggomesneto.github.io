@@ -305,7 +305,7 @@ let brute_force_try_markup = `
     <div id='pass-try'>
         -------------------------------------
         <br>
-        ENTRY A PASSWORD:<input type='text' id='try'>
+        ENTER A PASSWORD:<input type='text' id='try'>
     </div>
 `;
 
