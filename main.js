@@ -19,8 +19,8 @@ $(document).on('click', '#about', function() {
                         <p>
                             <i class="fas fa-laptop-code"></i> Software Engineer<br>
                             <i class="fas fa-cloud"></i> AWS Certified<br>
-							<i class="fas fa-code"></i> Boot Camp Graduate
-							<i class="fas fa-tachometer-alt"></i> Fast Learner
+							<i class="fas fa-code"></i> Boot Camp Graduate<br>
+							<i class="fas fa-tachometer-alt"></i> Fast Learner<br>
 							<i class="fas fa-globe-americas"></i> International Experience</p>
 	
 	
