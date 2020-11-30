@@ -1,0 +1,35 @@
+/* CSS FOR CONNECT 4 */
+
+#board-3 td {
+	width: 50px;
+	height: 50px;
+	border: solid 3px lightgrey;
+	border-radius: 15px;
+}
+
+#board-3 {
+	margin: auto;
+	max-width: 380px;
+}
+
+.piece {
+	margin: 5px;
+	width: 80%;
+	height: 80%;
+	border-radius: 50%;
+	border: 2px solid black;
+}
+
+#column-top td {
+	border: dashed 1px lightgray;
+}
+
+#column-top td:hover {
+	background-color: gold;
+}
+
+#game {
+	margin: auto;
+	width: 600px;
+	height: 600px;
+}
