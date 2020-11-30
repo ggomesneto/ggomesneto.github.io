@@ -56,7 +56,7 @@ $(document).on('click', '#contact', function() {
 	$('#footer').empty();
 	let markup = `
 	
-	<p><a href='https://linkedin.com/in/ggomesneto'>LINKEDIN</a> | <a href='https://github.com/ggomesneto'>GITHBUB</a> | <A href='https://drive.google.com/file/d/18Ba4_hL8BmGvszqbBasiC02MONelZA2w/view?usp=sharing'>CURRICULUM</A> | GGOMESNETO@GMAIL.COM</P>
+	<p><a href='https://linkedin.com/in/ggomesneto'>LINKEDIN</a> | <a href='https://github.com/ggomesneto'>GITHUB</a> | <A href='https://drive.google.com/file/d/18Ba4_hL8BmGvszqbBasiC02MONelZA2w/view?usp=sharing'>CURRICULUM</A> | GGOMESNETO@GMAIL.COM</P>
 	
 	
 	
