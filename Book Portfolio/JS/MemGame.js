@@ -163,8 +163,8 @@ function closeDisplay() {
 	}
 }
 
-$(document).on('dblclick', '#memoryGame', function() {
-	if ($('body')[0].innerHTML.includes(`controlArea`)) {
+$(document).on('click', '#memoryGame', function() {
+	if ($('body')[0].innerHTML.includes(`container-fluid memoryBoard`)) {
 		return;
 	}
 
@@ -201,14 +201,14 @@ $(document).on('dblclick', '#memoryGame', function() {
 
 	`;
 
-	$('#desktop').append(markup);
+	$('#portfolio').append(markup);
 
 	$('#memory').draggable({
-		containment: 'parent',
+		containment: '#portfolio',
 		handle: '#topBar'
 	});
 
-	$('#memory').resizable({ containment: $('#desktop') });
+	$('#memory').resizable({ containment: $('#portfolio') });
 
 	area = document.getElementById('gameArea');
 

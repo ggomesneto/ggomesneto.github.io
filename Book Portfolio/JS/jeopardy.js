@@ -174,7 +174,7 @@ function openJeopardy() {
 	$('#jeopardy').toggle();
 }
 
-$(document).on('dblclick', '#jeopardyGame', function() {
+$(document).on('click', '#jeopardyGame', function() {
 	if ($('body')[0].innerHTML.includes(`container-fluid text-center`)) {
 		return;
 	}
@@ -199,7 +199,7 @@ $(document).on('dblclick', '#jeopardyGame', function() {
 	
 	`;
 
-	$('#desktop').append(markup);
+	$('#portfolio').append(markup);
 
 	$('#Jeopardy').draggable({
 		containment: 'parent',
