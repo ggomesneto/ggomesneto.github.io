@@ -66,3 +66,7 @@ $(document).on('click', '#contact', function() {
 
 	$('#footer').append(markup);
 });
+
+$(document).on('click', '#close', function() {
+	$(this).parent().remove();
+});
