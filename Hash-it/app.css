@@ -1,0 +1,159 @@
+
+* {
+	box-sizing: border-box
+}
+
+body {
+	background-color: #51c0a0;
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	min-width: 100vw;
+
+}
+
+.pw-container {
+	background-color: #219071;
+	min-width: 400px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+	margin: 1rem;
+}
+
+.pw-header {
+	
+	padding: 1rem;
+
+}
+.pw {
+	width: 100%;
+	height: 50px;
+	background-color: #51c0a0;
+	display: flex;
+	align-items: center;
+	position: relative;
+	font-size: 1.6rem;
+	padding: 1rem;
+	
+}
+
+.pw button {
+	position: absolute;
+	right:0;
+	top: 0;
+	transform: translateX(0,-50%);
+	background-color:white;
+	color:  #219071;
+	padding: 0.25rem;
+	border: none;
+	font-family: inherit;
+	opacity:0;
+	transition: opacity 0.2s ease;
+	cursor: pointer
+}
+
+.pw:hover button {
+	opacity: 1
+}
+
+.pw-body {
+	padding: 0 1rem 1rem;
+}
+
+.form-control {
+	display: flex;
+	justify-content: space-between;
+	margin: 0.75rem 0;
+	color: #eee
+}
+
+.info {
+	margin-bottom: 0;
+}
+
+.generate {
+	display: block;
+	background-color: #382d45;
+	color: #51c0a0;
+	font-weight: bold;
+	margin-top: 1rem;
+	font-size: 1.5rem;
+	padding: 0.5rem;
+	border: none;
+	width: 100%;
+}
+.generate:hover {
+	cursor: pointer;
+}
+
+.hash-log {
+	background-color:  #1a8063;
+	min-width: 600px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+	margin: 1rem;
+}
+
+.hash-info {
+	padding: 0.1rem 1rem 1rem 1rem;
+	
+	background-color: #51c0a0;
+	margin: 1rem;
+	font-size: 1.5rem;
+	text-align: center;
+	position: relative;
+}
+
+i {
+	position: relative;
+	transform: translateY(25%)
+}
+
+.close {
+	position: absolute;
+	right: 5px;
+	top: 0;
+}
+
+.close:hover {
+	cursor: pointer;
+}
+
+.info-hash {
+
+	position: absolute;
+	background-color: #1a8063;
+	padding: 1rem;
+	color: white;
+	bottom: 8%;
+	
+	
+	margin-left: 5rem;
+	margin-right: 5rem;
+	max-height: 12rem;
+	overflow-Y: scroll;
+
+}
+
+.salt-info {
+	margin-top: 1rem;
+}		
+#title {
+	position: absolute;
+	top: 0;
+	padding: 2rem;
+	font-size: clamp(3rem, 4vw, 5rem);
+	text-align: center;
+}
+#combinations {
+	margin-left: 5px;
+}
+
+
+@media screen and (max-width: 1500px) {
+	body {
+		justify-content: left;
+	}
+}
