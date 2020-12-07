@@ -12,7 +12,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
-	min-width: 100vw;
+	
 
 }
 
@@ -154,6 +154,26 @@ i {
 
 @media screen and (max-width: 1500px) {
 	body {
-		justify-content: left;
+		justify-content: inherit;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	body {
+		justify-content: flex-start;
+		display: block;
+	}
+	#title {
+		position: relative;
+	}
+	.hash-log {
+		min-width: 350px;
+		
+	}
+	.hash-info {
+		font-size:1rem;
+	}
+	.info-hash {
+		position: relative;
 	}
 }
