@@ -237,7 +237,11 @@ function generateSalt() {
 }
 
 $(document).on('click', '.close', function() {
-	$(this).parent().remove();
+	if ($('.close').length > 1) {
+		$(this).parent().remove();
+	} else {
+		$(this).parent().parent().remove();
+	}
 });
 
 // ==========================================================================
