@@ -177,3 +177,70 @@ i {
 		position: relative;
 	}
 }
+
+
+/* --- snack */
+
+#snackbar {
+	font-family: Arial;
+	line-height: 1em;
+	visibility: hidden;
+	width: 200px;
+	min-width: 200px;
+	max-width: 300px;
+	background-color: white;
+	border-radius: 2px;
+	padding: 10px;
+	position: fixed;
+	z-index: 100;
+	bottom: 0px;
+	left: 0px;
+	font-size: 17px;
+	margin: 1%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	color: black;
+}
+
+#snackbar.show {
+	visibility: visible;
+	-webkit-animation: fadein 0.5s;
+	animation: fadein 0.5s;
+}
+
+#snackbar a:hover {
+	text-decoration: none;
+}
+.snckhdr {
+	font-weight: bold;
+	color: black;
+	margin-bottom: 10px;
+	font-size: 1.1em;
+	width: 100%;
+}
+
+.snckmsg {
+	color: #4e4e4e;
+	font-size: 0.85em;
+}
+
+.snckmsg img {
+	width: 40px;
+}
+
+#hlclose {
+	position: absolute;
+	float: right;
+	display: inline-block;
+	padding: 2px 5px;
+	top: 3px;
+	right: 5px;
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
