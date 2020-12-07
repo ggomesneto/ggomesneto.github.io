@@ -106,9 +106,9 @@ function generateinfoBox(len, charlen) {
 
 	let pwStrength;
 
-	if (len < 5) {
+	if (Math.floor(charlen ** len) < 100000000000) {
 		pwStrength = 'Weak';
-	} else if (len < 8) {
+	} else if (Math.floor(charlen ** len) < 10000000000000) {
 		pwStrength = 'Medium';
 	} else {
 		pwStrength = 'Strong';
