@@ -46,7 +46,7 @@ img {
     transform: translateY(100%);
     transition: all 1s ease;
     max-height: 100%;
-    overflow-y: scrool;
+    overflow-y: scroll;
 }
 
 .red {
