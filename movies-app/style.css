@@ -64,6 +64,7 @@ img {
 #movie-wrapper {
     max-height: 92vh;
     overflow-y: scroll;
+    min-width: 95vw;
 }
 
 #search-bar {
