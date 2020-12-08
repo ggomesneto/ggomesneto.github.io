@@ -85,7 +85,7 @@ img {
 }
 
 
-@media screen and (max-width: 550px) {
+/* @media screen and (max-width: 550px) {
     img {
         max-width:400px;
         
@@ -94,7 +94,7 @@ img {
         max-width:400px;
         font-size: 1.5rem;
     }
-}
+} */
 /* -----------------dropdown ------------------*/
 
 .dropbtn {
