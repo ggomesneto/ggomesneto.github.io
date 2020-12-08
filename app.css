@@ -73,6 +73,8 @@ body {
 	font-size: 1.5em;
 	font-family: 'Roboto', sans-serif;
 	max-width: 50%;
+	max-height: 50%;
+	overflow-y: scroll;
 }
 
 .button:hover {
@@ -178,7 +180,7 @@ p {
 	}
 	#footer {
 		max-width: 100%;
-		bottom: 50px;
+		
 	}
 }
 
