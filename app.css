@@ -3,6 +3,7 @@ body {
 	height: 100vh;
 	background-color: rgba(206, 206, 72, 0.774);
 	font-family: 'Nerko One', cursive;
+	overflow-x: hidden;
 }
 #wrapper {
 	width: 95%;
@@ -23,6 +24,8 @@ body {
 	width: 70%;
 	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 	margin: auto;
+	margin-bottom: 1rem;
+	
 }
 
 #content {
