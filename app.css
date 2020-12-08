@@ -176,6 +176,9 @@ p {
 	#wrapper {
 		margin: 2px;
 	}
+	#footer {
+		max-width: 100%;
+	}
 }
 
 @-webkit-keyframes bounce-in-top {
