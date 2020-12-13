@@ -265,6 +265,8 @@ a:hover {
 	background-color: black;
 	margin: 0px;
 	position: relative;
+	border-radius: 3px;
+	padding: 0px 0.25rem;
 }
 
 .salt-info:hover {
