@@ -153,6 +153,14 @@ i {
 	margin-left: 5px;
 }
 
+#bcrypt {
+	font-size: 0.9rem;
+}
+
+.hashing {
+	text-align: center;
+}
+
 
 @media screen and (max-width: 1500px) {
 	body {
@@ -170,6 +178,7 @@ i {
 	}
 	.hash-log {
 		min-width: 350px;
+		max-width: 100%;
 		
 	}
 	.hash-info {
@@ -177,6 +186,9 @@ i {
 	}
 	.info-hash {
 		position: relative;
+	}
+	#bcrypt {
+		font-size: 0.65rem;
 	}
 }
 
@@ -277,9 +289,7 @@ a:hover {
 	display: inline-block;
 }
 
-#bcrypt {
-	font-size: 0.9rem;
-}
+
 
 .salt-info-content {
 	width: 400px;
