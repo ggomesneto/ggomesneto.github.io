@@ -158,7 +158,7 @@ function generateHashBox() {
 			<div class='hash-title'>HASHED WITH: <strong>MD5</strong></div>
 			<div class='hash'>${hash}</div>
 			<div class='hash-title'><strong>SALT</strong> added</div>
-			<div class='hash'>${hash_salt}</div>
+			<div class='hash salt'>${hash_salt}</div>
 			<div class='salt-info'>?<div class='salt-info-content'>A cryptographic salt is made up of random bits added to each password instance before its hashing. Salts create unique passwords even in the instance of two users choosing the same passwords. Salts help us mitigate rainbow table attacks by forcing attackers to re-compute them using the salts.</div></div>
 			<div class='hash-time-title'>It took</div>
 			<div class='hash-time-wrapper'>
