@@ -25,6 +25,7 @@ body {
 	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 	margin: auto;
 	margin-bottom: 1rem;
+	padding: 1rem;
 	
 }
 
@@ -159,6 +160,10 @@ p {
 #close:hover {
 	transform: scale(1.1);
 	cursor: pointer;
+}
+
+#portfolio-title {
+	font-size: 3rem;
 }
 
 
