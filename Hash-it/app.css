@@ -84,6 +84,7 @@ body {
 	padding: 0.5rem;
 	border: none;
 	width: 100%;
+	text-align: center;
 }
 .generate:hover {
 	cursor: pointer;
@@ -94,6 +95,7 @@ body {
 	min-width: 600px;
 	box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 	margin: 1rem;
+	max-width: 40%;
 }
 
 .hash-info {
@@ -101,7 +103,7 @@ body {
 	
 	background-color: #51c0a0;
 	margin: 1rem;
-	font-size: 1.5rem;
+	font-size: 1rem;
 	text-align: center;
 	position: relative;
 }
@@ -244,3 +246,46 @@ a {
 a:hover {
 	text-decoration: none;
 }
+
+.hash, .hash-time {
+	background-color: #1a8063;
+	display: inline-block;
+	padding: 0 1rem;
+}
+
+
+.hash-time-unit {
+	display: inline-block;
+	
+	
+}
+
+.salt-info {
+	display:inline-block;
+	background-color: black;
+	margin: 0px;
+	position: relative;
+}
+
+.salt-info:hover {
+	cursor: pointer;
+}
+
+.salt-info:hover .salt-info-content {
+	display: inline-block;
+}
+
+#bcrypt {
+	font-size: 0.9rem;
+}
+
+.salt-info-content {
+	width: 400px;
+	left: -400px;
+	display: none;
+	position: absolute;
+	background-color: #1a8063;
+	padding: 1rem;
+	z-index: 1;
+}
+
