@@ -183,6 +183,7 @@ i {
 	.hash-log {
 		min-width: 350px;
 		max-width: 100%;
+		margin: 0px;
 		
 	}
 	.hash-info {
