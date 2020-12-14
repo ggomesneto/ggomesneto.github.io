@@ -179,9 +179,9 @@ function generateHashBox() {
 			
 			<div class='hash-time-title'>To HASH your password<br> <small><small>Time based on your internet speed and computer capacity</small></small></div>
 		</div>
-		<div class='hash-info'>
-			<div class='hash-title'><i>THE SLOWER <strong>THE BETTER</i></strong></div>
-			<div class='hash-info'>The speed of a HASH function affects the number of attempts a computer can make per second. This means that a SLOW Hash function can increase the cracking time immensely.</div>
+		<div class='hash-info info-text'>
+			<div class='hash-title info-text'><i><strong>THE SLOWER THE BETTER</i></strong></div>
+			<div class='hash-info info-text'>The speed of a HASH function affects the number of attempts a computer can make per second. This means that a SLOW Hash function can increase the cracking time immensely.</div>
 
 		</div>
 	</div>`;

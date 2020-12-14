@@ -123,6 +123,11 @@ i {
 	cursor: pointer;
 }
 
+.info-text {
+	background-color: #ddc63a;
+		color: #1a8063;
+}
+
 .info-hash {
 
 	position: absolute;
@@ -301,6 +306,8 @@ a:hover {
 .salt-info:hover .salt-info-content {
 	display: inline-block;
 }
+
+
 
 
 
