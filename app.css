@@ -356,6 +356,7 @@ p {
 
 .text {
 	font-size: 2rem;
+	margin: 1rem;
 }
 
 .text-author {
