@@ -75,3 +75,20 @@ $(document).on('click', '#contact', function() {
 $(document).on('click', '#close', function() {
 	$(this).parent().remove();
 });
+
+$(document).on('click', '#fancy', function() {
+	fancyIntro();
+});
+
+function fancyIntro() {
+	const tl = gsap.timeline({ defaults: { ease: 'power1.out' } });
+	tl.to('.slider', { y: '0', duration: 1, delay: 2 }, '-=1');
+	tl.to('.intro', { y: '0', duration: 1, delay: 0.5 }, '-=1');
+	tl.to('.text', { y: '0%', duration: 1.5, stagger: 0.25 });
+	tl.to('#me', { x: '88vw', transform: 'scale(1.5)', duration: 1.5, stagger: 2 });
+	tl.to('#me', { y: '-83vh', transform: 'scale(1)', duration: 1.5, stagger: 0.25 });
+	tl.to('#me', { x: '0', transform: 'scale(1.5)', duration: 1.5, stagger: 0.5 });
+	tl.to('#me', { y: '0', transform: 'scale(1)', duration: 1.5, stagger: 0.25 });
+	tl.to('.intro', { y: '-100%', duration: 1, delay: 2 }, '-=1');
+	tl.to('.slider', { y: '-100%', duration: 1, delay: 0.5 }, '-=1');
+}
