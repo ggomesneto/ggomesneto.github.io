@@ -385,7 +385,7 @@ p {
 @media screen and (max-width: 800px) {
 	#modal {
 		width: 100%;
-		top: 15%
+		top: 70%;
 	}
 }
 
