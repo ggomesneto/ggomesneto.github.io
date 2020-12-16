@@ -89,5 +89,5 @@ function fancyIntro() {
 	tl.to('.intro', { y: '-100%', duration: 1, delay: 2 }, '-=1');
 	tl.to('.black-slider', { y: '-100%', duration: 2, stagger: 0.5 }, '-=1');
 	tl.to('.slider', { y: '-100%', duration: 1.5 }, '-=1.5');
-	tl.to('.text', { y: '102%', duration: 1.5, stagger: 0.25 });
+	tl.to('.text', { y: '120%', duration: 1.5, stagger: 0.25 });
 }
