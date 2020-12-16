@@ -119,7 +119,7 @@ p {
 }
 
 #modal {
-	
+	z-index: 4;
 	position: fixed;
 	top: 50%;
 	width: 60%;
@@ -131,11 +131,7 @@ p {
 
 #modal-text {
 	width: 100%;
-	
-
 	border: 15px solid black;
-	
-	
 	background-color: rgb(218, 218, 90);
 	font-family: 'JetBrains Mono', monospace;
 }
