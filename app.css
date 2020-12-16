@@ -304,6 +304,10 @@ p {
 	height: 100vh;
 	transform: translateY(-100%);
 	z-index: 11;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	
 }
 
@@ -344,7 +348,7 @@ p {
 .text-author {
 	font-size: 1.5rem;
 	position: relative;
-	left: 60%;
+	left:40%;
 	
 }
 
@@ -367,7 +371,7 @@ p {
 	
 }
 #fancy span {
-	color: green;
+	color: #007bff;
 }
 
 
