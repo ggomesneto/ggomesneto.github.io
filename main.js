@@ -91,4 +91,5 @@ function fancyIntro() {
 	tl.to('#me', { y: '0', transform: 'scale(1)', duration: 1.5, stagger: 0.25 });
 	tl.to('.intro', { y: '-100%', duration: 1, delay: 2 }, '-=1');
 	tl.to('.slider', { y: '-100%', duration: 1, delay: 0.5 }, '-=1');
+	tl.to('.text', { y: '102%', duration: 1.5, stagger: 0.25 });
 }
