@@ -120,7 +120,7 @@ p {
 
 #modal {
 	width: 60%;
-
+	z-index: 10;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -311,6 +311,30 @@ p {
 	align-items: center;
 	z-index: 3;
 	transform: translateY(-100%);
+}
+
+.black-slider {
+	background-color: black;
+	position: fixed;
+	top: 0;
+	width: 25%;
+	height: 100vh;
+	transform: translateY(-100%);
+	z-index: 2;
+	
+}
+
+.slide1 {
+	left: 0
+}
+.slide2 {
+	left: 25%
+}
+.slide3 {
+	left: 50%
+}
+.slide4 {
+	left: 75%
 }
 
 .slider {
