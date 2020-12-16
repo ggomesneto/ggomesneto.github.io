@@ -166,7 +166,14 @@ p {
 	font-size: 3rem;
 }
 
+.fa-undo {
+	float: right;
+	margin: 5px;
+}
 
+.fa-undo:hover {
+	cursor: pointer;
+}
 
 .bounce-in-top {
 	-webkit-animation: bounce-in-top 1.1s both;

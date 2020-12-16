@@ -11,11 +11,23 @@ $('#me').on('click', function() {
 	$('#footer').toggleClass('show hide');
 });
 
+$(document).on('click', '.fa-undo', function() {
+	$('#footer').empty();
+	let markup = `
+
+	<P id='about' class='button'>ABOUT</P>
+	<P id='toolkit' class='button'>TOOLKIT</P>
+	<p id='contact' class='button'>CONTACT</p>
+	`;
+
+	$('#footer').append(markup);
+});
+
 $(document).on('click', '#about', function() {
 	$('#footer').empty();
 	let markup = `
 	
-	<p>Hey, I'm Geraldo.</p>
+	<p>Hey, I'm Geraldo. <i class="fas fa-undo"></i></p>
                         <p>
                             <i class="fas fa-laptop-code"></i> Software Engineer |
                             <i class="fas fa-cloud"></i> AWS Certified |
@@ -39,7 +51,7 @@ $(document).on('click', '#toolkit', function() {
 	$('#footer').empty();
 	let markup = `
 	
-	<p>TOOLKIT</p>
+	<p>TOOLKIT <i class="fas fa-undo"></i></p>
                         <img data-toggle="tooltip" data-placement="top" title="BootStrap" src='img/bootstrap.png'>
                         <img data-toggle="tooltip" data-placement="top" title="CSS" src='img/css.png'>
                         <img data-toggle="tooltip" data-placement="top" title="Git" src='img/git.png'><br>
@@ -63,7 +75,7 @@ $(document).on('click', '#contact', function() {
 	$('#footer').empty();
 	let markup = `
 	
-	<p><a href='https://linkedin.com/in/ggomesneto' target='_blank'>LINKEDIN</a> | <a href='https://github.com/ggomesneto' target='_blank'>GITHUB</a> | <A href='https://drive.google.com/file/d/18Ba4_hL8BmGvszqbBasiC02MONelZA2w/view?usp=sharing' target='_blank'>CURRICULUM</A> | GGOMESNETO@GMAIL.COM</P>
+	<p><i class="fas fa-undo"></i><a href='https://linkedin.com/in/ggomesneto' target='_blank'>LINKEDIN</a> | <a href='https://github.com/ggomesneto' target='_blank'>GITHUB</a> | <A href='https://drive.google.com/file/d/18Ba4_hL8BmGvszqbBasiC02MONelZA2w/view?usp=sharing' target='_blank'>CURRICULUM</A> | GGOMESNETO@GMAIL.COM</P>
 	
 	
 	
