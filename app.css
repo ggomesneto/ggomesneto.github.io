@@ -4,6 +4,7 @@ body {
 	background-color: rgba(206, 206, 72, 0.774);
 	font-family: 'Nerko One', cursive;
 	overflow-x: hidden;
+	
 }
 #wrapper {
 	width: 95%;
@@ -15,19 +16,28 @@ body {
 #title {
 	width: 80%;
 	margin: auto;
-
+	line-height:1;
 	font-size: 5em;
 }
 
 #display {
 	display: grid;
 	width: 70%;
+	height: 800px;
+	overflow-y: scroll;
 	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 	margin: auto;
 	margin-bottom: 1rem;
 	padding: 1rem;
 	
+	
+	
+	
 }
+
+#display::-webkit-scrollbar {
+	display: none;
+  }
 
 #content {
 	margin: auto;
@@ -80,6 +90,12 @@ body {
 	max-height: 55%;
 	overflow-y: scroll;
 }
+
+#footer::-webkit-scrollbar {
+	display: none;
+  }
+
+
 
 .button:hover {
 	text-decoration: underline;
@@ -159,6 +175,9 @@ p {
 
 #portfolio-title {
 	font-size: 3rem;
+	line-height:1;
+	border-bottom: 5px solid black;
+	
 }
 
 .fa-undo {
@@ -381,6 +400,7 @@ p {
 	#modal {
 		width: 100%;
 		top: 30%;
+		
 		transform: translate(-50%,-30%)
 	}
 }
@@ -393,7 +413,8 @@ p {
 		margin: 2px;
 	}
 	#footer {
-		max-width: 100%;
+		max-width: 99%;
+		left: 0%;
 		
 	}
 	.text {
