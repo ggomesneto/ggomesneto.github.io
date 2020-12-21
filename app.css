@@ -408,6 +408,8 @@ p {
 @media screen and (max-width: 550px) {
 	#display {
 		width: 100%;
+		height: 700px;
+		
 	}
 	#wrapper {
 		margin: 2px;
@@ -419,5 +421,12 @@ p {
 	}
 	.text {
 		font-size: 1.2rem;
+	}
+	#title {
+		font-size: 3.5rem;
+	}
+	#portfolio-title {
+		font-size: 2.5rem;
+		line-height: 1.5;
 	}
 }
