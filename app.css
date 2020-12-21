@@ -5,12 +5,18 @@ body {
 	font-family: 'Nerko One', cursive;
 	overflow-x: hidden;
 	
+	
 }
+
+
+
 #wrapper {
 	width: 95%;
 	height: 95%;
 	margin: auto;
 	position: relative;
+	
+
 }
 
 #title {
@@ -29,6 +35,7 @@ body {
 	margin: auto;
 	margin-bottom: 1rem;
 	padding: 1rem;
+	scrollbar-width: none;
 	
 	
 	
@@ -77,6 +84,8 @@ body {
 	color: black;
 }
 
+
+
 #footer {
 	background-color: white;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.5), -1px -1px 30px rgba(0, 0, 0, 0.2);
@@ -89,6 +98,8 @@ body {
 	max-width: 50%;
 	max-height: 55%;
 	overflow-y: scroll;
+	scrollbar-width: none;
+	
 }
 
 #footer::-webkit-scrollbar {
@@ -108,6 +119,7 @@ body {
 	bottom: 0px;
 	margin: 10px;
 	z-index: 3;
+	transition: all 1s ease;
 }
 
 img:hover {

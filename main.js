@@ -103,3 +103,22 @@ function fancyIntro() {
 	tl.to('.slider', { y: '-100%', duration: 1.5 }, '-=1.5');
 	tl.to('.text', { y: '120%', duration: 1.5, stagger: 0.25 });
 }
+
+
+function loopMe() {
+	let $me = $('#me')
+
+	$me.css('transform','rotate(15deg)')
+	
+	setTimeout(function(){
+		$me.css('transform','rotate(-15deg)')
+	},1000)
+
+	setTimeout(function(){
+		$me.css('transform','rotate(0deg)')
+	},2000)
+}
+
+setInterval(function(){
+	loopMe()
+},5000)
