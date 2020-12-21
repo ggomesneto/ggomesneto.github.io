@@ -40,6 +40,7 @@ body {
 	
 	
 	
+	
 }
 
 #display::-webkit-scrollbar {
@@ -155,7 +156,16 @@ p {
 	transform: translate(-50%,-50%);
 	background-color: rgb(218, 218, 90);
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.5), -1px -1px 30px rgba(0, 0, 0, 0.2);
+	max-height: 70%;
+	overflow-y:scroll;
+	scrollbar-width: none;
 }
+
+#modal::-webkit-scrollbar {
+	display: none;
+  }
+
+
 #modal-back{
 	background-color: black;
 	position: fixed;
