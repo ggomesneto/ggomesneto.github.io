@@ -86,6 +86,12 @@ $(document).on('click', '#contact', function() {
 
 $(document).on('click', '#close', function() {
 	$(this).parent().remove();
+	$('#modal-back').remove();
+});
+
+$(document).on('click', '#modal-back', function() {
+	$('#modal-back').remove();
+	$('#modal').remove();
 });
 
 $(document).on('click', '#fancy', function() {
@@ -104,21 +110,20 @@ function fancyIntro() {
 	tl.to('.text', { y: '120%', duration: 1.5, stagger: 0.25 });
 }
 
-
 function loopMe() {
-	let $me = $('#me')
+	let $me = $('#me');
 
-	$me.css('transform','rotate(15deg)')
-	
-	setTimeout(function(){
-		$me.css('transform','rotate(-15deg)')
-	},1000)
+	$me.css('transform', 'rotate(15deg)');
 
-	setTimeout(function(){
-		$me.css('transform','rotate(0deg)')
-	},2000)
+	setTimeout(function() {
+		$me.css('transform', 'rotate(-15deg)');
+	}, 1000);
+
+	setTimeout(function() {
+		$me.css('transform', 'rotate(0deg)');
+	}, 2000);
 }
 
-setInterval(function(){
-	loopMe()
-},5000)
+setInterval(function() {
+	loopMe();
+}, 5000);
