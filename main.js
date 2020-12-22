@@ -84,16 +84,9 @@ $(document).on('click', '#contact', function() {
 	$('#footer').append(markup);
 });
 
-$(document).on('click', '#close', function() {
-	$('#modal').remove();
-	$('#modal-back').remove();
-	$(this).remove();
-});
-
 $(document).on('click', '#modal-back', function() {
 	$('#modal-back').remove();
 	$('#modal').remove();
-	$('#close').remove();
 });
 
 $(document).on('click', '#fancy', function() {

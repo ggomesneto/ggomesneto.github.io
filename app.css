@@ -189,16 +189,7 @@ p {
 	font-size: 1rem;
 }
 
-#close {
-	padding: 20px;
-	font-size: 3em;
-	position: absolute;
-	right: 20%;
-	top: 20%;
-	color: red;
 
-	display: inline-block;
-}
 
 #close:hover {
 	transform: scale(1.1);
