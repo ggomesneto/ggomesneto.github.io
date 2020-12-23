@@ -565,6 +565,9 @@ p img {
 		
 		transform: translate(-50%,-30%)
 	}
+	p img {
+		width: 70px;
+	}
 	.button {
 		font-size: 2rem;
 	}
