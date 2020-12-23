@@ -65,7 +65,7 @@ $(document).on('click', '#toolkit', function() {
                         <img data-toggle="tooltip" data-placement="top" title="Git" src='img/git.png'>
                         <img data-toggle="tooltip" data-placement="top" title="HTML5" src='img/html5.png'>
                         <img data-toggle="tooltip" data-placement="top" title="JavaScript" src='img/javascript.png'>
-                        <img data-toggle="tooltip" data-placement="top" title="MongoDB" src='img/mongodb.png'>
+                        <img data-toggle="tooltip" data-placement="top" title="MongoDB" src='img/mongodb.png'><br>
                         <img data-toggle="tooltip" data-placement="top" title="NodeJS" src='img/nodejs.png'>
                         <img data-toggle="tooltip" data-placement="top" title="PostgreSQL" src='img/postgres.png'>
                         <img data-toggle="tooltip" data-placement="top" title="Python" src='img/python.png'>
