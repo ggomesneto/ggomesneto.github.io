@@ -1,33 +1,17 @@
-$('#me').on('click', function() {
-	$('#footer').empty();
-	let markup = `
 
-	<P id='about' class='button'>ABOUT</P>
-	<P id='toolkit' class='button'>TOOLKIT</P>
-	<p id='contact' class='button'>CONTACT</p>
-	`;
-
-	$('#footer').append(markup);
-	$('#footer').toggleClass('show hide');
-});
-
-$(document).on('click', '.fa-undo', function() {
-	$('#footer').empty();
-	let markup = `
-
-	<P id='about' class='button'>ABOUT</P>
-	<P id='toolkit' class='button'>TOOLKIT</P>
-	<p id='contact' class='button'>CONTACT</p>
-	`;
-
-	$('#footer').append(markup);
-});
 
 $(document).on('click', '#about', function() {
-	$('#footer').empty();
+	if ($('#modal').hasClass('show')) {
+	} else {
+		$('#modal').toggleClass('show hide');
+	}
+	if ($('#display').hasClass('grid')) {
+		$('#display').toggleClass('grid hide');
+	}
+	$('#modal-text').empty();
 	let markup = `
 	
-	<p>Hey, I'm Geraldo. <i class="fas fa-undo"></i></p>
+	<p>Hey, I'm Geraldo. 
                         <p>
                             <i class="fas fa-laptop-code"></i> Software Engineer |
                             <i class="fas fa-cloud"></i> AWS Certified |
@@ -44,44 +28,83 @@ $(document).on('click', '#about', function() {
 	
 	`;
 
-	$('#footer').append(markup);
+	$('#modal-text').append(markup);
+});
+
+$(document).on('click', '#portfolio', function() {
+
+	if ($('#modal').hasClass('show')){
+		$('#modal').toggleClass('show hide')
+	}
+
+	if ($('#display').hasClass('hide')){
+		$('#display').toggleClass('grid hide');
+		
+	} 
+	
+	
 });
 
 $(document).on('click', '#toolkit', function() {
-	$('#footer').empty();
+
+	if ($('#modal').hasClass('show')) {
+	} else {
+		$('#modal').toggleClass('show hide');
+	}
+	if ($('#display').hasClass('grid')) {
+		$('#display').toggleClass('grid hide');
+	}
+
+
+	$('#modal-text').empty();
 	let markup = `
 	
-	<p>TOOLKIT <i class="fas fa-undo"></i></p>
+	<p> 
                         <img data-toggle="tooltip" data-placement="top" title="BootStrap" src='img/bootstrap.png'>
                         <img data-toggle="tooltip" data-placement="top" title="CSS" src='img/css.png'>
-                        <img data-toggle="tooltip" data-placement="top" title="Git" src='img/git.png'><br>
+                        <img data-toggle="tooltip" data-placement="top" title="Git" src='img/git.png'>
                         <img data-toggle="tooltip" data-placement="top" title="HTML5" src='img/html5.png'>
                         <img data-toggle="tooltip" data-placement="top" title="JavaScript" src='img/javascript.png'>
-                        <img data-toggle="tooltip" data-placement="top" title="MongoDB" src='img/mongodb.png'><br>
+                        <img data-toggle="tooltip" data-placement="top" title="MongoDB" src='img/mongodb.png'>
                         <img data-toggle="tooltip" data-placement="top" title="NodeJS" src='img/nodejs.png'>
                         <img data-toggle="tooltip" data-placement="top" title="PostgreSQL" src='img/postgres.png'>
-                        <img data-toggle="tooltip" data-placement="top" title="Python" src='img/python.png'><br>
+                        <img data-toggle="tooltip" data-placement="top" title="Python" src='img/python.png'>
                         <img data-toggle="tooltip" data-placement="top" title="React" src='img/react.png'>
-                        <img data-toggle="tooltip" data-placement="top" title="VSCode" src='img/vscode1.png'></img>
+						<img data-toggle="tooltip" data-placement="top" title="VSCode" src='img/vscode1.png'></img>
+						
+	</p>
+	<p> I FOCUS ON THE MERN STACK BUT I'M <strong>NOT RESTRICTED</strong> TO IT.<br> I VALUE A 'ALWAYS LEARNING' MENTALITY AND I CAN TACKLE ANY OBSTACLES AHEAD OF ME.</P>
 	`;
 
-	$('#footer').append(markup);
+	// $('#modal').css({
+	// 	'display': 'grid',
+	// 	'grid-template-columns' : 'repeat(auto-fill, minmax(350px, 1fr))' })
+	
+	$('#modal-text').append(markup);
 	$(function() {
 		$('[data-toggle="tooltip"]').tooltip();
 	});
 });
 
 $(document).on('click', '#contact', function() {
-	$('#footer').empty();
+	if ($('#modal').hasClass('show')) {
+	} else {
+		$('#modal').toggleClass('show hide');
+	}
+	if ($('#display').hasClass('grid')) {
+		$('#display').toggleClass('grid hide');
+	}
+
+	$('#modal-text').empty();
 	let markup = `
 	
-	<p><i class="fas fa-undo"></i><a href='https://linkedin.com/in/ggomesneto' target='_blank'>LINKEDIN</a> | <a href='https://github.com/ggomesneto' target='_blank'>GITHUB</a> | <A href='https://drive.google.com/file/d/18Ba4_hL8BmGvszqbBasiC02MONelZA2w/view?usp=sharing' target='_blank'>CURRICULUM</A> | GGOMESNETO@GMAIL.COM</P>
+	<p class='contact' ><a href='https://linkedin.com/in/ggomesneto' target='_blank'>LINKEDIN</a> | <a href='https://github.com/ggomesneto' target='_blank'>GITHUB</a> | <A href='https://drive.google.com/file/d/18Ba4_hL8BmGvszqbBasiC02MONelZA2w/view?usp=sharing' target='_blank'>CURRICULUM</A> | GGOMESNETO@GMAIL.COM</P>
 	
 	
 	
 	`;
 
-	$('#footer').append(markup);
+	$('#modal-text').append(markup);
 });
 
 $(document).on('click', '#modal-back', function() {
@@ -122,3 +145,9 @@ function loopMe() {
 setInterval(function() {
 	loopMe();
 }, 5000);
+
+
+setTimeout(function() {
+	$('#modal').toggleClass('show hide');
+	$('#menu').toggleClass('show hide');
+}, 800);
