@@ -215,6 +215,18 @@ p {
 	font-size: 1.2rem;
 }
 
+#about-title {
+	position: absolute;
+	padding: 0 1rem 0 1rem;
+	right: 0;
+	display: inline-block;
+
+	font-size: 2rem;
+	background-color: rgba(206, 206, 72	);
+}
+
+
+
 p img {
 	width: 100px;
 }
