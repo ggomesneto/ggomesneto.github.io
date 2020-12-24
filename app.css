@@ -432,6 +432,9 @@ p img {
 	#display {
 		width: 95%;
 	}
+	#end {
+		height: 15vw;
+	}
 	
 	
 	.text {
