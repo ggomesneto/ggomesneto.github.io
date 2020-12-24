@@ -10,6 +10,10 @@ $(document).on('click', '#me', function() {
 	}
 });
 
+$(function() {
+	$('[data-toggle="tooltip"]').tooltip();
+});
+
 function fancyIntro() {
 	const tl = gsap.timeline({ defaults: { ease: 'power1.out' } });
 	tl.to('.slider', { y: '0', duration: 1, delay: 2 }, '-=1');
