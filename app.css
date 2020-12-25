@@ -436,8 +436,12 @@ p img {
 		height: 15vw;
 	}
 	.about-me {
-		font-family: 'JetBrains Mono', monospace;
-		font-size: 1rem;
+	
+		font-size: 0.8rem;
+	}
+	#modal-text {
+
+		font-size: 0.8rem;
 	}
 	
 	
