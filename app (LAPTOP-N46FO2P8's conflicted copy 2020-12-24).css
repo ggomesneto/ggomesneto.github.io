@@ -430,14 +430,7 @@ p img {
 		width: 50px;
 	}
 	#display {
-		width: 95%;
-	}
-	#end {
-		height: 15vw;
-	}
-	.about-me {
-		font-family: 'JetBrains Mono', monospace;
-		font-size: 1rem;
+		width: 90%;
 	}
 	
 	
