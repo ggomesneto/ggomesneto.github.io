@@ -115,11 +115,17 @@ body {
 }
 
 .button {
-	
 	font-size: 1.5rem;
-	
 	line-height: 1;
 
+}
+
+#portfolio-title {
+	font-family: 'JetBrains Mono', monospace;
+	font-size: 2rem;
+	text-align: center;
+	padding: 1rem;
+	margin: 0.5rem;
 }
 
 #contact-menu {
@@ -451,8 +457,5 @@ p img {
 	#title {
 		font-size: 3.5rem;
 	}
-	#portfolio-title {
-		font-size: 2.2rem;
-		line-height: 1.5;
-	}
+	
 }
