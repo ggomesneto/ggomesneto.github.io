@@ -48,3 +48,8 @@ setTimeout(function() {
 	$('#modal').toggleClass('show hide');
 	$('#menu').toggleClass('show hide');
 }, 800);
+
+$('#black-back').on('click', function() {
+	$(this).remove();
+	$('#first').remove();
+});
