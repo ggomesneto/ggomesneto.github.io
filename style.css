@@ -306,27 +306,31 @@ ul {
         position: absolute;  
     }
 
+  
 
     
-    @media screen and (max-width: 975px){
+    @media only screen and (max-width: 975px){
         .text h1 {
             font-size: 10vw;
             top: 35vh;
-            left: 22vw;
-           
+            left: 15vw;
         }
         nav {
-            font-size: 4.5vw;
+            font-size: 3vw;
+            padding-left: 15px;
+        }
+        nav .nav-links ul li {
+            padding: 0 8px;
+        }
+        nav ul {
+            padding: 0px;
         }
 
         .slide-detail {
-            
             top: 80px;
             left:10%;
-           
             width: 80%;
             height: 400px;
-            
         }
 
         .swiper-slide {
