@@ -470,6 +470,7 @@ p img {
 	}
 	#display {
 		width: 95%;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 	}
 	#end {
 		height: 15vw;
