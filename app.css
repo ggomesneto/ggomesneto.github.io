@@ -436,12 +436,16 @@ p img {
 		top: 35%;
 		left: 0%;
 		max-height: 70%;
-		
-		
-		
+	
 	}
 	p img {
 		width: 70px;
+	}
+
+	.text-img span {
+		
+		font-size: 2em;
+		
 	}
 	.button {
 		font-size: 2rem;
