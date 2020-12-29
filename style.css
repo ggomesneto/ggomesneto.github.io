@@ -184,23 +184,23 @@ ul {
     }
 
     .swiper-slide:nth-child(1) .slide-img {
-        background-image: url('/img/game-shelf-p.jpg')
+        background-image: url('/img/game-shelf.gif')
     }
 
     .swiper-slide:nth-child(2) .slide-img {
-        background-image: url('/img/warbler-p.jpg')
+        background-image: url('/img/twitter.gif')
     }
 
     .swiper-slide:nth-child(3) .slide-img {
-        background-image: url('/img/hash-it-p.png')
+        background-image: url('/img/hash-it.gif')
     }
 
     .swiper-slide:nth-child(4) .slide-img {
-        background-image: url('/img/movies-app-p.png')
+        background-image: url('/img/movies.gif')
     }
 
     .swiper-slide:nth-child(5) .slide-img {
-        background-image: url('/img/Hacker-News-p.jpg')
+        background-image: url('/img/hack.gif')
     }
 
     .slide-img {
@@ -327,7 +327,7 @@ ul {
         }
 
         .slide-detail {
-            top: 80px;
+            top: 150px;
             left:10%;
             width: 80%;
             height: 400px;
@@ -341,11 +341,8 @@ ul {
 
         .slide-detail-facts {
             position: absolute;
-            top: 400px;
-            left: 10%;
-           
-            
-            
+            top: 420px;
+            left: 10%;  
         }
 
         .about-me {
@@ -381,6 +378,18 @@ ul {
         }
         .toolkit div {
             display: inline-block;
+        }
+
+        .slide-img {
+            width: 60%;
+        }
+
+        .slide-number {
+            left:65%;
+        }
+        .slide-number p {
+            font-size:35px;
+            
         }
 
     }
