@@ -18,6 +18,10 @@ let slider = new Swiper('.swiper-container', {
 		renderBullet : function(index, className) {
 			return '<div class="' + className + '">' + keys[index] + '</div>';
 		}
+	},
+	navigation     : {
+		nextEl : '.swiper-button-next',
+		prevEl : '.swiper-button-prev'
 	}
 });
 
