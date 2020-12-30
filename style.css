@@ -114,8 +114,16 @@ ul {
     width: 50%;
     height: 80%;
     transform: translate(-20%,-45%);
+    overflow-y: scroll;
+    scrollbar-width: none;
         
     }
+
+    .about::-webkit-scrollbar {
+        display: none;
+      }
+
+
     .about-me {
         font-size: 1.2rem;
         font-family: 'JetBrains Mono', monospace;
@@ -362,9 +370,7 @@ ul {
             overflow-x: hidden;
                 
         }
-        .about::-webkit-scrollbar {
-            display: none;
-          }
+        
 
         .toolkit {
             display: inline-block;
