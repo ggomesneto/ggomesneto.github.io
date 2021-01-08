@@ -84,15 +84,17 @@ ul {
 .title {
     color: white;
     font-size: 4rem;
-    height: 170px;
+    height: 180px;
     position:relative;
+
 }
 
 .title span {
     position: absolute;
     bottom: 0px;
     left: 50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
+    
 }
 .sketchy {
     
@@ -392,11 +394,13 @@ ul {
             font-size: 1.8rem;
             height: 100px;
             margin-bottom: 1rem;
+           
           
         }
         .title span {
             left: 15%;
             transform: none;
+           
 
         }
         
