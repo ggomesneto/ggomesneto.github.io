@@ -207,24 +207,26 @@ ul {
     }
 
     .swiper-slide:nth-child(1) .slide-img {
-        background-image: url('/img/game-shelf.gif')
+        background-image: url('/img/backpacky.gif')
     }
 
     .swiper-slide:nth-child(2) .slide-img {
-        background-image: url('/img/twitter.gif')
+        background-image: url('/img/game-shelf.gif')
     }
 
     .swiper-slide:nth-child(3) .slide-img {
-        background-image: url('/img/hash-it.gif')
+        background-image: url('/img/twitter.gif')
     }
 
     .swiper-slide:nth-child(4) .slide-img {
-        background-image: url('/img/movies.gif')
+        background-image: url('/img/hash-it.gif')
     }
 
     .swiper-slide:nth-child(5) .slide-img {
-        background-image: url('/img/hack.gif')
+        background-image: url('/img/movies.gif')
     }
+
+    
 
     .slide-img {
         background-position: 'center';
