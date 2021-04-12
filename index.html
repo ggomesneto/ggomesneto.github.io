@@ -1,192 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Geraldo Gomes Portfolio</title>
+		<meta name="description" content="A page background effect where SVG shapes morph and transform on scroll" />
+		<meta name="keywords" content="background, svg, morph, animation, scroll, shape, web development, css, javascript" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="sponsor/pater.css" />
+		<script>
+			document.documentElement.className = 'js';
+			var supportsCssVars = function() {
+				var s = document.createElement('style'),
+				support;
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Geraldo Gomes Personal Site</title>
-        <link rel='stylesheet' href='style.css'>
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-    </head>
-
-    <body>
-        <nav>
-            <div class='nav-links'>
-                <ul>
-                    <li><a href='#projects'>PORTFOLIO</a></li>
-                    <li><a href='#sectionthree'>ABOUT</a></li>
-                    <li><a href='https://linkedin.com/in/ggomesneto' target='_blank'>LINKEDIN</a></li>
-                    <li><a href='https://github.com/ggomesneto' target='_blank'>GITHUB</a></li>
-                    <li><a href='https://drive.google.com/file/d/18Ba4_hL8BmGvszqbBasiC02MONelZA2w/view?usp=sharing'
-                            target='_blank'>CURRICULUM</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-
-        <section id='sectionone' class='screen'>
-            <div id='scene'>
-                <div data-depth="0.1" class='bg'>
-                    <img src='/img/background.jpg'>
-                </div>
-                <div data-depth="1.1" class='text'>
-                    <h1>GERALDO GOMES</h1>
-                </div>
-            </div>
-        </section>
-        <section id='sectiontwo' class='screen'>
-            <div id='projects' class='title'><span>PROJECTS I MADE</span></div>
-            <div class='swiper-container'>
-                <div class='swiper-wrapper'>
-                    <!-- SLIDE 1 -->
-                    <div class='swiper-slide'>
-                        <div class='slide-number'>
-                            <p>GLOBE<br>TROTTER</p>
-                        </div>
-                        <div class='slide-text'>
-                            <h4><span>01</span></h4>
-                        </div>
-                        <div class='slide-detail'>
-                            <p><span>Second Full Stack project as a Software Engineer student. Uses a Geolocation API, a Map Library, Redux and Hooks.<br>
-                                    <a href='https://backpacky.herokuapp.com/' target='_blank'>SITE</a> |
-                                    <a href='https://github.com/ggomesneto/globetrotter-heroku' target='_blank'>GITHUB</a>
-                                </span></p>
-                        </div>
-                        <div class='slide-detail-facts'>
-                            <div>
-                                <h5>TOOLS USED: <span style='opacity: 0.8'> REDUX | REACT | EXPRESSJS | HEROKU |
-                                        GIT | VSCODE</span></h5>
-                            </div>
-                        </div>
-                        <div class='slide-img'></div>
-                    </div>
-                    <!-- SLIDE 2 -->
-                    <div class='swiper-slide'>
-                        <div class='slide-number'>
-                            <p>GAME<br> SHELF</p>
-                        </div>
-                        <div class='slide-text'>
-                            <h4><span>02</span></h4>
-                        </div>
-                        <div class='slide-detail'>
-                            <p><span>First Full Stack Project as a Software Engineer student. Using a Free Gaming API I
-                                    was able to create a gaming library in which the users can share opinions and get
-                                    information about a game or platform.<br>
-                                    <a href='https://game-shelf-library.herokuapp.com/' target='_blank'>SITE</a> |
-                                    <a href='https://github.com/ggomesneto/Game-Shelf' target='_blank'>GITHUB</a>
-                                </span></p>
-                        </div>
-                        <div class='slide-detail-facts'>
-                            <div>
-                                <h5>TOOLS USED: <span style='opacity: 0.8'> JAVASCRIPT | PYTHON | POSTGRES | HEROKU |
-                                        GIT | VSCODE</span></h5>
-                            </div>
-                        </div>
-                        <div class='slide-img'></div>
-                    </div>
-                    <!-- SLIDE 3 -->
-                    <div class='swiper-slide'>
-                        <div class='slide-number'>
-                            <p>FAKE<br> TWITTER</p>
-                        </div>
-                        <div class='slide-text'>
-                            <h4><span>03</span></h4>
-                        </div>
-                        <div class='slide-detail'>
-                            <p><span>Second Full Stack Application as a Software Engineer Student. This project is a
-                                    Twitter clone. It has password encryption technology and all functionalities from
-                                    Twitter.<br>
-                                    <a href='https://fake-tweet-warbler.herokuapp.com/' target='_blank'>SITE</a><br>
-                                </span></p>
-                        </div>
-                        <div class='slide-detail-facts'>
-                            <div>
-                                <h5>TOOLS USED: <span style='opacity: 0.8'> JAVASCRIPT | PYTHON | POSTGRES | HEROKU |
-                                        GIT | VSCODE</span></h5>
-                            </div>
-                        </div>
-                        <div class='slide-img'></div>
-                    </div>
-                    <!-- SLIDE 4 -->
-                    <div class='swiper-slide'>
-                        <div class='slide-number'>
-                            <p>HASH<br> IT</p>
-                        </div>
-                        <div class='slide-text'>
-                            <h4><span>04</span></h4>
-                        </div>
-                        <div class='slide-detail'>
-                            <p><span>Password protection visualizer. It calculates the take it would take to crack a
-                                    password based on its length and complexity.<br>
-                                    <a href='/Hash-it/index.html' target='_blank'>SITE</a> |
-                                    <a href='https://github.com/ggomesneto/ggomesneto.github.io/tree/master/Hash-it'
-                                        target='_blank'>GITHUB</a>
-                                </span></p>
-                        </div>
-                        <div class='slide-detail-facts'>
-                            <div>
-                                <h5>TOOLS USED:<span style='opacity: 0.8'>JQUERY</span></h5>
-                            </div>
-                        </div>
-                        <div class='slide-img'></div>
-                    </div>
-                    <!-- SLIDE 5 -->
-                    <div class='swiper-slide'>
-                        <div class='slide-number'>
-                            <p>MOVIES<br> APP</p>
-                        </div>
-                        <div class='slide-text'>
-                            <h4><span>05</span></h4>
-                        </div>
-                        <div class='slide-detail'>
-                            <p><span>Simple Movies App using a free API. It shows the movie's rating and the plot by
-                                    hovering on its image.<br>
-                                    <a href='/movies-app/index.html' target='_blank'>SITE</a> |
-                                    <a href='https://github.com/ggomesneto/ggomesneto.github.io/tree/master/movies-app'
-                                        target='_blank'>GITHUB</a>
-                                </span></p>
-                        </div>
-                        <div class='slide-detail-facts'>
-                            <div>
-                                <h5>TOOLS USED:<span style='opacity: 0.8'>JQUERY</span></h5>
-                            </div>
-                        </div>
-                        <div class='slide-img'></div>
-                    </div>
-                    
-                    
-
-                </div>
-
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-
-            <div>
-                <div class='portfolio-links'></div>
-            </div>
-
-
-
-        </section>
-        <section id='sectionthree' class='screen'>
-
-
-            <div class="sketchy about">
-
-                <p class='about-me'>I AM A BRAZILIAN LIVING IN THE USA SINCE 2018. MY CAREER IN THE OILFIELD
+				s.innerHTML = "root: { --tmp-var: bold; }";
+				document.head.appendChild(s);
+				support = !!(window.CSS && window.CSS.supports && window.CSS.supports('font-weight', 'var(--tmp-var)'));
+				s.parentNode.removeChild(s);
+				return support;
+			}
+			if (!supportsCssVars()) alert('Please view this demo in a modern browser that supports CSS Variables.')
+		</script>
+	</head>
+	<body class="demo-1 loading">
+		<svg class="hidden">
+			<symbol id="icon-arrow" viewBox="0 0 24 24">
+				<title>arrow</title>
+				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
+			</symbol>
+			<symbol id="icon-drop" viewBox="0 0 24 24">
+				<title>drop</title>
+				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
+			</symbol>
+			<symbol id="shape-demo" viewBox="0 0 200 100">
+				<title>shape demo</title>
+				<path d="M 6.144,74.1 C 20.4,107.4 70.13,94.33 94.22,95.74 121.3,97.41 130.8,101.1 154.7,99.38 178.6,97.72 201.9,78.95 199.4,46.86 197.1,14.96 174.9,4.781 161.4,1.827 147.9,-1.128 119.8,8.284 105.6,8.766 85.34,9.449 81.91,7.628 51.08,2.334 17.26,-3.482 -8.105,40.84 6.144,74.1 Z" />
+			</symbol>
+		</svg>
+		<main>
+			<div class="morph-wrap">
+				<svg class="morph" width="1400" height="770" viewBox="0 0 1400 770">
+					<path d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"/>
+				</svg>
+			</div>
+			<div class="content content--fixed">
+				<header class="codrops-header">
+					<div class="codrops-links">
+						<svg class="decoshape" viewBox="0 0 200 100" width="100%" height="100%" preserveAspectRatio="none">
+							<path d="M 10.45,74.41 C 39.4,110.8 72.59,67.27 95.98,68.68 122.3,70.35 131.5,101.4 154.7,99.69 177.9,98.03 200.5,79.26 198.1,47.17 195.9,15.27 174.6,-0.3279 151.8,0.9941 128.6,2.581 126,16.86 107,22.76 88.26,28.67 88.87,12.36 60.37,1.787 31.79,-8.877 -18.61,37.92 10.45,74.41 Z" />
+						</svg>
+						</div>
+					<h1 class="codrops-header__title">Geraldo Gomes Portfolio</h1>
+				</header>
+				<nav class="demos">
+					<a class="demo demo--current" href="#home"><svg class="decoshape" preserveAspectRatio="none"><use xlink:href="#shape-demo"></use></svg>Home</a>
+					<a class="demo demo--current" href="#about"><svg class="decoshape" preserveAspectRatio="none"><use xlink:href="#shape-demo"></use></svg>About</a>
+					<a class="demo demo--current" href="#portfolio"><svg class="decoshape" preserveAspectRatio="none"><use xlink:href="#shape-demo"></use></svg>Portfolio</a>
+				
+				</nav>
+				
+				<div class="deco deco--title">Full Stack Software Engineer</div>
+			</div>
+			<!-- Related demos -->
+			<section id='home' class="content content--related">
+				<p class='main'>Hey, I'm Geraldo.</p>
+				<p id='typewriter' ></p>
+				
+			</section>
+			<section id='about' class="content content--related about">
+				<p class='about-me'>I AM A BRAZILIAN LIVING IN THE USA SINCE 2018. MY CAREER IN THE OILFIELD
                     STARTED WHEN I WAS 21 AND ON THE YEARS AFTER I WORKED IN PLACES LIKE SIBERIA, ABU DHABI,
-                    BRAZIL AND CENTRAL AMERICA. EVEN THOUGH IT WAS A VERY EXCITING CAREER, IN 2016 I DECIDED TO
-                    PURSUE A DREAM AND BECAME A FULL-TIME POKER PLAYER IN LAS VEGAS. FOR THREE YEARS I SUCCEED
-                    BUT, AFTER GETTING MARRIED, I DECIDED TO GO BACK TO WORK IN A 'NORMAL' JOB THAT COULD GIVE
-                    ME MORE FINANCIAL STABILITY.</p>
+                    BRAZIL AND CENTRAL AMERICA.</p>
                 <p class='about-me'>AFTER WORKING WITH DIFFERENT TYPES OF TECHNOLOGY, I FOUND LOVE IN CODING AND
                     DECIDED TO TAKE A STEP OUT OF MY COMFORT ZONE AND LEARN MORE ABOUT SOFTWARE ENGINEERING.
-                    WITH THE KNOWLEDGE FROM THE SOFTWARE ENGINEERING BOOTCAMP AT SPRINGBOARD I FEEL VERY
-                    COMFORTABLE TO PURSUE A CAREER CHANGE AND TRAIL A NEW PATH, NOW AS A DEVELOPER INSTEAD OF
-                    SOMEONE THAT JUST USES THE FINAL PRODUCT.</p>
+                    </p>
                 <p class='about-me'>MY WORK EXPERIENCE IS IN THE OIL & GAS BUSINESS, BUT ALTHOUGH YOU THINK THAT
                     THERE ARE NOT A
                     LOT
@@ -198,80 +90,44 @@
                     HUGE EXPECTATIONS TOWARDS YOUR RESULTS.</p>
                 <p class=' about-me'> I AM PURSUING A SOFTWARE ENGINEER POSITION IN WHICH I CAN CONTINUE
                     PROGRESSING AS A DEVELOPER, BE PART OF A GREAT TEAM AND SHARE MY KNOWLEDGE WITH OTHERS.</P>
-
-
-
-            </div>
-            <div class='toolkit sketchy'>
-                <div>
-                    <img data-toggle="tooltip" data-placement="top" title="BootStrap" src='img/bootstrap.png'>
-                    BOOTSTRAP
-                </div>
-                <div>
-                    <img data-toggle="tooltip" data-placement="top" title="CSS" src='img/css.png'>
-                    CSS
-                </div>
-                <div>
-                    <img data-toggle="tooltip" data-placement="top" title="Git" src='img/git.png'>
-                    GIT
-                </div>
-                <div>
-                    <img data-toggle="tooltip" data-placement="top" title="HTML5" src='img/html5.png'>
-                    HTML5
-                </div>
-                <div>
-                    <img data-toggle="tooltip" data-placement="top" title="JavaScript" src='img/javascript.png'>
-                    JAVASCRIPT
-                </div>
-                <div>
-                    <img data-toggle="tooltip" data-placement="top" title="MongoDB" src='img/mongodb.png'>
-                    MONGODB
-                </div>
-                <div>
-                    <img data-toggle="tooltip" data-placement="top" title="NodeJS" src='img/nodejs.png'>
-                    NODEJS
-                </div>
-                <div>
-                    <img data-toggle="tooltip" data-placement="top" title="PostgreSQL" src='img/postgres.png'>
-                    POSTGRES
-                </div>
-                <div>
-                    <img data-toggle="tooltip" data-placement="top" title="Python" src='img/python.png'>
-                    PYTHON
-                </div>
-                <div>
-                    <img data-toggle="tooltip" data-placement="top" title="React" src='img/react.png'>
-                    REACTJS
-                </div>
-                <div>
-                    <img data-toggle="tooltip" data-placement="top" title="VSCode" src='img/vscode1.png'></img>
-                    VSCODE
-                </div>
-
-
-            </div>
-            <div class='bg-3'>
-                <img src='/img/background-3.jpg'>
-            </div>
-
-
-
-
-        </section>
-
-    </body>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
-        integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"
-        integrity="sha512-/6TZODGjYL7M8qb7P6SflJB/nTGE79ed1RfJk3dfm/Ib6JwCT4+tOfrrseEHhxkIhwG8jCl+io6eaiWLS/UX1w=="
-        crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-
-    <script src='app.js'></script>
-
-
-
+			</section>
+			
+			<div id='portfolio' class="content-wrap">
+				<div class="content content--layout content--layout-1">
+					<img class="content__img" src="img/7.jpg" alt="Some image" />
+					<h3 class="content__title">Globetrotter</h3>
+					<p class="content__author">REACT EXPRESSJS REDUX</p>
+					<p class="content__desc">Full Stack web app for road trips.</p>
+					
+					<a href="https://https://backpacky.herokuapp.com/" target='_blank' class="content__link">DEMO</a>
+				</div>
+			</div>
+			<div class="content-wrap">
+				<div class="content content--layout content--layout-2">
+					<img class="content__img" src="img/6.jpg" alt="Some image" />
+					<h3 class="content__title">GameShelf</h3>
+					<p class="content__author">JAVASCRPT PYTHON FLASK POSTGRESQL</p>
+					<p class="content__desc">Full Stack web app for gamming.</p>
+					<a href="https://game-shelf-library.herokuapp.com/" target='_blank' class="content__link">DEMO</a>
+				</div>
+			</div>
+			<div class="content-wrap">
+				<div class="content content--layout content--layout-3">
+					<img class="content__img" src="img/8.jpg" alt="Some image" />
+					<h3 class="content__title">HASH-IT</h3>
+					<p class="content__author">JAVASCRIPT</p>
+					<p class="content__desc">Password cracking visualizer</p>
+					<a href='/Hash-it/index.html' target='_blank' class="content__link">DEMO</a>
+				</div>
+			</div>
+			
+			
+		</main>
+		<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/anime.min.js"></script>
+		<script src="js/scrollMonitor.js"></script>
+		<script src="js/demo1.js"></script>
+		
+	</body>
 </html>
